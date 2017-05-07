@@ -1,0 +1,6 @@
+http://coenraets.org/blog/cordova-phonegap-3-tutorial/
+http://ccoenraets.github.io/cordova-tutorial/
+http://ccoenraets.github.io/cordova-tutorial/create-cordova-project.html
+https://github.com/ccoenraets/cordova-tutorial
+http://blog.csdn.net/xiaoguang44/article/details/7768099
+http://stackoverflow.com/questions/10897081/retrieving-last-known-geolocation-phonegap

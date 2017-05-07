@@ -1,0 +1,48 @@
+
+                         如何 安装 mono 在 Linux上面同时支持 .net的程序运行
+
+1. Ubuntu 的安装  和 Oracle VM VirtualBox 的下载 并安装
+
+
+
+2. http://www.mono-project.com/docs/getting-started/install/linux/
+
+   开始安装mono
+
+   2.1   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
+sudo apt-get update
+
+   2.2   echo "deb http://download.mono-project.com/repo/debian wheezy-apache24-compat main" | sudo tee -a /etc/apt/sources.list.d/mono-xamarin.list
+
+       
+   2.3   sudo apt-get install mono-devel
+         sudo apt-get install mono-complete
+         sudo apt-get install referenceassemblies-pcl
+         sudo apt-get install ca-certificates-mono
+         sudo apt-get install mono-xsp4
+                             
+                     
+
+3.  把 项目放到ubuntu 上面  cd过去，在 实行 xsp4 --port=9000 就可以了 。 
+  
+
+          xsp4 --port=80 --nonstop --quiet &
+
+
+
+
+4.  数据库的配置
+     sqlserver：　
+       sudo apt-get remove
+       sudo apt-get install freedts*
+
+       tsql -S 127.0.0.1 -P 1433 -U sa -Ppassword
+
+     mysql:
+        sudo apt-get install mysql-client*
+        
+        mysql -u sa -psa -Ddatabase -h 127.0.0.1
+
+
+

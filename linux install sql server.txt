@@ -1,0 +1,18 @@
+安装步骤：
+1.输入命令，获取root权限
+sudo su
+2.导入公共库GPG密钥：
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+
+3.注册 Microsoft SQL Server Ubuntu存储库 命令如下：
+curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list > /etc/apt/sources.list.d/mssql-server.list
+
+4.下载安装SQL Server, 命令如下：
+sudo apt-get update
+sudo apt-get install -y mssql-server
+
+5.安装完成后运行配置脚本并按提示进行sa账户的配置，如下
+sudo /opt/mssql/bin/sqlservr-setup  （版本更新后命令不同，按照安装完后提示的命令输入）
+6.输入sa账户的密码
+7.检查服务是否正常运行，命令如下：
+systemctl status mssql-server

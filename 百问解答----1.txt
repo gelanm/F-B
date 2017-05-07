@@ -1,0 +1,85 @@
+Oliver
+大家好 我想问下 phonegap  开发出来的app 怎么实现跨平台啊  假设ios用phonegap 开发出来个app   难道还能用到android么  不是很懂  望大家指点下
+16:00:58
+sandy_liao 2017/1/9 16:00:58
+嗯 phonegap 是个核， 其它就是要写了 插件 和 Html5
+
+sandy_liao 2017/1/9 16:01:34
+有android 和 ios 还有很多其它的核 
+16:03:23
+Oliver 2017/1/9 16:03:23
+那代码要写几套啊
+Oliver 2017/1/9 16:03:31
+还是不是很明白
+
+sandy_liao 2017/1/9 16:04:30
+一套 H5 可以跑在 phonegap 建立的 android 项目中 也可以跑在 ios项目中
+
+					sandy_liao 2017/1/9 16:04:52
+需要生成两个项目 
+16:05:24
+					Oliver 2017/1/9 16:05:24
+那我们名师原生的 ios  android  也可以用同一个h5啊
+					Oliver 2017/1/9 16:05:30
+不知道有啥区别
+					Oliver 2017/1/9 16:05:36
+平时
+
+						sandy_liao 2017/1/9 16:05:58
+个人体会 兼容性好 
+
+						sandy_liao 2017/1/9 16:06:24
+js + css 实现 自适应 所有设备
+						Oliver 2017/1/9 16:06:47
+界面布局都是 js  +css实现的啊
+
+						sandy_liao 2017/1/9 16:07:22
+插件 很多 ， 通过核来调用  GPS Camar 很稳定
+16:07:32
+						Oliver 2017/1/9 16:07:32
+不是  ios 项目 用ios布局      android用angroid布局
+
+						sandy_liao 2017/1/9 16:08:10
+phonegap 就是把前端 给 html化
+
+						sandy_liao 2017/1/9 16:08:36
+核 负责 js 和 css 的转换。
+16:09:40
+						Oliver 2017/1/9 16:09:40
+你说的核  是不是 ios  android的API啊
+						Oliver 2017/1/9 16:10:17
+就是我们布局 通用性的用css+js实现
+
+						sandy_liao 2017/1/9 16:10:23
+就是用来封装 html5 到 app中的 
+						Oliver 2017/1/9 16:10:56
+其他的  ios  android  特定的功能  就通过相应的api来调用
+
+						sandy_liao 2017/1/9 16:11:10
+是 的 布局 css + js + html 目前有很多 架构 出来
+
+						sandy_liao 2017/1/9 16:11:33
+gps 通过插件调用
+16:11:56
+						sandy_liao 2017/1/9 16:11:56
+phonegap 核里面自带 gps插件， 所有 js直接调用
+						Oliver 2017/1/9 16:12:05
+就是  android 用android插件  ios工程用ios工程插件么
+
+						sandy_liao 2017/1/9 16:13:05
+嗯
+
+						sandy_liao 2017/1/9 16:13:28
+插件就是原生 开发 
+16:15:22
+						sandy_liao 2017/1/9 16:15:22
+去搞个 hello world
+						Oliver 2017/1/9 16:15:46
+噢懂了    phonegap  就是相当于 js +css  实现主体架构功能,辅助功能如gps  等  通过相应的插件调用来实现
+
+						sandy_liao 2017/1/9 16:16:03
+en 
+						Oliver 2017/1/9 16:16:06
+恩  好的   谢谢了哈
+						Oliver 2017/1/9 16:16:15
+太感谢了
