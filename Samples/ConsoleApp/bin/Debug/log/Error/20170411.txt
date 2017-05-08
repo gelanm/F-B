@@ -1,0 +1,84 @@
+2017-04-11 14:07:06,101:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:07:06,101:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:07:20,970:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:07:24,083:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:07:37,063:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:07:45,244:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:07:50,281:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:07:50,296:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:07:58,719:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:08:02,528:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:46:29,376:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:47:49,680:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:47:54,881:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98
+2017-04-11 14:48:54,535:
+
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Fleck.Samples.ConsoleApp.BLL.MessageBLL.GetChatUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\BLL\MessageBLL.cs:行号 159
+   在 Fleck.Samples.ConsoleApp.Data.ConnectUsers.GetUser(Int32 id) 位置 F:\yoyo\Socket\Fleck-master\src\Samples\ConsoleApp\Data\ConnectUsers.cs:行号 98

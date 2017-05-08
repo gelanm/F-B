@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="Robots" contect="all">
+        <title>会话窗口</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/liaotian.css" rel="stylesheet">
+        <script language="javascript" type="text/javascript" src="./js/jquery-1.11.1.min.js" ></script>
+        <script language="javascript" type="text/javascript" src="./js/jsChat.js" ></script>
+        <script language="javascript" type="text/javascript" src="./js/common.js" ></script>
+    </head>
+    <body class="shangpinxiangqing" style="background: #fff;">
+        <header class="goodsallhead" style="background:#6dc5dd;">
+		  <div class="with96">
+			  	<a class="hisback" href="javascript:window.history.back();"></a>
+		  		<div class="headtitle"><span>会话窗口</span></div>
+		  		<div class="menuheadright">
+				  	<a class="chathis" href="javascript:window.location.reload();"></a>
+		  		</div>
+		  </div>
+	    </header>
+        <div id="chatbox">
+        </div>
+         <script language="javascript" type="text/javascript">
+             //var authcode = localStorage.getItem("AuthCode");
+             //var id = localStorage.getItem("Id");
+             //var username = localStorage.getItem("UserName");
+			 var authcode = "1";
+             var id = getParameterByName('userid');
+             var username = getParameterByName('username');
+             var touserid = getParameterByName('touserid');
+             var tousername = getParameterByName('tousername');
+             $("#chatbox").Chat({
+                 userid: id,
+                 username: username,
+                 auth: authcode,
+                 //url: 'ws://58.215.65.123:4141/chat',
+				 //url: 'ws://192.168.56.1:4141/chat',
+				 //url: 'ws://192.168.6.231:4141/chat',
+				 //url: 'ws://192.168.56.1:8181',
+				 url: 'ws://192.168.6.231:8181',
+                 InitUser: function () {
+                     return { id: id, name: username, toid: touserid, toname: tousername };
+                 }
+             });
+        </script>
+    </body>
+</html>
