@@ -1,0 +1,9 @@
+
+
+a.  ÷∂Ø∆Ù∂Ø Nginx
+
+1. cd /www/nginx/sbin/
+ 
+2. ./nginx
+
+3. √‹¬Î£∫111111
