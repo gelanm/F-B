@@ -8,7 +8,8 @@ public partial class user_Addgongcheng : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string userName = Convert.ToString(Session["userName"]);
+        string userName = memcached.Find("userName" + memcached.GetIP().ToString());
+            //Convert.ToString(Session["userName"]);
 
         //=Convert.ToString(Session["qx"]);
         if (userName == "")
