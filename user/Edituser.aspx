@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Edituser.aspx.cs" Inherits="user_Edituser" %>
-<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
+<%--<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>--%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -56,7 +56,7 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <webdiyer:aspnetpager ID="AspNetPager1" runat="server" CssClass="formfield" 
+        <%--<webdiyer:aspnetpager ID="AspNetPager1" runat="server" CssClass="formfield" 
             CustomInfoClass="formbutton" 
             CustomInfoHTML="第&lt;font color='red'&gt;&lt;b&gt;%CurrentPageIndex%&lt;/b&gt;&lt;/font&gt;页 共%PageCount%&nbsp;页 %StartRecordIndex%-%EndRecordIndex%" 
             CustomInfoTextAlign="Center" FirstPageText="首页" horizontalalign="Center" 
@@ -65,7 +65,7 @@
             PrevPageText="前一页" showcustominfosection="Left" ShowInputBox="Always" 
             ShowNavigationToolTip="True" style="FONT-SIZE: 14px" 
             SubmitButtonClass="formfield" SubmitButtonText="GO" width="506px">
-        </webdiyer:aspnetpager>
+        </webdiyer:aspnetpager>--%>
       </td>
   </tr>
   <tr bgcolor="#FFFFFF"> 

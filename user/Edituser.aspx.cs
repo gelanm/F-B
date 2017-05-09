@@ -21,11 +21,11 @@ public partial class user_Edituser : System.Web.UI.Page
             DataView dv = objuser.GetAllList().DefaultView;
             PagedDataSource pds = new PagedDataSource();
 
-            AspNetPager1.RecordCount = dv.Count;
+            //AspNetPager1.RecordCount = dv.Count;
             pds.DataSource = dv;
             pds.AllowPaging = true;
-            pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
-            pds.PageSize = AspNetPager1.PageSize;
+            //pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
+            //pds.PageSize = AspNetPager1.PageSize;
             this.GridView1.DataSource = pds;
             this.GridView1.DataBind();
         }
@@ -65,11 +65,11 @@ public partial class user_Edituser : System.Web.UI.Page
         DataView dv = objuser.GetAllList().DefaultView;
         PagedDataSource pds = new PagedDataSource();
 
-        AspNetPager1.RecordCount = dv.Count;
+        //AspNetPager1.RecordCount = dv.Count;
         pds.DataSource = dv;
         pds.AllowPaging = true;
-        pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
-        pds.PageSize = AspNetPager1.PageSize;
+        //pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
+        //pds.PageSize = AspNetPager1.PageSize;
         this.GridView1.DataSource = pds;
         this.GridView1.DataBind();
     }
@@ -99,11 +99,11 @@ public partial class user_Edituser : System.Web.UI.Page
         DataView dv = objuser.GetAllList().DefaultView;
         PagedDataSource pds = new PagedDataSource();
 
-        AspNetPager1.RecordCount = dv.Count;
+        //AspNetPager1.RecordCount = dv.Count;
         pds.DataSource = dv;
         pds.AllowPaging = true;
-        pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
-        pds.PageSize = AspNetPager1.PageSize;
+        //pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
+        //pds.PageSize = AspNetPager1.PageSize;
         this.GridView1.DataSource = pds;
         this.GridView1.DataBind();
     }
