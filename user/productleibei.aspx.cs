@@ -64,9 +64,9 @@ public partial class user_productleibei : System.Web.UI.Page
     {
         string strErr = "";
 
-       
 
-        if (this.WE_NewsContent.Text == "")
+
+        if (this.myEditor.Value == "")
         {
             strErr += "内容不能为空！\\n";
         }
@@ -83,7 +83,7 @@ public partial class user_productleibei : System.Web.UI.Page
 
         int id = Convert.ToInt32(this.DropDownList1.SelectedValue);
         string pic = this.txtpic.Text;
-        string content = this.WE_NewsContent.Text;
+        string content = this.myEditor.Value;
         Maticsoft.Model.productclass model = new Maticsoft.Model.productclass();
 
         model.id = id;

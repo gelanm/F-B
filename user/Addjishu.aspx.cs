@@ -29,7 +29,7 @@ public partial class user_Addjishu : System.Web.UI.Page
                 Maticsoft.BLL.gscontent bll = new Maticsoft.BLL.gscontent();
                 Maticsoft.Model.gscontent model = bll.GetModel(id);
                 this.TextBox2.Text = model.title;
-                this.WE_NewsContent.Text = Server.HtmlDecode(model.content.ToString());
+                this.myEditor.Value = Server.HtmlDecode(model.content.ToString());
             }
         }
 
@@ -47,7 +47,7 @@ public partial class user_Addjishu : System.Web.UI.Page
             }
 
 
-            if (this.WE_NewsContent.Text == "")
+            if (this.myEditor.Value == "")
             {
                 strErr += "内容不能为空！\\n";
             }
@@ -66,7 +66,7 @@ public partial class user_Addjishu : System.Web.UI.Page
             string title = this.TextBox2.Text;
             string faburen = this.TextBox3.Text;
             DateTime time = DateTime.Now;
-            string content = Server.HtmlEncode(this.WE_NewsContent.Text.ToString().Replace("'", "!"));
+            string content = Server.HtmlEncode(this.myEditor.Value.ToString().Replace("'", "!"));
 
 
 
@@ -89,9 +89,9 @@ public partial class user_Addjishu : System.Web.UI.Page
             {
                 strErr += "标题不能为空！\\n";
             }
-           
 
-            if (this.WE_NewsContent.Text == "")
+
+            if (this.myEditor.Value == "")
             {
                 strErr += "内容不能为空！\\n";
             }
@@ -110,7 +110,7 @@ public partial class user_Addjishu : System.Web.UI.Page
             string title = this.TextBox2.Text;
             
             DateTime time = DateTime.Now;
-            string content = this.WE_NewsContent.Text;
+            string content = this.myEditor.Value;
             string faburen = this.TextBox3.Text;
 
             int classid = 22;
@@ -129,7 +129,7 @@ public partial class user_Addjishu : System.Web.UI.Page
             bll.Add(model);
             MessageBox.Show(this, "添加成功");
             this.TextBox2.Text = "";
-            this.WE_NewsContent.Text = "";
+            this.myEditor.Value = "";
             return;
         }
     }

@@ -26,7 +26,7 @@ public partial class user_Addcustomer : System.Web.UI.Page
 
                 this.Label1.Text = model.classname;
 
-                this.WE_NewsContent.Text = model.content;
+                this.myEditor.Value = model.content;
                 if (model.classname == "常见问题")
                 {
                     Response.Redirect("Addcustomer1.aspx?id=" + id + "");
@@ -46,7 +46,7 @@ public partial class user_Addcustomer : System.Web.UI.Page
 
         int id = Convert.ToInt32(DB.SQLReplace(Request.QueryString["id"]));
 
-        string sql = "update gsclass set content ='" + WE_NewsContent.Text + "' where id=" + id + "";
+        string sql = "update gsclass set content ='" + myEditor.Value + "' where id=" + id + "";
         DB.execnonsql(sql);
         MessageBox.Show(this, "更新成功");
     }

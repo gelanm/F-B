@@ -20,7 +20,7 @@ public partial class user_dailixx : System.Web.UI.Page
             int id =Convert.ToInt32( Request.QueryString["id"]);
             this.TextBox1.Text = DB.FindString("select title from gscontent where id=" + id + "");
             this.TextBox2.Text = DB.FindString("select jianjie from gscontent where id=" + id + "");
-            this.WE_NewsContent.Text = DB.FindString("select content from gscontent where id=" + id + "");
+            this.myEditor.Value = DB.FindString("select content from gscontent where id=" + id + "");
             this.txtpic.Text = DB.FindString("select keywords from gscontent where id=" + id + "");
         }
     }
@@ -29,7 +29,7 @@ public partial class user_dailixx : System.Web.UI.Page
         int id=Convert.ToInt32(Request.QueryString["id"]);
         string title = this.TextBox1.Text;
         string jianjie = this.TextBox2.Text;
-        string content = this.WE_NewsContent.Text;
+        string content = this.myEditor.Value;
         string pic = txtpic.Text;
         DateTime dtt = DateTime.Now;
         string sql = "update [gscontent]set [title]='" + title + "',[jianjie]='" + jianjie + "',[content]='" + content + "',[keywords]='" + pic + "',[time]='" + dtt + "'where id=" + id + "";

@@ -26,7 +26,7 @@ public partial class user_Addcustomer1 : System.Web.UI.Page
                 Maticsoft.Model.gscontent model = bll.GetModel(id);
                 this.TextBox2.Text = model.title;
                 this.TextBox1.Text = model.faburen;
-                this.WE_NewsContent.Text = model.content;
+                this.myEditor.Value = model.content;
                 this.Label1.Text = "常见问题";
             }
             else
@@ -54,7 +54,7 @@ public partial class user_Addcustomer1 : System.Web.UI.Page
                 strErr += "发布人不能为空！\\n";
             }
 
-            if (this.WE_NewsContent.Text == "")
+            if (this.myEditor.Value == "")
             {
                 strErr += "内容不能为空！\\n";
             }
@@ -68,7 +68,7 @@ public partial class user_Addcustomer1 : System.Web.UI.Page
             string title = this.TextBox2.Text;
             string faburen = this.TextBox1.Text;
             DateTime time = DateTime.Now;
-            string content = this.WE_NewsContent.Text;
+            string content = this.myEditor.Value;
 
 
             int classid = Convert.ToInt32(Request.QueryString["id"]);
@@ -88,7 +88,7 @@ public partial class user_Addcustomer1 : System.Web.UI.Page
             MessageBox.Show(this, "添加成功");
             this.TextBox1.Text = "";
             this.TextBox2.Text = "";
-            this.WE_NewsContent.Text = "";
+            this.myEditor.Value = "";
             return;
 
         }
@@ -105,7 +105,7 @@ public partial class user_Addcustomer1 : System.Web.UI.Page
                 strErr += "发布人不能为空！\\n";
             }
 
-            if (this.WE_NewsContent.Text == "")
+            if (this.myEditor.Value == "")
             {
                 strErr += "内容不能为空！\\n";
             }
@@ -120,7 +120,7 @@ public partial class user_Addcustomer1 : System.Web.UI.Page
             string title = this.TextBox2.Text;
             string faburen = this.TextBox1.Text;
             DateTime time = DateTime.Now;
-            string content = this.WE_NewsContent.Text;
+            string content = this.myEditor.Value;
            
 
 

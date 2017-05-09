@@ -35,7 +35,7 @@ public partial class user_Addgongcheng1 : System.Web.UI.Page
             int id = Convert.ToInt32(Request.QueryString["id"]);
             string pic = this.txtpic.Text;
             string title = this.TextBox1.Text;
-            string content = this.WE_NewsContent.Text;
+            string content = this.myEditor.Value;
 
 
 

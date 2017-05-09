@@ -24,14 +24,14 @@ public partial class user_Addgongcheng2 : System.Web.UI.Page
 
             this.Label1.Text = model.classname;
 
-            this.WE_NewsContent.Text = model.content;
+            this.myEditor.Value = model.content;
         }
     }
     protected void btnAdd_Click(object sender, EventArgs e)
     {
         int id = Convert.ToInt32(DB.SQLReplace(Request.QueryString["id"]));
 
-        string content = this.WE_NewsContent.Text;
+        string content = this.myEditor.Value;
 
 
         Maticsoft.Model.gsclass model = new Maticsoft.Model.gsclass();

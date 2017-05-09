@@ -8,7 +8,8 @@ public partial class user_Adddaili : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string userName = Convert.ToString(Session["userName"]);
+        string userName = memcached.Find("userName" + memcached.GetIP().ToString());
+        //Convert.ToString(Session["userName"]);
 
         //=Convert.ToString(Session["qx"]);
         if (userName == "")
@@ -46,8 +47,8 @@ public partial class user_Adddaili : System.Web.UI.Page
                 return;
             }
 
-            
-            string content = this.WE_NewsContent.Text;
+
+            string content = this.myEditor.Value;
 
 
             int classid = Convert.ToInt32(DB.SQLReplace(Request.QueryString["id"]));

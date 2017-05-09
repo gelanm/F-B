@@ -8,7 +8,8 @@ public partial class user_Editgongchengxx : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string userName = Convert.ToString(Session["userName"]);
+        string userName = memcached.Find("userName" + memcached.GetIP().ToString()); 
+        //Convert.ToString(Session["userName"]);
 
         //=Convert.ToString(Session["qx"]);
         if (userName == "")
@@ -23,7 +24,7 @@ public partial class user_Editgongchengxx : System.Web.UI.Page
             this.TextBox1.Text = model.title;
             this.TextBox2.Text = model.faburen;
             this.txtpic.Text = model.keywords;
-            this.WE_NewsContent.Text = model.content;
+            this.myEditor.Value = model.content;
         }
     }
     protected void btnAdd_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ public partial class user_Editgongchengxx : System.Web.UI.Page
         int id = Convert.ToInt32(Request.QueryString["id"]);
         string pic = this.txtpic.Text;
         string title = this.TextBox1.Text;
-        string content = this.WE_NewsContent.Text;
+        string content = this.myEditor.Value;
         string faburen=this.TextBox2.Text;
 
 

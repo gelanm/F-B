@@ -23,14 +23,14 @@ public partial class user_message : System.Web.UI.Page
         {
             Maticsoft.BLL.wangzhan bll = new Maticsoft.BLL.wangzhan();
             Maticsoft.Model.wangzhan model = bll.GetModel(1);
-            this.WE_NewsContent.Text = model.lianxiwm;
+            this.myEditor.Value = model.lianxiwm;
         }
     }
     protected void btnAdd_Click(object sender, EventArgs e)
     {
         Maticsoft.BLL.wangzhan bll = new Maticsoft.BLL.wangzhan();
         Maticsoft.Model.wangzhan model = bll.GetModel(1);
-        model.lianxiwm = this.WE_NewsContent.Text;
+        model.lianxiwm = this.myEditor.Value;
         if (bll.Update(model))
         {
             MessageBox.Show(this, "更新成功");

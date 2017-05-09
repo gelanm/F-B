@@ -46,7 +46,7 @@ public partial class user_xtjg : System.Web.UI.Page
         StringBuilder strSql1 = new StringBuilder();
         StringBuilder strSql2 = new StringBuilder();
         string _cpid = DropDownList1.SelectedValue.ToString();
-        string _cont = WE_NewsContent.Text;
+        string _cont = myEditor.Value;
         if (_cpid != null)
         {
             strSql1.Append("cpid,");

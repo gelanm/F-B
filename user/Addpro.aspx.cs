@@ -29,7 +29,7 @@ public partial class user_Addpro : System.Web.UI.Page
                 Maticsoft.BLL.product bll = new Maticsoft.BLL.product();
                 Maticsoft.Model.product model = bll.GetModel(id);
                 this.TextBox2.Text = model.protitle;
-                this.WE_NewsContent.Text = model.procontent;
+                this.myEditor.Value = model.procontent;
                 this.DropDownList1.SelectedValue = Convert.ToString(model.classid);
                 this.txtpic.Text = model.propic;
 
@@ -83,9 +83,9 @@ public partial class user_Addpro : System.Web.UI.Page
             {
                 strErr += "标题不能为空！\\n";
             }
-          
 
-            if (this.WE_NewsContent.Text == "")
+
+            if (this.myEditor.Value == "")
             {
                 strErr += "内容不能为空！\\n";
             }
@@ -103,7 +103,7 @@ public partial class user_Addpro : System.Web.UI.Page
             string title = this.TextBox2.Text;
            string pic=this.txtpic.Text;
             DateTime time = DateTime.Now;
-            string content = this.WE_NewsContent.Text;
+            string content = this.myEditor.Value;
 
 
             int classid = Convert.ToInt32(this.DropDownList1.SelectedValue);
@@ -133,9 +133,9 @@ public partial class user_Addpro : System.Web.UI.Page
             {
                 strErr += "标题不能为空！\\n";
             }
-          
 
-            if (this.WE_NewsContent.Text == "")
+
+            if (this.myEditor.Value == "")
             {
                 strErr += "内容不能为空！\\n";
             }
@@ -154,7 +154,7 @@ public partial class user_Addpro : System.Web.UI.Page
             string title = this.TextBox2.Text;
            string pic=this.txtpic.Text;
             DateTime time = DateTime.Now;
-            string content = this.WE_NewsContent.Text;
+            string content = this.myEditor.Value;
 
 
             int classid = Convert.ToInt32(this.DropDownList1.SelectedValue);
@@ -174,7 +174,7 @@ public partial class user_Addpro : System.Web.UI.Page
             MessageBox.Show(this, "添加成功");
            
             this.TextBox2.Text = "";
-            this.WE_NewsContent.Text = "";
+            this.myEditor.Value = "";
             return;
         }
     }

@@ -28,7 +28,7 @@ public partial class user_Addnews : System.Web.UI.Page
                 Maticsoft.Model.newscontent model = bll.GetModel(id);
                 this.TextBox1.Text = model.faburen;
                 this.TextBox2.Text = model.title;
-                this.WE_NewsContent.Text = model.content;
+                this.myEditor.Value = model.content;
                 btnDel.Visible = true;                
             }
             BindClass();
@@ -63,7 +63,7 @@ public partial class user_Addnews : System.Web.UI.Page
                 strErr += "发布人不能为空！\\n";
             }
 
-            if (this.WE_NewsContent.Text == "")
+            if (this.myEditor.Value == "")
             {
                 strErr += "内容不能为空！\\n";
             }
@@ -78,7 +78,7 @@ public partial class user_Addnews : System.Web.UI.Page
             string title = this.TextBox2.Text;
             string faburen = this.TextBox1.Text;
             DateTime time = DateTime.Now;
-            string content = this.WE_NewsContent.Text;
+            string content = this.myEditor.Value;
             int hit = Convert.ToInt32(this.DropDownList1.SelectedValue);
 
 
@@ -108,7 +108,7 @@ public partial class user_Addnews : System.Web.UI.Page
                 strErr += "发布人不能为空！\\n";
             }
 
-            if (this.WE_NewsContent.Text == "")
+            if (this.myEditor.Value == "")
             {
                 strErr += "内容不能为空！\\n";
             }
@@ -123,7 +123,7 @@ public partial class user_Addnews : System.Web.UI.Page
             string title = this.TextBox2.Text;
             string faburen = this.TextBox1.Text;
             DateTime time = DateTime.Now;
-            string content = this.WE_NewsContent.Text;
+            string content = this.myEditor.Value;
             int hit = Convert.ToInt32(this.DropDownList1.SelectedValue);
 
 
