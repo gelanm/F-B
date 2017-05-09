@@ -73,7 +73,7 @@ namespace Maticsoft.DAL
             MySqlParameter[] Parameters = {
 					new MySqlParameter("@title", MySqlDbType.VarChar, 100),
 					new MySqlParameter("@faburen", MySqlDbType.VarChar, 100),
-                    new MySqlParameter("@time", MySqlDbType.Date, 8),
+                    new MySqlParameter("@time", MySqlDbType.Date),
 					new MySqlParameter("@content", MySqlDbType.Text),
                     new MySqlParameter("@hit", MySqlDbType.Int32, 4)};
 
