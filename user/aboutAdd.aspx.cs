@@ -26,8 +26,8 @@ public partial class user_aboutAdd : System.Web.UI.Page
             Maticsoft.Model.gsclass model = bll.GetModel(id);
             
             this.Label1.Text = model.classname;
-           
-            this.WE_NewsContent.Text = model.content;
+
+            this.myEditor.Value = model.content;
             if (Label1.Text == "企业荣誉")
             {
                 Response.Redirect("Editbout1.aspx");
@@ -42,10 +42,10 @@ public partial class user_aboutAdd : System.Web.UI.Page
     protected void btnAdd_Click(object sender, EventArgs e)
     {
         string strErr = "";
-       
-       
-       
-        if (this.WE_NewsContent.Text == "")
+
+
+
+        if (this.myEditor.Value == "")
         {
             strErr += "请输入内容！\\n";
         }
@@ -57,8 +57,8 @@ public partial class user_aboutAdd : System.Web.UI.Page
         }
 
         int id = Convert.ToInt32(DB.SQLReplace(Request.QueryString["id"]));
-       
-        string content = this.WE_NewsContent.Text;
+
+        string content = this.myEditor.Value;
 
 
         Maticsoft.Model.gsclass model = new Maticsoft.Model.gsclass();
