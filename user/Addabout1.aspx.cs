@@ -24,7 +24,7 @@ public partial class user_Addabout1 : System.Web.UI.Page
         {
             int id = Convert.ToInt32(Request.QueryString["Editabout"]);
             this.TextBox1.Text = DB.FindString("select title from gscontent where id=" + id + "");
-            this.WE_NewsContent.Text = DB.FindString("select content from gscontent where id=" + id + "");
+            this.myEditor.Value = DB.FindString("select content from gscontent where id=" + id + "");
             this.txtpic.Text = DB.FindString("select keywords from gscontent where id=" + id + "");
 
         }
@@ -40,7 +40,7 @@ public partial class user_Addabout1 : System.Web.UI.Page
                 strErr += "请输入标题！\\n";
             }
 
-            if (this.WE_NewsContent.Text == "")
+            if (this.myEditor.Value == "")
             {
                 strErr += "请输入内容！\\n";
             }
@@ -51,7 +51,7 @@ public partial class user_Addabout1 : System.Web.UI.Page
                 return;
             }
             string biaoti = this.TextBox1.Text;
-            string neirong = this.WE_NewsContent.Text;
+            string neirong = this.myEditor.Value;
             string txtpic = this.txtpic.Text;
             int classid = Convert.ToInt32(this.DropDownList1.SelectedValue);
             DateTime dtt = DateTime.Now;

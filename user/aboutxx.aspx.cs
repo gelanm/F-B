@@ -29,7 +29,7 @@ public partial class user_aboutxx : System.Web.UI.Page
                 Maticsoft.Model.gscontent model = bll.GetModel(id);
                 this.TextBox1.Text = model.title;
                 this.txtpic.Text = model.keywords;
-                this.WE_NewsContent.Text = model.content;
+                this.myEditor.Value = model.content;
             }
         }
     }
@@ -46,7 +46,7 @@ public partial class user_aboutxx : System.Web.UI.Page
             strErr += "标题不能为空！\\n";
         }
 
-        if (this.WE_NewsContent.Text == "")
+        if (this.myEditor.Value == "")
         {
             strErr += "内容不能为空！\\n";
         }
@@ -60,7 +60,7 @@ public partial class user_aboutxx : System.Web.UI.Page
         int id = Convert.ToInt32(Request.QueryString["id"]);
         string title = this.TextBox1.Text;
         string pic = this.txtpic.Text;
-        string content = this.WE_NewsContent.Text;
+        string content = this.myEditor.Value;
         DateTime dtt = DateTime.Now;
 
 

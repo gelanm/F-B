@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Addabout1.aspx.cs" Inherits="user_Addabout1" %>
-<%@ Register TagPrefix="CE" Namespace="CuteEditor" Assembly="CuteEditor" %>
+<%--<%@ Register TagPrefix="CE" Namespace="CuteEditor" Assembly="CuteEditor" %>--%>
+<%@ Register Assembly="FredCK.FCKeditorV2" Namespace="FredCK.FCKeditorV2" TagPrefix="FCKeditorV2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,6 +13,9 @@
             width: 234px;
         }
     </style>
+    <script src="ueditor/ueditor.config.js" type="text/javascript"></script>
+    <script src="ueditor/ueditor.all.min.js" type="text/javascript"></script>
+    <link href="ueditor/themes/default/css/ueditor.css" rel="stylesheet" type="text/css" />
 </head>
 <body bgcolor="#DEDDDD" text="#333333" link="#333333" vlink="#333333" alink="#333333" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
     <form id="form1" runat="server">
@@ -45,8 +49,10 @@
   <tr bgcolor="#FFFFFF"> 
     <td height="25" class="style1"><div align="right">内容：</div></td>
     <td height="25">
-        <CE:Editor id="WE_NewsContent" runat="server" AutoConfigure="Simple" 
-                    BreakElement="Br" Width="580px" ></CE:Editor></td>
+        <%--<CE:Editor id="WE_NewsContent" runat="server" AutoConfigure="Simple" 
+                    BreakElement="Br" Width="580px" ></CE:Editor>--%>
+        <textarea id="myEditor" cols="200" rows="8" name="myEditor" runat="server"></textarea>
+    </td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td height="25" class="style1"><div align="right">图片：</div></td>
@@ -100,5 +106,9 @@
            </InsertParameters>
        </asp:SqlDataSource>
     </form>
+    <script type="text/javascript">
+        var ue = new baidu.editor.ui.Editor();
+        ue.render("myEditor");   //这里填写要改变为编辑器的控件id
+    </script>
 </body>
 </html>
