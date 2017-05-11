@@ -5,3 +5,11 @@ F:\1.250code\git7\F-B\branches\FlighingandBlueThreeBllDll\BLLDALMod\bin\Debug\Me
 F:\1.250code\git7\F-B\branches\FlighingandBlueThreeBllDll\BLLDALMod\bin\Debug\MySql.Data.dll
 F:\1.250code\git7\F-B\branches\FlighingandBlueThreeBllDll\BLLDALMod\obj\Debug\BLLDALMod.dll
 F:\1.250code\git7\F-B\branches\FlighingandBlueThreeBllDll\BLLDALMod\obj\Debug\BLLDALMod.pdb
+F:\1.250code\git\branches\FlighingandBlueThreeBllDll\BLLDALMod\bin\Debug\BLLDALMod.dll
+F:\1.250code\git\branches\FlighingandBlueThreeBllDll\BLLDALMod\bin\Debug\BLLDALMod.pdb
+F:\1.250code\git\branches\FlighingandBlueThreeBllDll\BLLDALMod\bin\Debug\log4net.dll
+F:\1.250code\git\branches\FlighingandBlueThreeBllDll\BLLDALMod\bin\Debug\Memcached.ClientLibrary.dll
+F:\1.250code\git\branches\FlighingandBlueThreeBllDll\BLLDALMod\bin\Debug\MySql.Data.dll
+F:\1.250code\git\branches\FlighingandBlueThreeBllDll\BLLDALMod\obj\Debug\BLLDALMod.csprojResolveAssemblyReference.cache
+F:\1.250code\git\branches\FlighingandBlueThreeBllDll\BLLDALMod\obj\Debug\BLLDALMod.dll
+F:\1.250code\git\branches\FlighingandBlueThreeBllDll\BLLDALMod\obj\Debug\BLLDALMod.pdb

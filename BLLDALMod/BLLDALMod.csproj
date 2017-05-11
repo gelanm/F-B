@@ -61,7 +61,6 @@
     <Compile Include="BLL\productclass.cs" />
     <Compile Include="BLL\user.cs" />
     <Compile Include="BLL\wangzhan.cs" />
-    <Compile Include="Common.cs" />
     <Compile Include="DAL\book.cs" />
     <Compile Include="DAL\bookDAL.cs" />
     <Compile Include="DAL\gsclass.cs" />
@@ -72,16 +71,10 @@
     <Compile Include="DAL\productclass.cs" />
     <Compile Include="DAL\user.cs" />
     <Compile Include="DAL\wangzhan.cs" />
-    <Compile Include="DataControlHelper.cs" />
-    <Compile Include="DB.cs" />
     <Compile Include="DBUtility\DbHelperOleDb.cs" />
     <Compile Include="DBUtility\DBhelpmysql.cs" />
     <Compile Include="DBUtility\PubConstant.cs" />
     <Compile Include="DBUtility\SQLHelper.cs" />
-    <Compile Include="LogHelper.cs" />
-    <Compile Include="md5.cs" />
-    <Compile Include="memcached.cs" />
-    <Compile Include="MessageBox.cs" />
     <Compile Include="Model\book.cs" />
     <Compile Include="Model\gsclass.cs" />
     <Compile Include="Model\gscontent.cs" />
@@ -92,13 +85,9 @@
     <Compile Include="Model\qxcp.cs" />
     <Compile Include="Model\user.cs" />
     <Compile Include="Model\wangzhan.cs" />
-    <Compile Include="PageValidate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicConfig.cs" />
     <Compile Include="PublicEnum.cs" />
-    <Compile Include="upload.cs" />
-    <Compile Include="Uploader.cs" />
-    <Compile Include="ValidateNumber.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
