@@ -52,14 +52,17 @@
                <p>我们坐落于上海市嘉定区曹安公路边, 技术QQ群为：464947252 （希望同行业的同仁加入 讨论 互相 学习，我们会把相关有用的互联网技术在里面公布出来。）</p>
                <div class="row">
                  <div class="col-md-8">
-                   <form method="post" action="contact-post.html">
+                   <!--<form method="post" action="contact-post.html">-->
+
+                       <form action="http://localhost:10038/MessageAdd" method="post"  enctype="multipart/form-data" >
+
 					<div class="contact-to">
-                     	<input type="text" class="text" value="姓名..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name...';}">
-					 	<input type="text" class="text" value="邮件..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email...';}" style="margin-left: 10px">
-					 	<input type="text" class="text" value="项目..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject...';}" style="margin-left: 10px">
+                     	<input type="text" id="lianxiren" name="lianxiren" class="text" value="姓名..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name...';}">
+					 	<input type="text" id="liuyanTelEmail" name="liuyanTelEmail" class="text" value="邮件..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email...';}" style="margin-left: 10px">
+					 	<input type="text" id="liuyantitle" name="liuyantitle" class="text" value="项目..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject...';}" style="margin-left: 10px">
 					</div>
 					<div class="text2">
-	                   <textarea value="信息.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '信息';}">信息..</textarea>
+	                   <textarea id="liuyancontent" value="信息.." name="liuyancontent" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '信息';}">信息..</textarea>
 	                </div>
 	                <div class="contact_btn">
 	               		<input name="submit" type="submit" id="submit" value="Submit">
