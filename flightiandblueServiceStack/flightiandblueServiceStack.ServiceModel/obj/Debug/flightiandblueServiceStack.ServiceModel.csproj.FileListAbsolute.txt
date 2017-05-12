@@ -1,0 +1,6 @@
+F:\1.250code\git7\F-B\branches\flightiandblueServiceStack\flightiandblueServiceStack\flightiandblueServiceStack.ServiceModel\bin\Debug\flightiandblueServiceStack.ServiceModel.dll
+F:\1.250code\git7\F-B\branches\flightiandblueServiceStack\flightiandblueServiceStack\flightiandblueServiceStack.ServiceModel\bin\Debug\flightiandblueServiceStack.ServiceModel.pdb
+F:\1.250code\git7\F-B\branches\flightiandblueServiceStack\flightiandblueServiceStack\flightiandblueServiceStack.ServiceModel\bin\Debug\ServiceStack.Interfaces.dll
+F:\1.250code\git7\F-B\branches\flightiandblueServiceStack\flightiandblueServiceStack\flightiandblueServiceStack.ServiceModel\obj\Debug\flightiandblueServiceStack.ServiceModel.csprojResolveAssemblyReference.cache
+F:\1.250code\git7\F-B\branches\flightiandblueServiceStack\flightiandblueServiceStack\flightiandblueServiceStack.ServiceModel\obj\Debug\flightiandblueServiceStack.ServiceModel.dll
+F:\1.250code\git7\F-B\branches\flightiandblueServiceStack\flightiandblueServiceStack\flightiandblueServiceStack.ServiceModel\obj\Debug\flightiandblueServiceStack.ServiceModel.pdb
