@@ -27,8 +27,15 @@ sudo apt-get update
 3.  把 项目放到ubuntu 上面  cd过去，在 实行 xsp4 --port=9000 就可以了 。 
   
 
+          ps -ef |grep xsp4
+
+          kill -9 id
+
           xsp4 --port=80 --nonstop --quiet &
 
+端口：80是首页
+端口：8083后台
+端口：8082 api
 
 
 
