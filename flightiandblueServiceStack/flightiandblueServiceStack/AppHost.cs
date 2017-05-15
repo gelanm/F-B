@@ -2,6 +2,7 @@
 using ServiceStack;
 using flightiandblueServiceStack.ServiceInterface;
 
+
 namespace flightiandblueServiceStack
 {
     public class AppHost : AppHostBase
@@ -21,6 +22,14 @@ namespace flightiandblueServiceStack
             //Config examples
             //this.Plugins.Add(new PostmanFeature());
             //this.Plugins.Add(new CorsFeature());
+            base.SetConfig(new HostConfig
+    {
+        GlobalResponseHeaders = {
+            { "Access-Control-Allow-Origin", "*" },
+            { "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS" },
+            { "Access-Control-Allow-Headers", "Content-Type" },
+                },
+    });
         }
     }
 }
