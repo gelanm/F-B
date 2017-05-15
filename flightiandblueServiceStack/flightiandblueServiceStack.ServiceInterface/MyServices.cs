@@ -18,6 +18,7 @@ namespace flightiandblueServiceStack.ServiceInterface
             objmode.liuyangcontent = request.liuyancontent;
             objmode.phonenum = request.liuyanTelEmail;
             objmode.username = request.lianxiren;
+            objmode.liuyantitme = DateTime.Now;
 
             objBll.Add(objmode);
             return new MessageAddResponse { Result = "留言成功!" };
