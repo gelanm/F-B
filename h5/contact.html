@@ -3,14 +3,58 @@
 <head>
 <title>Contact</title>
 <meta charset="utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jsApi.js"></script>
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="text/javascript">
+    function AddMessage() {
+        var liuyantitle = $("#liuyantitle").val();
+        var lianxiren = $("#lianxiren").val();
+        var liuyanTelEmail = $("#liuyanTelEmail").val();
+        var liuyancontent = $("#liuyancontent").val();
+
+        if (lianxiren == "") {
+            alert("请输入联系人名字！");
+            return;
+        }
+        if (liuyanTelEmail == "") {
+            alert("请输入邮箱！");
+            return;
+        }
+        if (liuyantitle == "") {
+            alert("请输入标题！");
+            return;
+        }
+        if (liuyancontent == "") {
+            alert("请输入留言内容！");
+            return;
+        }
+
+        var a = { "liuyantitle": liuyantitle, "liuyancontent": liuyancontent, "liuyanTelEmail": liuyanTelEmail, "lianxiren": lianxiren }
+        var data = api("MessageAdd", a)
+        //var data = MessageAdd( a );
+        //if (data.Status.IsSuccess) {
+        //    $('#selshopname').empty();
+
+        //    $.each(data.lstUser, function (i, item) {
+        //        i = i + 1;                      
+        //        $('#selshopname').append('<option id="' + i + '" value="' + item.RegisterId + '">' + item.Address +'</option>');
+        //        $('#selshopname').attr('size', i + 1);
+        //    });                  
+        //}
+        //else { 
+        //    alert(data.Status.ErrorMessage);
+        //}
+        alert(data.Result);
+    }
+</script>
 </head>
 <body>
    <!----- start-header---->
@@ -54,7 +98,7 @@
                  <div class="col-md-8">
                    <!--<form method="post" action="contact-post.html">-->
 
-                       <form action="http://localhost:10038/MessageAdd" method="post"  enctype="multipart/form-data" >
+                       <!--<form action="http://localhost:10038/MessageAdd" method="post"  enctype="multipart/form-data" >-->
 
 					<div class="contact-to">
                      	<input type="text" id="lianxiren" name="lianxiren" class="text" value="姓名..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name...';}">
@@ -65,7 +109,7 @@
 	                   <textarea id="liuyancontent" value="信息.." name="liuyancontent" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '信息';}">信息..</textarea>
 	                </div>
 	                <div class="contact_btn">
-	               		<input name="submit" type="submit" id="submit" value="Submit">
+	               		<input name="submit" type="submit" id="submit" value="Submit" onclick="AddMessage()">
 	                </div>
 	                <div class="clearfix"> </div>
 	               </form>
