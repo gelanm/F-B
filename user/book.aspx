@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="book.aspx.cs" Inherits="user_book" %>
-<%--<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>--%>
+<%@ Register Assembly="BLLDALMod" Namespace="BLLDALMod.Comm.UI" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -29,9 +29,7 @@
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td class="style1" colspan="2">
-        <asp:GridView ID="GridView1" runat="server"  
-            AutoGenerateColumns="False" DataKeyNames="id"  
-            Width="100%">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" Width="100%">
             <Columns>
                 <asp:TemplateField>
                     <ItemTemplate>
@@ -50,7 +48,6 @@
                 <asp:BoundField DataField="liuyangcontent" HeaderText="留言内容" 
                     SortExpression="liuyangcontent" />
                 <asp:BoundField DataField="hueifu" HeaderText="回复" SortExpression="hueifu" />
-                 
                 <asp:TemplateField Visible="False">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("id") %>'></asp:TextBox>
@@ -61,6 +58,7 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+        <cc1:ctrlPage ID="ctrlPage" PageSize="5" runat="server" IsShowLoading="true"></cc1:ctrlPage>
          <%--<webdiyer:aspnetpager ID="AspNetPager1" runat="server" CssClass="formfield" 
             CustomInfoClass="formbutton" 
             CustomInfoHTML="第&lt;font color='red'&gt;&lt;b&gt;%CurrentPageIndex%&lt;/b&gt;&lt;/font&gt;页 共%PageCount%&nbsp;页 %StartRecordIndex%-%EndRecordIndex%" 
@@ -71,6 +69,8 @@
             ShowNavigationToolTip="True" style="FONT-SIZE: 14px" 
             SubmitButtonClass="formfield" SubmitButtonText="GO" width="506px">
         </webdiyer:aspnetpager>--%>
+
+        
       </td>
   </tr>
   <tr bgcolor="#FFFFFF"> 

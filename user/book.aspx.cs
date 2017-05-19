@@ -14,27 +14,34 @@ public partial class user_book : System.Web.UI.Page
             Response.Redirect("index.aspx");
         }
 
-        if (!IsPostBack)
-        {
+        //if (!IsPostBack)
+        //{
 
             Maticsoft.BLL.book objbook = new Maticsoft.BLL.book();
 
             DataView dv = objbook.GetAllList().DefaultView;
             PagedDataSource pds = new PagedDataSource();
 
-            //AspNetPager1.RecordCount = dv.Count;
+            ctrlPage.TotalRecords = dv.Count;
             pds.DataSource = dv;
             pds.AllowPaging = true;
-            //pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
-            //pds.PageSize = AspNetPager1.PageSize;
+            pds.CurrentPageIndex = ctrlPage.PageIndex - 1;
+            pds.PageSize = ctrlPage.PageSize;
             this.GridView1.DataSource = pds;
             this.GridView1.DataBind();
-        }
+        //}
 
 
     }
     protected void AspNetPager1_PageChanged(object sender, EventArgs e)
     {
+
+
+
+
+
+
+
 
     }
     protected void CheckBox2_CheckedChanged(object sender, EventArgs e)
