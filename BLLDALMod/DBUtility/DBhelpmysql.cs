@@ -73,8 +73,9 @@ namespace Maticsoft.DBUtility
         }
 
         //Insert statement
-        public static void Insert(string query, MySqlParameter[] Parameters)
+        public static object Insert(string query, MySqlParameter[] Parameters)
         {
+            object obj = null;
             DateTime dtStart = DateTime.Now;
             //open connection
              
@@ -94,7 +95,13 @@ namespace Maticsoft.DBUtility
                         cmd.Parameters.AddRange(Parameters);
                     }
                     //Execute command
-                    cmd.ExecuteNonQuery();
+                    //cmd.ExecuteNonQuery();
+                    obj = cmd.ExecuteScalar();
+                    cmd.Parameters.Clear();
+                    if ((Object.Equals(obj, null)) || (Object.Equals(obj, System.DBNull.Value)))
+                    {
+                        obj = null;
+                    }
                 }
                 catch (Exception e)
                 {
@@ -109,6 +116,7 @@ namespace Maticsoft.DBUtility
                     cmd.Dispose();
                     AddLog.AddSQLLog(query, dtStart.TimeOfDay.ToString(), DateTime.Now.TimeOfDay.ToString(), Convert.ToString(DateTime.Now - dtStart));
                 }
+                return obj;
               
         }
 
