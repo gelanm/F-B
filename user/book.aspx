@@ -58,7 +58,8 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <cc1:ctrlPage ID="ctrlPage" PageSize="5" runat="server" IsShowLoading="true"></cc1:ctrlPage>
+        <cc1:ctrlPage ID="ctrlPage" PageSize="5" OnPageGo="AspNetPager1_PageChanged"  OnIndexNumberChanged ="AspNetPager1_PageChanged"
+             OnIndexChanged="AspNetPager1_PageChanged" runat="server" IsShowLoading="true"></cc1:ctrlPage>
          <%--<webdiyer:aspnetpager ID="AspNetPager1" runat="server" CssClass="formfield" 
             CustomInfoClass="formbutton" 
             CustomInfoHTML="第&lt;font color='red'&gt;&lt;b&gt;%CurrentPageIndex%&lt;/b&gt;&lt;/font&gt;页 共%PageCount%&nbsp;页 %StartRecordIndex%-%EndRecordIndex%" 
