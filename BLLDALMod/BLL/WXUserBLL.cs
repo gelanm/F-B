@@ -22,6 +22,25 @@ namespace BLLDALMod.BLL
         {
             return dal.InsertMysql(model);
         }
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public WXUser GetModel(int Id)
+        {
+
+            return dal.GetModel(Id);
+        }
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public WXUser GetModel(string OpenId)
+        {
+
+            return dal.GetModel(OpenId);
+        }
+
         #endregion  Method
     }
 }

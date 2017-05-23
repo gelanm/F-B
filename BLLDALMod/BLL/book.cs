@@ -104,7 +104,7 @@ namespace Maticsoft.BLL
         }
 
         /// <summary>
-        /// 获得数据列表
+        /// 获得数据列表 
         /// </summary>
         //public DataSet GetList(int PageSize,int PageIndex,string strWhere)
         //{
