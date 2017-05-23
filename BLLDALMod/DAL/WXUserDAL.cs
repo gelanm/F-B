@@ -3,6 +3,7 @@ using Maticsoft.DBUtility;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -119,6 +120,179 @@ namespace BLLDALMod.DAL
             }
             //return 1;
         }
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public WXUser GetModel(int Id)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select * from WXUser ");
+            strSql.Append(" where Id=@Id");
+            MySqlParameter[] parameters = {
+					new MySqlParameter("@Id", MySqlDbType.Int16,4)
+			};
+            parameters[0].Value = Id;
+
+            WXUser model = new WXUser();
+            DataTable dt = DBhelpmysql.Select(strSql.ToString(), parameters);
+            if (dt.Rows.Count > 0)
+            {
+                if (dt.Rows[0]["Id"] != null && dt.Rows[0]["Id"].ToString() != "")
+                {
+                    model.Id = int.Parse(dt.Rows[0]["Id"].ToString());
+                }
+                if (dt.Rows[0]["OpenId"] != null && dt.Rows[0]["OpenId"].ToString() != "")
+                {
+                    model.OpenId = dt.Rows[0]["OpenId"].ToString();
+                }
+                if (dt.Rows[0]["UnionId"] != null && dt.Rows[0]["UnionId"].ToString() != "")
+                {
+                    model.UnionId = dt.Rows[0]["UnionId"].ToString();
+                }
+                if (dt.Rows[0]["NickName"] != null && dt.Rows[0]["NickName"].ToString() != "")
+                {
+                    model.NickName = dt.Rows[0]["NickName"].ToString();
+                }
+                if (dt.Rows[0]["Sex"] != null && dt.Rows[0]["Sex"].ToString() != "")
+                {
+                    model.Sex = int.Parse(dt.Rows[0]["Sex"].ToString());
+                }
+                if (dt.Rows[0]["Province"] != null && dt.Rows[0]["Province"].ToString() != "")
+                {
+                    model.Province = dt.Rows[0]["Province"].ToString();
+                }
+                if (dt.Rows[0]["City"] != null && dt.Rows[0]["City"].ToString() != "")
+                {
+                    model.City = dt.Rows[0]["City"].ToString();
+                }
+                if (dt.Rows[0]["Country"] != null && dt.Rows[0]["Country"].ToString() != "")
+                {
+                    model.Country = dt.Rows[0]["Country"].ToString();
+                }
+                if (dt.Rows[0]["HeadimgUrl"] != null && dt.Rows[0]["HeadimgUrl"].ToString() != "")
+                {
+                    model.HeadimgUrl = dt.Rows[0]["HeadimgUrl"].ToString();
+                }
+                if (dt.Rows[0]["AccessToken"] != null && dt.Rows[0]["AccessToken"].ToString() != "")
+                {
+                    model.AccessToken = dt.Rows[0]["AccessToken"].ToString();
+                }
+                if (dt.Rows[0]["RefreshToken"] != null && dt.Rows[0]["RefreshToken"].ToString() != "")
+                {
+                    model.RefreshToken = dt.Rows[0]["RefreshToken"].ToString();
+                }
+                if (dt.Rows[0]["AddDate"] != null && dt.Rows[0]["AddDate"].ToString() != "")
+                {
+                    model.AddDate = DateTime.Parse(dt.Rows[0]["AddDate"].ToString());
+                }
+                if (dt.Rows[0]["UpdateTime"] != null && dt.Rows[0]["UpdateTime"].ToString() != "")
+                {
+                    model.UpdateTime = DateTime.Parse(dt.Rows[0]["UpdateTime"].ToString());
+                }
+                if (dt.Rows[0]["Memo"] != null && dt.Rows[0]["Memo"].ToString() != "")
+                {
+                    model.Memo = dt.Rows[0]["Memo"].ToString();
+                }
+                if (dt.Rows[0]["Status"] != null && dt.Rows[0]["Status"].ToString() != "")
+                {
+                    model.Status = dt.Rows[0]["Status"].ToString();
+                }
+                return model;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public WXUser GetModel(string OpenId)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select * from WXUser ");
+            strSql.Append(" where OpenId=@OpenId");
+            MySqlParameter[] parameters = {
+					new MySqlParameter("@OpenId", MySqlDbType.VarChar,100)
+			};
+            parameters[0].Value = OpenId;
+
+            WXUser model = new WXUser();
+            DataTable dt = DBhelpmysql.Select(strSql.ToString(), parameters);
+            if (dt.Rows.Count > 0)
+            {
+                if (dt.Rows[0]["Id"] != null && dt.Rows[0]["Id"].ToString() != "")
+                {
+                    model.Id = int.Parse(dt.Rows[0]["Id"].ToString());
+                }
+                if (dt.Rows[0]["OpenId"] != null && dt.Rows[0]["OpenId"].ToString() != "")
+                {
+                    model.OpenId = dt.Rows[0]["OpenId"].ToString();
+                }
+                if (dt.Rows[0]["UnionId"] != null && dt.Rows[0]["UnionId"].ToString() != "")
+                {
+                    model.UnionId = dt.Rows[0]["UnionId"].ToString();
+                }
+                if (dt.Rows[0]["NickName"] != null && dt.Rows[0]["NickName"].ToString() != "")
+                {
+                    model.NickName = dt.Rows[0]["NickName"].ToString();
+                }
+                if (dt.Rows[0]["Sex"] != null && dt.Rows[0]["Sex"].ToString() != "")
+                {
+                    model.Sex = int.Parse(dt.Rows[0]["Sex"].ToString());
+                }
+                if (dt.Rows[0]["Province"] != null && dt.Rows[0]["Province"].ToString() != "")
+                {
+                    model.Province = dt.Rows[0]["Province"].ToString();
+                }
+                if (dt.Rows[0]["City"] != null && dt.Rows[0]["City"].ToString() != "")
+                {
+                    model.City = dt.Rows[0]["City"].ToString();
+                }
+                if (dt.Rows[0]["Country"] != null && dt.Rows[0]["Country"].ToString() != "")
+                {
+                    model.Country = dt.Rows[0]["Country"].ToString();
+                }
+                if (dt.Rows[0]["HeadimgUrl"] != null && dt.Rows[0]["HeadimgUrl"].ToString() != "")
+                {
+                    model.HeadimgUrl = dt.Rows[0]["HeadimgUrl"].ToString();
+                }
+                if (dt.Rows[0]["AccessToken"] != null && dt.Rows[0]["AccessToken"].ToString() != "")
+                {
+                    model.AccessToken = dt.Rows[0]["AccessToken"].ToString();
+                }
+                if (dt.Rows[0]["RefreshToken"] != null && dt.Rows[0]["RefreshToken"].ToString() != "")
+                {
+                    model.RefreshToken = dt.Rows[0]["RefreshToken"].ToString();
+                }
+                if (dt.Rows[0]["AddDate"] != null && dt.Rows[0]["AddDate"].ToString() != "")
+                {
+                    model.AddDate = DateTime.Parse(dt.Rows[0]["AddDate"].ToString());
+                }
+                if (dt.Rows[0]["UpdateTime"] != null && dt.Rows[0]["UpdateTime"].ToString() != "")
+                {
+                    model.UpdateTime = DateTime.Parse(dt.Rows[0]["UpdateTime"].ToString());
+                }
+                if (dt.Rows[0]["Memo"] != null && dt.Rows[0]["Memo"].ToString() != "")
+                {
+                    model.Memo = dt.Rows[0]["Memo"].ToString();
+                }
+                if (dt.Rows[0]["Status"] != null && dt.Rows[0]["Status"].ToString() != "")
+                {
+                    model.Status = dt.Rows[0]["Status"].ToString();
+                }
+                return model;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         #endregion  Method
     }
 }
