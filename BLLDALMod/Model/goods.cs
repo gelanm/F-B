@@ -13,7 +13,7 @@ namespace BLLDALMod.Model
 
         #region 成员变量、构造函数
         string m_strTableName;
-        long m_id;
+        int m_id;
         string m_Title;
         string m_MainImage;
         string m_ContentValidity;
@@ -24,6 +24,7 @@ namespace BLLDALMod.Model
         string m_State;
         string m_type;
         string m_Remark;
+        int m_UserId;
 
         /// <summary>
         /// 初始化类 Goods 的新实例。
@@ -49,7 +50,7 @@ namespace BLLDALMod.Model
         /// <summary>
         /// 
         /// </summary>
-        public long id
+        public int id
         {
             get
             {
@@ -208,6 +209,20 @@ namespace BLLDALMod.Model
             set
             {
                 m_Remark = value;
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int UserId
+        {
+            get
+            {
+                return m_UserId;
+            }
+            set 
+            {
+                m_UserId = value;
             }
         }
 
