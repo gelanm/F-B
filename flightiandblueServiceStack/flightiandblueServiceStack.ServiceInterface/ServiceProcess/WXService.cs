@@ -49,18 +49,26 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
             try
             {
                 WXUserBLL objWXUserBLL = new WXUserBLL();
-                BLLDALMod.Model.WXUser objWXUser = new BLLDALMod.Model.WXUser();
-                objWXUser.OpenId = objWXUserInfo.openId;
-                objWXUser.Sex = objWXUserInfo.gender;
-                objWXUser.City = objWXUserInfo.city;
-                objWXUser.Country = objWXUserInfo.country;
-                objWXUser.Province = objWXUserInfo.province;
-                objWXUser.UnionId = objWXUserInfo.unionId;
-                objWXUser.NickName = objWXUserInfo.nickName;
-                objWXUser.HeadimgUrl = objWXUserInfo.avatarUrl;
-                objWXUser.AddDate = DateTime.Now;
+                BLLDALMod.Model.WXUser model = objWXUserBLL.GetModel(objWXUserInfo.openId);
+                if (model != null)
+                {
+                    return model.Id;
+                }
+                else
+                {
+                    BLLDALMod.Model.WXUser objWXUser = new BLLDALMod.Model.WXUser();
+                    objWXUser.OpenId = objWXUserInfo.openId;
+                    objWXUser.Sex = objWXUserInfo.gender;
+                    objWXUser.City = objWXUserInfo.city;
+                    objWXUser.Country = objWXUserInfo.country;
+                    objWXUser.Province = objWXUserInfo.province;
+                    objWXUser.UnionId = objWXUserInfo.unionId;
+                    objWXUser.NickName = objWXUserInfo.nickName;
+                    objWXUser.HeadimgUrl = objWXUserInfo.avatarUrl;
+                    objWXUser.AddDate = DateTime.Now;
 
-                return objWXUserBLL.Add(objWXUser);
+                    return objWXUserBLL.Add(objWXUser);
+                }
                 //return 1;
             }
             catch (Exception ex)
