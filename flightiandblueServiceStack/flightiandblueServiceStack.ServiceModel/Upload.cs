@@ -8,14 +8,18 @@ using System.Threading.Tasks;
 namespace flightiandblueServiceStack.ServiceModel
 {
     [Route("/upload")]
-    public class Upload
+    public class Upload : IReturn<UploadResponse>
     {
-        public string Md5 { get; set; }
-        public string Card { get; set; }
-        public string Address { get; set; }
+        public string Title { get; set; }
         public int RegisterId { get; set; }
-        public int Status { get; set; }
     }
+
+    public class UploadResponse : BaseResponseType
+    {
+        public int id { get; set; }
+    }
+
+
 
     [Route("/resize/{Id}")]
     public class Resize
