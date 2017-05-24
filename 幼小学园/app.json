@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/detail/detail",
+    "pages/my/index",
+    "pages/my/uploadGoods",
+    "pages/my/mapAddress",
+    "pages/my/set"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "幼小学园",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "blue",
+    "backgroundColor": "#dfdfdf",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "img/homeoff.png",
+      "selectedIconPath": "img/homeon.png"
+    },
+    {
+      "pagePath": "pages/my/index",
+      "text": "我的",
+      "iconPath": "img/myoff.png",
+      "selectedIconPath": "img/myon.png"
+    }]
+  }
+}
