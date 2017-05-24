@@ -63,7 +63,6 @@ namespace BLLDALMod.Comm.UI
         #region "页面重写函数"
 
         /// <summary>
-        /// CreateBy:BeautyMyth
         /// 在点击分页控件时是否需要Loading效果
         /// </summary>
         public bool IsShowLoading
