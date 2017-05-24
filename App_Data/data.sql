@@ -90,6 +90,47 @@ CREATE TABLE `wangzhan` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Table structure for goods
+-- ----------------------------
+CREATE TABLE `goods` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `Title` varchar(60) NOT NULL,
+  `MainImage` varchar(200) NOT NULL,
+  `ContentValidity` varchar(1000) DEFAULT NULL,
+  `PurchaseDate` datetime DEFAULT NULL,
+  `Price` double DEFAULT NULL,
+  `AddTime` datetime DEFAULT NULL,
+  `UpdateTime` datetime DEFAULT NULL,
+  `State` varchar(4) NOT NULL DEFAULT '0',
+  `type` varchar(10) DEFAULT NULL,
+  `Remark` varchar(1000) DEFAULT NULL,
+  `UserId` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for WXUser
+-- ----------------------------
+CREATE TABLE `WXUser` (
+  `Id` bigint(16) NOT NULL AUTO_INCREMENT,
+  `OpenId` varchar(100) NOT NULL,
+  `UnionId` varchar(100) DEFAULT NULL,
+  `NickName` varchar(50) DEFAULT NULL,
+  `Province` varchar(50) DEFAULT NULL,
+  `City` varchar(50) DEFAULT NULL,
+  `Country` varchar(50) DEFAULT NULL,
+  `Sex` int(11) DEFAULT NULL,
+  `HeadimgUrl` varchar(250) DEFAULT NULL,
+  `AccessToken` varchar(250) DEFAULT NULL,
+  `RefreshToken` varchar(250) DEFAULT NULL,
+  `AddDate` datetime NOT NULL,
+  `UpdateTime` datetime DEFAULT NULL,
+  `Memo` varchar(1000) DEFAULT NULL,
+  `Status` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
 -- Records 
 -- ----------------------------
 INSERT INTO `gsclass` VALUES ('1', '公司简介', '1', '<p style=\"text-indent: 2em;font-size: 12pt;\">&nbsp;上海 &nbsp;</p>\r\n<p>\r\n上海 平台。\r\n</p>');
