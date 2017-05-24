@@ -1,8 +1,9 @@
 // pages/my/uploadGoods.js
 //var PostData = require('../../js/PostData.js');
-var PostData = require('../../utils/api.js');
+var api = require('../../utils/api.js');
 Page({
   data: {
+    titleClass: " ",
     urlClass: " ",
     whoClass: " ",
     typeClass: " ",
@@ -60,6 +61,18 @@ Page({
   //   }
   // },
   // 验证不能为空
+  verifyNotT: function (event) {
+    var value = event.detail.value;
+    if (value.length === 0) {
+      this.setData({
+        "titleClass": "titleClass"
+      })
+    } else {
+      this.setData({
+        "titleClass": " "
+      })
+    }
+  },
   verifyNotK: function (event) {
     var value = event.detail.value;
     if (value.length === 0) {
@@ -116,32 +129,45 @@ Page({
   formSubmit: function (e) {
     var _self = this;
     var valueAll = e.detail.value;
-    if (verifyHttp(valueAll.url)) {
+    if (valueAll.title.length === 0) {
       this.setData({
-        "urlClass": "urlClass"
+        "titleClass": "titleClass"
       })
     }
-    if (valueAll.who.length === 0) {
-      this.setData({
-        "whoClass": "whoClass"
-      })
-    }
-    if (valueAll.type.length === 0) {
-      this.setData({
-        "typeClass": "typeClass"
-      })
-    }
-    if (valueAll.desc.length === 0) {
-      this.setData({
-        "descClass": "descClass"
-      })
-    }
+    // if (verifyHttp(valueAll.url)) {
+    //   this.setData({
+    //     "urlClass": "urlClass"
+    //   })
+    // }
+    // if (valueAll.who.length === 0) {
+    //   this.setData({
+    //     "whoClass": "whoClass"
+    //   })
+    // }
+    // if (valueAll.type.length === 0) {
+    //   this.setData({
+    //     "typeClass": "typeClass"
+    //   })
+    // }
+    // if (valueAll.desc.length === 0) {
+    //   this.setData({
+    //     "descClass": "descClass"
+    //   })
+    // }
     // if (!verifyHttp(valueAll.url) && valueAll.who.length > 0 && valueAll.type.length > 0 && valueAll.desc.length > 0) {
-      if (valueAll.url.length>0 && valueAll.who.length > 0 && valueAll.type.length > 0 && valueAll.desc.length > 0) {
-      valueAll['debug'] = 'true';
-      var options = {
-        'data': valueAll
-      }
+    // if (valueAll.title.length>0 && valueAll.who.length > 0 && valueAll.type.length > 0 && valueAll.desc.length > 0) {
+    //   valueAll['debug'] = 'true';
+    //   var options = {
+    //     'data': valueAll
+    //   }
+      var a = { "Title": valueAll.title, "RegisterId": 1}
+      api.Api("upload", a).then(res2 => {
+        //console.log(res2);
+        if (res2.Status.IsSuccess) {
+          console.log(res2)
+        } else {
+          console.log(res2.Status.ErrorMessage)
+        }
       // PostData(options, function (res) {
       //   if (res.data && !res.data.error) {
       //     _self.setData({
@@ -155,9 +181,9 @@ Page({
       //     })
       //   }
       // })
-    }
-
-  },
+    })
+    //}
+  }
 })
 
 

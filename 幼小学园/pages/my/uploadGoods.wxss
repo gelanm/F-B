@@ -1,5 +1,5 @@
 /* pages/my/uploadGoods.wxss */
-.urlClass , .whoClass , .typeClass, .descClass{
+.urlClass , .whoClass , .typeClass, .descClass, .titleClass{
     border: 1px solid red !important;
 }
 
