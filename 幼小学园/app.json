@@ -6,6 +6,7 @@
     "pages/my/uploadGoods",
     "pages/my/mapAddress",
     "pages/my/unpostGoods",
+    "pages/my/postGoods",
     "pages/my/set"
   ],
   "window":{
