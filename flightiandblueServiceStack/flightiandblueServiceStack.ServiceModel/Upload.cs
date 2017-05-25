@@ -12,6 +12,9 @@ namespace flightiandblueServiceStack.ServiceModel
     {
         public string Title { get; set; }
         public int RegisterId { get; set; }
+        public string Desc { get; set; }
+        public DateTime PurchaseDate { get; set; }
+        public double Price { get; set; }
     }
 
     public class UploadResponse : BaseResponseType
