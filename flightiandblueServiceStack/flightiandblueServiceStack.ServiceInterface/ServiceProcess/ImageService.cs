@@ -11,6 +11,8 @@ using System.Drawing;
 using System.Security.Cryptography;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
+using BLLDALMod.Model;
+using BLLDALMod.BLL;
 
 namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
 {
@@ -119,6 +121,25 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
                     string[] str2 = fname.Split(',');
                     fname1 = str2[0];
                     fname2 = str2[1];
+                }
+
+                Goods objGoods = new Goods();
+                objGoods.Title = request.Title;
+                objGoods.MainImage = idcreatedir + "/350/" + fname1;
+                objGoods.ContentValidity = request.Desc;
+                objGoods.PurchaseDate = request.PurchaseDate;
+                objGoods.AddTime = DateTime.Now;
+                objGoods.State = "0";
+                objGoods.Price = request.Price;
+                objGoods.UserId = request.RegisterId;
+                goodsBLL objGoodsBLL = new goodsBLL();
+                int a = objGoodsBLL.Add(objGoods);
+                if (a > 0)
+                {
+                    return "上传成功";
+                }
+                else {
+                    return "上传失败";
                 }
 
                 //int i = Db.Update<UserInfo>(
