@@ -10,13 +10,13 @@ Page({
     userInfo: {},
     //projectSource: 'https://github.com/liuxuanqiang/wechat-weapp-mall',
     userListInfo: [{
-      id:1,
+      id: 'postGoods',
       icon: '../../img/iconfont-dingdan.png',
       text: '已分享的宝贝',
       isunread: true,
       unreadNum: 3
     }, {
-        id: 2,
+        id: 'unpostGoods',
         icon: '../../img/iconfont-card.png',
         text: '未分享的宝贝',
       isunread: false,
