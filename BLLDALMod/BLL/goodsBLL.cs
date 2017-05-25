@@ -15,9 +15,9 @@ namespace BLLDALMod.BLL
         /// <summary>
         /// 增加一条数据
         /// </summary>
-        public void Add(BLLDALMod.Model.Goods model)
+        public int Add(BLLDALMod.Model.Goods model)
         {
-            dal.Add(model);
+            return  dal.Add(model);
         }
 
         /// <summary>
