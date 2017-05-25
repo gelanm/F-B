@@ -5,7 +5,8 @@ Page({
     pn: 0,
     list: [],
     showMore: true,
-    showLoading: true
+    showLoading: true,
+    a:{}
   },
   redirect: function (e) {
     var id = e.currentTarget.dataset.id;
@@ -28,11 +29,11 @@ Page({
     this.loadData(this.data.pn);
   },
   loadData: function (pn) {
-    api.Api('in_theaters', pn).then(res => {
-      //console.log(res);
-      if (res.subjects.length > 0) {
+    api.Api('viewGoods', pn).then(res => {
+      console.log(res);
+      if (res.length > 0) {
         this.setData({
-          list: this.data.list.concat(res.subjects),
+          list: this.data.list.concat(res),
           showLoading: false,
           pn: pn + 1
         })
@@ -45,7 +46,21 @@ Page({
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-    this.loadData(this.data.pn);
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        // Do something with return value
+        console.log(value)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "Type": 0 }
+         })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+    console.log(this.data.a)
+    this.loadData(this.data.a);
   },
   onReady: function () {
     // 页面渲染完成

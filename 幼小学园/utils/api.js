@@ -19,5 +19,8 @@ function fetchApi(name, param) {
 module.exports={
     Api:function(name,param){
         return fetchApi(name,param).then(res=>res.data)//.catch(rej=>rej.data)
+    },
+    getList: function (type, pn = 0, count = 10) {
+      return fetchApi(type, { "start": pn * count, "count": count }).then(res => res.data)
     }
 }

@@ -27,15 +27,23 @@ Page({
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     var that=this;
-    wx.getStorage({
-      key: 'User',
-      success: function (res) {
-        console.log(res.data.Id)
-        that.setData({
-          UserId:res.data.Id
-        })
-      }
-    })
+    var value = wx.getStorageSync('User')
+    if (value) {
+      // Do something with return value
+      console.log(value)
+      that.setData({
+        UserId: value.Id
+      })
+    }
+    // wx.getStorage({
+    //   key: 'User',
+    //   success: function (res) {
+    //     console.log(res.data.Id)
+    //     that.setData({
+    //       UserId:res.data.Id
+    //     })
+    //   }
+    // })
   },
   chooseimage: function () {
     var _this = this;
@@ -220,7 +228,11 @@ Page({
           },
           success: function (res) {
             console.log(res)
-            var data = res.data
+            wx.showToast({
+              title: res.data,
+              icon: 'success',
+              duration: 2000
+            })
             //do something
           }
         })
