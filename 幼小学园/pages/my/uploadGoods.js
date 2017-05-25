@@ -3,7 +3,9 @@
 var api = require('../../utils/api.js');
 Page({
   data: {
+    UserId:" ",
     titleClass: " ",
+    priceClass:" ",
     urlClass: " ",
     whoClass: " ",
     typeClass: " ",
@@ -15,9 +17,25 @@ Page({
     addTypeData: "",
     callbackDesc: " ",
     toast1Hidden: true,
+    date: '2017-01-01',
+  },
+  bindDateChange: function (e) {
+    this.setData({
+      date: e.detail.value
+    })
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
+    var that=this;
+    wx.getStorage({
+      key: 'User',
+      success: function (res) {
+        console.log(res.data.Id)
+        that.setData({
+          UserId:res.data.Id
+        })
+      }
+    })
   },
   chooseimage: function () {
     var _this = this;
@@ -31,6 +49,7 @@ Page({
         _this.setData({
           tempFilePaths: tempFilePaths0
         })
+        console.log(tempFilePaths0)
         // wx.uploadFile({
         //   url: 'http://api.test.com/apisk/upload', //仅为示例，非真实的接口地址
         //   filePath: tempFilePaths0[0],
@@ -60,6 +79,19 @@ Page({
   //     })
   //   }
   // },
+  // 验证是否为数字
+  verifyInt: function (event) {
+    var value = event.detail.value;
+    if (verifyInt(value)) {
+      this.setData({
+        "priceClass": "priceClass"
+      })
+    } else {
+      this.setData({
+        "priceClass": " "
+      })
+    }
+  },
   // 验证不能为空
   verifyNotT: function (event) {
     var value = event.detail.value;
@@ -134,6 +166,11 @@ Page({
         "titleClass": "titleClass"
       })
     }
+    if (verifyInt(valueAll.price) || (valueAll.price === 0)) {
+      this.setData({
+        "priceClass": "priceClass"
+      })
+    }
     // if (verifyHttp(valueAll.url)) {
     //   this.setData({
     //     "urlClass": "urlClass"
@@ -149,25 +186,44 @@ Page({
     //     "typeClass": "typeClass"
     //   })
     // }
-    // if (valueAll.desc.length === 0) {
-    //   this.setData({
-    //     "descClass": "descClass"
-    //   })
-    // }
+    if (valueAll.desc.length === 0) {
+      this.setData({
+        "descClass": "descClass"
+      })
+    }
     // if (!verifyHttp(valueAll.url) && valueAll.who.length > 0 && valueAll.type.length > 0 && valueAll.desc.length > 0) {
     // if (valueAll.title.length>0 && valueAll.who.length > 0 && valueAll.type.length > 0 && valueAll.desc.length > 0) {
     //   valueAll['debug'] = 'true';
-    //   var options = {
-    //     'data': valueAll
-    //   }
-      var a = { "Title": valueAll.title, "RegisterId": 1}
-      api.Api("upload", a).then(res2 => {
-        //console.log(res2);
-        if (res2.Status.IsSuccess) {
-          console.log(res2)
-        } else {
-          console.log(res2.Status.ErrorMessage)
-        }
+      // var options = {
+      //   'data': valueAll
+      // }
+      // var a = { "Title": valueAll.title, "RegisterId": 1}
+      // api.Api("upload", options).then(res2 => {
+      //   //console.log(res2);
+      //   if (res2.Status.IsSuccess) {
+      //     console.log(res2)
+      //   } else {
+      //     console.log(res2.Status.ErrorMessage)
+      //   }
+    console.log(this.data)
+    console.log(valueAll)
+        wx.uploadFile({
+          url: 'http://api.test.com/apisk/upload', //仅为示例，非真实的接口地址
+          filePath: _self.data.tempFilePaths[0],
+          name: 'file',
+          formData: {
+            "Title": valueAll.title,
+            "RegisterId": _self.data.UserId,
+            "PurchaseDate": _self.data.date,
+            "Desc":valueAll.desc,
+            "Price": valueAll.price
+          },
+          success: function (res) {
+            console.log(res)
+            var data = res.data
+            //do something
+          }
+        })
       // PostData(options, function (res) {
       //   if (res.data && !res.data.error) {
       //     _self.setData({
@@ -181,7 +237,6 @@ Page({
       //     })
       //   }
       // })
-    })
     //}
   }
 })
@@ -190,5 +245,9 @@ Page({
 
 function verifyHttp(value) {
   var regex = /(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?/;
+  return !regex.test(value)
+}
+function verifyInt(value) {
+  var regex = /^[0 - 9]\d*$/;
   return !regex.test(value)
 }
