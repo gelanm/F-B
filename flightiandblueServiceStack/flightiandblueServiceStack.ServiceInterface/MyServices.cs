@@ -6,6 +6,8 @@ using ServiceStack;
 using flightiandblueServiceStack.ServiceModel;
 using System.Net;
 using BLLDALMod.Comm;
+using BLLDALMod.BLL;
+using BLLDALMod.Model;
 
 namespace flightiandblueServiceStack.ServiceInterface
 {
@@ -26,7 +28,15 @@ namespace flightiandblueServiceStack.ServiceInterface
             return new MessageAddResponse { Result = "留言成功!" };
         }
 
-        public object Any(WXUser request)
+        public object Any(viewGoods request)
+        {
+            goodsBLL objBll = new goodsBLL();
+            List<Goods> listmode = objBll.GetModelList(" State = '"+request.Type.ToString() + "' and UserId = "+request.RegisterId);
+            return listmode;
+
+        }
+
+        public object Any(flightiandblueServiceStack.ServiceModel.WXUser request)
         {
             string url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + "wxfa6ae3a6654c4012"     //Common.weixin.WxPayConfig.APPID
             + "&secret=" + "b2c837bafcbe989666c24f999b499868"
