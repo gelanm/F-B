@@ -9,16 +9,22 @@
         <block wx:for="{{list}}">
             <view data-id="{{item.id}}" bindtap="redirect" class="mod-list">
                 <view class="left">
-                    <image src="{{item.images.large}}"></image>
+                    <image src="http://api.test.com/uploads/{{item.MainImage}}"></image>
                 </view>
                 <view class="right">
                     <view class="row">
-                        {{item.original_title}}{{item.year}}
+                        {{item.Title}}
                     </view>
                     <view class="row">
-                        评分:{{item.rating.average}}
+                        价格:{{item.Price}}
                     </view>
                     <view class="row">
+                        购买日期:{{item.PurchaseDate}}
+                    </view>
+                    <view class="row">
+                        简介:{{item.ContentValidity}}
+                    </view>
+                    <!--<view class="row">
                         <view class="tag">导演:</view><view wx:for="{{item.directors}}" wx:for-item="d">
                             {{d.name}}
                         </view>
@@ -27,7 +33,7 @@
                         <view class="tag">主演:</view><view wx:for="{{item.casts}}" wx:for-item="c">
                             {{c.name}}
                         </view>
-                    </view>
+                    </view>-->
                 </view>
             </view>
         </block>

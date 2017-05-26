@@ -1,2 +1,51 @@
-<!--pages/share/share.wxml-->
-<text>pages/share/share.wxml</text>
+<!--pages/home/home.wxml-->
+<block wx:if="{{showLoading}}">
+    <view class="page-loading">
+        <text>正在玩命加载中。。。</text>
+    </view>
+</block>
+<block wx:else>
+    <scroll-view class="sv" scroll-top="0" scroll-y bindscrolltolower="scrolltolower">
+        <block wx:for="{{list}}">
+            <view data-id="{{item.id}}" bindtap="redirect" class="mod-list">
+                <view class="left">
+                    <image src="http://api.test.com/uploads/{{item.MainImage}}"></image>
+                </view>
+                <view class="right">
+                    <view class="row">
+                        {{item.Title}}
+                    </view>
+                    <view class="row">
+                        价格:{{item.Price}}
+                    </view>
+                    <view class="row">
+                        购买日期:{{item.PurchaseDate}}
+                    </view>
+                    <view class="row">
+                        简介:{{item.ContentValidity}}
+                    </view>
+                    <!--<view class="row">
+                        <view class="tag">导演:</view><view wx:for="{{item.directors}}" wx:for-item="d">
+                            {{d.name}}
+                        </view>
+                    </view>
+                    <view class="row">
+                        <view class="tag">主演:</view><view wx:for="{{item.casts}}" wx:for-item="c">
+                            {{c.name}}
+                        </view>
+                    </view>-->
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{showMore}}">
+            <view class="page-loading">
+                <text>正在玩命加载中。。。</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="page-loading">
+                <text>没有更多内容了。。。</text>
+            </view>
+        </block>
+    </scroll-view>
+</block>

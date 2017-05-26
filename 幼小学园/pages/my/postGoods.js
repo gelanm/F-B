@@ -2,10 +2,12 @@ var api = require('../../utils/api.js');
 
 Page({
   data: {
-    pn: { 'RegisterId': 1 },
+    count: 10,
+    pn: 0,
     list: [],
     showMore: true,
-    showLoading: true
+    showLoading: true,
+    a: {}
   },
   redirect: function (e) {
     var id = e.currentTarget.dataset.id;
@@ -25,16 +27,29 @@ Page({
   scrolltolower: function (e) {
     //console.log(e);
     if (!this.data.showMore) return;
-    this.loadData(this.data.pn);
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        // Do something with return value
+        console.log(value)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": that.data.pn * that.data.count, "count": that.data.count }
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+    this.loadData(this.data.a);
   },
-  loadData: function (pn) {
-    api.Api('in_theaters', pn).then(res => {
-      //console.log(res);
-      if (res.subjects.length > 0) {
+  loadData: function (obj) {
+    api.Api('viewGoods', obj).then(res => {
+      console.log(res);
+      if (res.length > 0) {
         this.setData({
-          list: this.data.list.concat(res.subjects),
+          list: this.data.list.concat(res),
           showLoading: false,
-          pn: pn + 1
+          pn: this.data.pn + 1
         })
       } else {
         this.setData({
@@ -45,7 +60,21 @@ Page({
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-    this.loadData(this.data.pn);
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        // Do something with return value
+        console.log(value)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": 0, "count": that.data.count }
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+    console.log(this.data.a)
+    this.loadData(this.data.a);
   },
   onReady: function () {
     // 页面渲染完成
