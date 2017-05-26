@@ -30,10 +30,18 @@ namespace flightiandblueServiceStack.ServiceInterface
 
         public object Any(viewGoods request)
         {
-            goodsBLL objBll = new goodsBLL();
-            List<Goods> listmode = objBll.GetModelList(" State = '"+request.Type.ToString() + "' and UserId = "+request.RegisterId);
-            return listmode;
-
+            if (request.Type == 0)
+            {
+                goodsBLL objBll = new goodsBLL();
+                List<Goods> listmode = objBll.GetModelList(" State = '" + request.State.ToString() + "' and UserId = " + request.RegisterId + " limit " + request.start + "," + request.count);
+                return listmode;
+            }
+            else
+            {
+                techsBLL objBll = new techsBLL();
+                List<techs> listmode = objBll.GetModelList(" 1=1 limit " + request.start + "," + request.count);
+                return listmode;
+            }
         }
 
         public object Any(flightiandblueServiceStack.ServiceModel.WXUser request)
