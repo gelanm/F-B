@@ -36,10 +36,15 @@ namespace flightiandblueServiceStack.ServiceInterface
                 List<Goods> listmode = objBll.GetModelList(" State = '" + request.State.ToString() + "' and UserId = " + request.RegisterId + " limit " + request.start + "," + request.count);
                 return listmode;
             }
-            else
+            else if (request.Type == 1)
             {
                 techsBLL objBll = new techsBLL();
                 List<techs> listmode = objBll.GetModelList(" 1=1 limit " + request.start + "," + request.count);
+                return listmode;
+            }
+            else {
+                goodsBLL objBll = new goodsBLL();
+                List<Goods> listmode = objBll.GetModelList(" State = '" + request.State.ToString() + "' limit " + request.start + "," + request.count);
                 return listmode;
             }
         }
