@@ -1,0 +1,6 @@
+<!--pages/tech/tech.wxml-->
+<view class="page center">
+    <block wx:for="{{list}}">
+        <video src="{{item.Url}}" controls ></video>
+    </block>
+</view>

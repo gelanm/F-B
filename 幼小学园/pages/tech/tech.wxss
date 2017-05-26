@@ -1,0 +1,4 @@
+/* pages/tech/tech.wxss */
+video{
+    width:710rpx;
+}
