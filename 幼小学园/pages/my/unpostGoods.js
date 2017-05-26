@@ -2,6 +2,7 @@ var api = require('../../utils/api.js');
 
 Page({
   data: {
+    count:10,
     pn: 0,
     list: [],
     showMore: true,
@@ -26,16 +27,29 @@ Page({
   scrolltolower: function (e) {
     //console.log(e);
     if (!this.data.showMore) return;
-    this.loadData(this.data.pn);
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        // Do something with return value
+        console.log(value)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 0,"Type": 0, "start": that.data.pn * that.data.count, "count": that.data.count }
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+    this.loadData(this.data.a);
   },
-  loadData: function (pn) {
-    api.Api('viewGoods', pn).then(res => {
+  loadData: function (obj) {
+    api.Api('viewGoods', obj).then(res => {
       console.log(res);
       if (res.length > 0) {
         this.setData({
           list: this.data.list.concat(res),
           showLoading: false,
-          pn: pn + 1
+          pn: this.data.pn + 1
         })
       } else {
         this.setData({
@@ -53,7 +67,7 @@ Page({
         // Do something with return value
         console.log(value)
         that.setData({
-          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "Type": 0 }
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 0,"Type": 0, "start": 0, "count": that.data.count }
          })
       }
     } catch (e) {

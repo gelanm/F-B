@@ -4,9 +4,12 @@
     "pages/detail/detail",
     "pages/my/index",
     "pages/my/uploadGoods",
+    "pages/my/uploadTech",
     "pages/my/mapAddress",
     "pages/my/unpostGoods",
     "pages/my/postGoods",
+    "pages/share/share",
+    "pages/tech/tech",
     "pages/my/set"
   ],
   "window":{
@@ -24,6 +27,18 @@
       "text": "首页",
       "iconPath": "img/homeoff.png",
       "selectedIconPath": "img/homeon.png"
+    },
+    {
+      "pagePath": "pages/share/share",
+      "text": "互换",
+      "iconPath": "img/Shareoff.png",
+      "selectedIconPath": "img/Shareon.png"
+    },
+    {
+      "pagePath": "pages/tech/tech",
+      "text": "技术",
+      "iconPath": "img/techoff.png",
+      "selectedIconPath": "img/techon.png"
     },
     {
       "pagePath": "pages/my/index",

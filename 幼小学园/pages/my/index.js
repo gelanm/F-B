@@ -28,6 +28,12 @@ Page({
       isunread: true,
       unreadNum: 1
     }, {
+      id: 'uploadTech',
+      icon: '../../img/iconfont-icontuan.png',
+      text: '发布技术视频',
+      isunread: true,
+      unreadNum: 1
+    }, {
         id: 'mapAddress',
         icon: '../../img/iconfont-shouhuodizhi.png',
       text: '收货地址管理'

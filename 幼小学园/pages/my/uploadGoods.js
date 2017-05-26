@@ -224,7 +224,8 @@ Page({
             "RegisterId": _self.data.UserId,
             "PurchaseDate": _self.data.date,
             "Desc":valueAll.desc,
-            "Price": valueAll.price
+            "Price": valueAll.price,
+            "Type":0
           },
           success: function (res) {
             console.log(res)
