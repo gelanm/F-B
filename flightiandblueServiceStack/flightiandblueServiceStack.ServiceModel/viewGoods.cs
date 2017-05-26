@@ -13,6 +13,9 @@ namespace flightiandblueServiceStack.ServiceModel
     {
         public string OpenId { get; set; }
         public int RegisterId { get; set; }
+        public int State { get; set; }
+        public int start { get; set; }
+        public int count { get; set; }
         public int Type { get; set; }
     }
 }
