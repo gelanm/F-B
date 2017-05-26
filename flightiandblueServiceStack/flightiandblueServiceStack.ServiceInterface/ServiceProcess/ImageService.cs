@@ -64,135 +64,176 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
 
         public object Post(Upload request)
         {
-            try
+            if (request.Type == 0)
             {
-                string fname = null;
-                string fname1 = null;
-                string fname2 = null;
-                int idcreatedir = 0;
-                idcreatedir = Convert.ToInt32(request.RegisterId) / 10000;
-                UploadsDir = HttpContext.Current.Server.MapPath("/uploads/" + idcreatedir);
-                //UploadsDir = ("~/uploads/"+idcreatedir).MapHostAbsolutePath(); 
-                //UploadsDir = "F:\\www\\servicestack\\uploads\\" + idcreatedir;
-                //if (request.Card == null || (request.Card.Length != 15 && request.Card.Length != 18))
-                //{
-                //    return "认证失败，身份证号不正确";
-                //}
-
-                //var dbFactory = new OrmLiteConnectionFactory("server=192.168.6.205; uid=test; pwd=abc123!@#$; database=test18;", SqlServerDialect.Provider);
-                //var dbFactory = new OrmLiteConnectionFactory("server=192.168.1.12; uid=sa; pwd=Chengmou8888; database=DB_WanYuanShop;", SqlServerDialect.Provider);
-                //using (IDbConnection db = Db.Open())
-                //{
-                //var ur = Db.Select<web.ServiceModel.Types.UserRegister>(x => x.Id == request.RegisterId);
-                //string abc = Db.GetLastSql();
-                //DateTime d = ur[0].RegisterDate;
-                DateTime d2 = DateTime.Now.AddMinutes(-30);
-               // string mdd = FormsAuthentication.HashPasswordForStoringInConfigFile(ur[0].LogName, "MD5") + ur[0].LogPwd;
-                //if (ur[0].RegisterDate < DateTime.Now.AddMinutes(-30).Date)
-                //{
-                //    return "注册30分钟内才可以认证";
-                //}
-                //var a = Db.Select<UserInfo>(x => x.CardId == request.Card);
-                ////abc = Db.GetLastSql();
-                //if (a.Count > 5)
-                //{
-                //    return "认证失败,身份证号已被使用5次";
-                //}
-                //if (FormsAuthentication.HashPasswordForStoringInConfigFile(ur[0].LogName, "MD5") + ur[0].LogPwd != request.Md5)
-                //{
-                //    return "认证失败,身份验证错误";
-                //}
-
-                foreach (var uploadedFile in Request.Files.Where(uploadedFile => uploadedFile.ContentLength > 0))
+                try
                 {
-                    if (uploadedFile.ContentLength > 1048576)  //大于1M 报错
+                    string fname = null;
+                    string fname1 = null;
+                    string fname2 = null;
+                    int idcreatedir = 0;
+                    idcreatedir = Convert.ToInt32(request.RegisterId) / 10000;
+                    UploadsDir = HttpContext.Current.Server.MapPath("/uploads/" + idcreatedir);
+                    //UploadsDir = ("~/uploads/"+idcreatedir).MapHostAbsolutePath(); 
+                    //UploadsDir = "F:\\www\\servicestack\\uploads\\" + idcreatedir;
+                    //if (request.Card == null || (request.Card.Length != 15 && request.Card.Length != 18))
+                    //{
+                    //    return "认证失败，身份证号不正确";
+                    //}
+
+                    //var dbFactory = new OrmLiteConnectionFactory("server=192.168.6.205; uid=test; pwd=abc123!@#$; database=test18;", SqlServerDialect.Provider);
+                    //var dbFactory = new OrmLiteConnectionFactory("server=192.168.1.12; uid=sa; pwd=Chengmou8888; database=DB_WanYuanShop;", SqlServerDialect.Provider);
+                    //using (IDbConnection db = Db.Open())
+                    //{
+                    //var ur = Db.Select<web.ServiceModel.Types.UserRegister>(x => x.Id == request.RegisterId);
+                    //string abc = Db.GetLastSql();
+                    //DateTime d = ur[0].RegisterDate;
+                    DateTime d2 = DateTime.Now.AddMinutes(-30);
+                    // string mdd = FormsAuthentication.HashPasswordForStoringInConfigFile(ur[0].LogName, "MD5") + ur[0].LogPwd;
+                    //if (ur[0].RegisterDate < DateTime.Now.AddMinutes(-30).Date)
+                    //{
+                    //    return "注册30分钟内才可以认证";
+                    //}
+                    //var a = Db.Select<UserInfo>(x => x.CardId == request.Card);
+                    ////abc = Db.GetLastSql();
+                    //if (a.Count > 5)
+                    //{
+                    //    return "认证失败,身份证号已被使用5次";
+                    //}
+                    //if (FormsAuthentication.HashPasswordForStoringInConfigFile(ur[0].LogName, "MD5") + ur[0].LogPwd != request.Md5)
+                    //{
+                    //    return "认证失败,身份验证错误";
+                    //}
+
+                    foreach (var uploadedFile in Request.Files.Where(uploadedFile => uploadedFile.ContentLength > 0))
                     {
-                        return "认证失败，图片大于1M";
+                        if (uploadedFile.ContentLength > 1048576)  //大于1M 报错
+                        {
+                            return "认证失败，图片大于1M";
+                        }
+                        using (var ms = new MemoryStream())
+                        {
+                            uploadedFile.WriteTo(ms);
+                            fname += WriteImage(ms) + ",";
+                            // WriteImage(ms);
+                        }
                     }
-                    using (var ms = new MemoryStream())
+                    if (fname != null)
                     {
-                        uploadedFile.WriteTo(ms);
-                        fname += WriteImage(ms) + ",";
-                        // WriteImage(ms);
+                        string[] str2 = fname.Split(',');
+                        fname1 = str2[0];
+                        fname2 = str2[1];
                     }
-                }
-                if (fname != null)
-                {
-                    string[] str2 = fname.Split(',');
-                    fname1 = str2[0];
-                    fname2 = str2[1];
-                }
 
-                Goods objGoods = new Goods();
-                objGoods.Title = request.Title;
-                objGoods.MainImage = idcreatedir + "/350/" + fname1;
-                objGoods.ContentValidity = request.Desc;
-                objGoods.PurchaseDate = request.PurchaseDate;
-                objGoods.AddTime = DateTime.Now;
-                objGoods.State = "0";
-                objGoods.Price = request.Price;
-                objGoods.UserId = request.RegisterId;
-                goodsBLL objGoodsBLL = new goodsBLL();
-                int a = objGoodsBLL.Add(objGoods);
-                if (a > 0)
-                {
-                    return "上传成功";
-                }
-                else {
-                    return "上传失败";
-                }
+                    Goods objGoods = new Goods();
+                    objGoods.Title = request.Title;
+                    objGoods.MainImage = idcreatedir + "/350/" + fname1;
+                    objGoods.ContentValidity = request.Desc;
+                    objGoods.PurchaseDate = request.PurchaseDate;
+                    objGoods.AddTime = DateTime.Now;
+                    objGoods.State = "0";
+                    objGoods.Price = request.Price;
+                    objGoods.UserId = request.RegisterId;
+                    goodsBLL objGoodsBLL = new goodsBLL();
+                    int a = objGoodsBLL.Add(objGoods);
+                    if (a > 0)
+                    {
+                        return "上传成功";
+                    }
+                    else
+                    {
+                        return "上传失败";
+                    }
 
-                //int i = Db.Update<UserInfo>(
-                //    new
+                    //int i = Db.Update<UserInfo>(
+                    //    new
+                    //    {
+                    //        CardId = request.Card,
+                    //        IdentityCardImgNameHead = idcreatedir + "/350/" + fname1,
+                    //        IdentityCardImgNameTail = idcreatedir + "/350/" + fname2,
+                    //        AddressInfo = request.Address + "(手机端)",
+                    //        ApplyCount = 1
+                    //        //ApplyCount = db.Select<UserInfo>(x => x.RegisterId == request.RegisterId)[0].ApplyCount + 1
+                    //    }, p => p.RegisterId == request.RegisterId && p.AuditState != 1 && p.ApplyCount == 0);
+                    ////abc = Db.GetLastSql();
+                    //if (i > 0)
+                    //{
+                    //    return "认证成功<input type='button' value='关闭' onclick='javascript: window.history.go(-4);'>";//成功
+                    //}
+                    //else
+                    //{
+                    //    return "认证失败,已申请过";//失败
+                    //}
+
+                }
+                //return "认证成功<input type='button' value='关闭' onclick='javascript: window.history.go(-4);'>";//成功
+                //return HttpResult.Redirect("/default1.html");
+                //}
+                //    catch (Exception e)
                 //    {
-                //        CardId = request.Card,
-                //        IdentityCardImgNameHead = idcreatedir + "/350/" + fname1,
-                //        IdentityCardImgNameTail = idcreatedir + "/350/" + fname2,
-                //        AddressInfo = request.Address + "(手机端)",
-                //        ApplyCount = 1
-                //        //ApplyCount = db.Select<UserInfo>(x => x.RegisterId == request.RegisterId)[0].ApplyCount + 1
-                //    }, p => p.RegisterId == request.RegisterId && p.AuditState != 1 && p.ApplyCount == 0);
-                ////abc = Db.GetLastSql();
-                //if (i > 0)
-                //{
-                //    return "认证成功<input type='button' value='关闭' onclick='javascript: window.history.go(-4);'>";//成功
-                //}
-                //else
-                //{
-                //    return "认证失败,已申请过";//失败
-                //}
+                catch (Exception ex)
+                {
 
+                    if (ex.InnerException != null)
+                    {
+                        strErrorStackTrace += "" + ex.InnerException.StackTrace + "";
+                        strErrorMsg = ex.InnerException.Message + strErrorMsg;
+
+                    }
+                    else
+                    {
+                        strErrorStackTrace += "" + ex.StackTrace + "";
+                        strErrorMsg = ex.Message + strErrorMsg;
+                    }
+                    //CommModule.AddLog.AddWebLog(CommModule.PublicEnum.LogType.GlobalError, "Global捕获页面异常", strErrorMsg, strErrorStackTrace);
+                    return "认证失败";//失败
+                }
+                //        string strErr = string.Empty; //p_CmdParms 参数值                        
+                //        CommModule.AddLog.AddMsgLog(CommModule.PublicEnum.LogType.SqlError, "SqlBase", e.Message + "\r\nSQL     : " + SQLString + "\r\n参数    : " + strErr, e.StackTrace);
+                //    }
+                //    finally
+                //    {
+                //        CommModule.AddLog.AddSQLLog(db.GetLastSql();, dtStart.TimeOfDay.ToString(), DateTime.Now.TimeOfDay.ToString(), Convert.ToString(DateTime.Now - dtStart));
+                //    }
             }
-            //return "认证成功<input type='button' value='关闭' onclick='javascript: window.history.go(-4);'>";//成功
-            //return HttpResult.Redirect("/default1.html");
-            //}
-            //    catch (Exception e)
-            //    {
-            catch (Exception ex)
+            else
             {
-
-                if (ex.InnerException != null)
+                try
                 {
-                    strErrorStackTrace += "" + ex.InnerException.StackTrace + "";
-                    strErrorMsg = ex.InnerException.Message + strErrorMsg;
-
+                    techs objtechs = new techs();
+                    techsBLL objtechsBLL = new techsBLL();
+                    objtechs.Title = request.Title;
+                    objtechs.Url = request.Url;
+                    objtechs.ContentValidity = request.Desc;
+                    objtechs.UserId = request.RegisterId;
+                    objtechs.AddTime = DateTime.Now;
+                    objtechs.State = "0";
+                    objtechs.type = "0";
+                    if (objtechsBLL.Add(objtechs) > 0)
+                    {
+                        return "上传成功";
+                    }
+                    else {
+                        return "上传失败";
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    strErrorStackTrace += "" + ex.StackTrace + "";
-                    strErrorMsg = ex.Message + strErrorMsg;
+                    if (ex.InnerException != null)
+                    {
+                        strErrorStackTrace += "" + ex.InnerException.StackTrace + "";
+                        strErrorMsg = ex.InnerException.Message + strErrorMsg;
+
+                    }
+                    else
+                    {
+                        strErrorStackTrace += "" + ex.StackTrace + "";
+                        strErrorMsg = ex.Message + strErrorMsg;
+                    }
+                    AddLog.AddWebLog(PublicEnum.LogType.GlobalError, "Global捕获页面异常", strErrorMsg, strErrorStackTrace);
                 }
-                //CommModule.AddLog.AddWebLog(CommModule.PublicEnum.LogType.GlobalError, "Global捕获页面异常", strErrorMsg, strErrorStackTrace);
-                return "认证失败";//失败
+                return "上传失败";
             }
-            //        string strErr = string.Empty; //p_CmdParms 参数值                        
-            //        CommModule.AddLog.AddMsgLog(CommModule.PublicEnum.LogType.SqlError, "SqlBase", e.Message + "\r\nSQL     : " + SQLString + "\r\n参数    : " + strErr, e.StackTrace);
-            //    }
-            //    finally
-            //    {
-            //        CommModule.AddLog.AddSQLLog(db.GetLastSql();, dtStart.TimeOfDay.ToString(), DateTime.Now.TimeOfDay.ToString(), Convert.ToString(DateTime.Now - dtStart));
-            //    }
-            return "";
         }
         private string WriteImage(Stream ms)
         {
