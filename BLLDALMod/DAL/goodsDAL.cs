@@ -30,7 +30,7 @@ namespace BLLDALMod.DAL
 
             MySqlParameter[] parameters = {
 					new MySqlParameter("@Title", MySqlDbType.VarChar,60),
-					new MySqlParameter("@MainImage", MySqlDbType.VarChar,200),
+					new MySqlParameter("@MainImage", MySqlDbType.VarChar,1000),
 					new MySqlParameter("@ContentValidity", MySqlDbType.VarChar,1000),
 					new MySqlParameter("@PurchaseDate", MySqlDbType.DateTime),
 					new MySqlParameter("@Price", MySqlDbType.Double,9),
@@ -80,7 +80,7 @@ namespace BLLDALMod.DAL
             strSql.Append(" where id=@id");
             MySqlParameter[] parameters = {
 					new MySqlParameter("@Title", MySqlDbType.VarChar,60),
-					new MySqlParameter("@MainImage", MySqlDbType.VarChar,200),
+					new MySqlParameter("@MainImage", MySqlDbType.VarChar,1000),
 					new MySqlParameter("@ContentValidity", MySqlDbType.VarChar,1000),
 					new MySqlParameter("@PurchaseDate", MySqlDbType.DateTime),
                     new MySqlParameter("@Price", MySqlDbType.Double,9),
