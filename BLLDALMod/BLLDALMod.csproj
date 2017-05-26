@@ -61,6 +61,7 @@
     <Compile Include="BLL\newscontent.cs" />
     <Compile Include="BLL\product.cs" />
     <Compile Include="BLL\productclass.cs" />
+    <Compile Include="BLL\techsBLL.cs" />
     <Compile Include="BLL\user.cs" />
     <Compile Include="BLL\wangzhan.cs" />
     <Compile Include="BLL\WXUserBLL.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="DAL\newscontent.cs" />
     <Compile Include="DAL\product.cs" />
     <Compile Include="DAL\productclass.cs" />
+    <Compile Include="DAL\techsDAL.cs" />
     <Compile Include="DAL\user.cs" />
     <Compile Include="DAL\wangzhan.cs" />
     <Compile Include="DAL\WXUserDAL.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Model\product.cs" />
     <Compile Include="Model\productclass.cs" />
     <Compile Include="Model\qxcp.cs" />
+    <Compile Include="Model\techs.cs" />
     <Compile Include="Model\user.cs" />
     <Compile Include="Model\wangzhan.cs" />
     <Compile Include="Model\WXUser.cs" />
