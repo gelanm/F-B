@@ -2,6 +2,7 @@
 using BLLDALMod.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -21,6 +22,11 @@ namespace BLLDALMod.BLL
         public int Add(WXUser model)
         {
             return dal.InsertMysql(model);
+        }
+
+        public DataTable GetAllList()
+        {
+            return dal.GetAllList();
         }
 
         /// <summary>
