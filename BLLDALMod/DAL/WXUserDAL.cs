@@ -207,6 +207,18 @@ namespace BLLDALMod.DAL
             }
         }
 
+
+
+        public DataTable GetAllList()
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select * from WXUser ");
+            DataTable dt = DBhelpmysql.Select(strSql.ToString(), null);
+
+            return dt;
+        }
+
+
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
