@@ -7,14 +7,15 @@
     <title></title>
    <style type="text/css">
 <!--
-BODY    {	scrollbar-face-color: #45ACE5;
-		scrollbar-shadow-color: #3773C1;
-		scrollbar-highlight-color: #90D0F0;
-		scrollbar-3dlight-color: #45ACE5;
-		scrollbar-darkshadow-color: #EDEDED;
-		scrollbar-track-color: #EDEDED;
-		scrollbar-arrow-color: #FFFFFF;		
-	}
+       BODY
+       {	scrollbar-face-color: #45ACE5;
+		        scrollbar-shadow-color: #3773C1;
+		        scrollbar-highlight-color: #90D0F0;
+		        scrollbar-3dlight-color: #45ACE5;
+		        scrollbar-darkshadow-color: #EDEDED;
+		        scrollbar-track-color: #EDEDED;
+		        scrollbar-arrow-color: #FFFFFF;		
+	   }
        .style1
        {
            border: 1px solid #f1f1f1;
@@ -43,206 +44,87 @@ BODY    {	scrollbar-face-color: #45ACE5;
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td height="25" bgcolor="#DEDDDD"> <div align="center"> 
-        <table width="100%" border="0" cellspacing="4" cellpadding="0">
-        <%--  <tr> 
-            <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='wanzhan.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">网站设置</span></td>
-          </tr>--%>
-     <%--     <tr> 
-            <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='link.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">友情连接</span></td>
-          </tr>--%>
-          <tr> 
-             <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='message.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">联系我们</span></td>
-          </tr>
-         <%--  <tr> 
-             <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='qq.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">在线QQ</span></td>
-          </tr>--%>
-           </table>
+        <table width="100%" border="0" cellspacing="4" cellpadding="0">        
+              <tr> 
+                 <td class=style1 onmouseleave="javascript:this.className='lt0';" 
+                     onclick="javascript:top.main.location.href='message.aspx'" 
+                     onmouseenter="javascript:this.className='lt1';" ><span class="x">联系我们</span></td>
+              </tr>
+        </table>
       </div></td>
   </tr>
- <%-- <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">关于我们</font></strong></td>
-  </tr>
-  <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#DEDDDD"> 
-     <table width="100%" border="0" cellspacing="4" cellpadding="0">
-        <tr> 
-         <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='aboutAdd.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">关于我们</span></td>
-        </tr>
-  
-      </table>
-       
-      </td>
-  </tr>--%>
   <tr bgcolor="#FFFFFF"> 
     <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">关于我们</font></strong></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td height="25" align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
-        
         <asp:Repeater ID="Repeater1" runat="server">
-        <ItemTemplate>
-        <tr>
-        <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='aboutAdd.aspx?id=<%#Eval("id") %>'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x"> <%#Eval("classname") %></span></td>
-        </tr>
-        </ItemTemplate>
+            <ItemTemplate>
+                <tr>
+                     <td class=style1 onmouseleave="javascript:this.className='lt0';" 
+                         onclick="javascript:top.main.location.href='aboutAdd.aspx?id=<%#Eval("id") %>'" 
+                         onmouseenter="javascript:this.className='lt1';" ><span class="x"> <%#Eval("classname") %></span></td>
+                </tr>
+            </ItemTemplate>
         </asp:Repeater>
         </table></td>
   </tr>
-<%--  <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">产品管理</font></strong></td>
-  </tr>
-  <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
-        <tr> 
-          <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='productclass.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">产品类别管理</span></a></td>
-        </tr>
-        <tr> 
-          <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='productEdit.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">产品管理</span></td>
-        </tr>
-        <tr> 
-          <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='productleibei.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" >产品类别介绍添加</td>
-        </tr>
-        
-        </table></td>
-  </tr>--%>
   <tr bgcolor="#FFFFFF"> 
     <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">新闻动态</font></strong></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td height="25" align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
-        
         <tr> 
            <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='newsclass.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">新闻类别管理</span></td>
+               onclick="javascript:top.main.location.href='newsclass.aspx'" 
+               onmouseenter="javascript:this.className='lt1';" ><span class="x">新闻类别管理</span></td>
         </tr>
        <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='newscontent.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">新闻管理</span></td>
+            <td class=style1 onmouseleave="javascript:this.className='lt0';" 
+                onclick="javascript:top.main.location.href='newscontent.aspx'" 
+                onmouseenter="javascript:this.className='lt1';" ><span class="x">新闻管理</span></td>
         </tr>
          
-      </table></td>
-  </tr>
-  <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">合作单位</font></strong></td>
-  </tr>
-  <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
-        
-        <asp:Repeater ID="Repeater3" runat="server">
-        <ItemTemplate>
-        <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='Addcustomer.aspx?id=<%#Eval("id") %>'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x"><%#Eval("classname") %></span></td>
-        </tr>
-        </ItemTemplate>
-        </asp:Repeater>
-     <%--   <tr>
-        <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='Editcustomer.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" >编辑常见问题</td>
-        </tr>--%>
-       
       </table></td>
   </tr>
    <tr bgcolor="#FFFFFF"> 
     <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">旗下产品</font></strong></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
-        <asp:Repeater ID="Repeater4" runat="server">
-        <ItemTemplate>
-        <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='Addcareeas.aspx?id=<%#Eval("id") %>'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">旗下产品</span></td>
-        </tr>
-        <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='xtjg.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">旗下产品2</span></td>
-        </tr>
-        </ItemTemplate>
-        </asp:Repeater>
-       
-      </table></td>
+    <td align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
+           <tr> 
+               <td class=style1 onmouseleave="javascript:this.className='lt0';" 
+                   onclick="javascript:top.main.location.href='RegisterWeixinWanJu.aspx'" 
+                   onmouseenter="javascript:this.className='lt1';" ><span class="x">微信注册玩具用户</span></td>
+            </tr> 
+            <tr> 
+               <td class=style1 onmouseleave="javascript:this.className='lt0';" 
+                   onclick="javascript:top.main.location.href='AuditWeixinWanJu.aspx'" 
+                   onmouseenter="javascript:this.className='lt1';" ><span class="x">审批玩具</span></td>
+            </tr> 
+            <tr> 
+               <td class=style1 onmouseleave="javascript:this.className='lt0';" 
+                   onclick="javascript:top.main.location.href='AuditWeixinXuexi.aspx'" 
+                   onmouseenter="javascript:this.className='lt1';" ><span class="x">审批学习资料</span></td>
+            </tr>
+          </table></td>
   </tr>
-
-  <%-- <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">代理机构</font></strong></td>
-  </tr>
-  <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
-        <asp:Repeater ID="Repeater5" runat="server">
-        <ItemTemplate>
-        <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='Adddaili.aspx?id=<%#Eval("id") %>'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x"><%#Eval("classname") %></span></td>
-        </tr>
-        </ItemTemplate>
-        </asp:Repeater>
-       <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='Editdaili.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">编辑代理机构</span></td>
-        </tr>
-      </table></td>
-  </tr>--%>
   <tr bgcolor="#FFFFFF"> 
     <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">核心团队</font></strong></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
     <td align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
         <asp:Repeater ID="Repeater2" runat="server">
-        <ItemTemplate>
-        <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='Addgongcheng.aspx?id=<%#Eval("id") %>'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x"><%#Eval("classname") %></span></td>
-        </tr>
-        </ItemTemplate>
+            <ItemTemplate>
+                <tr> 
+                   <td class=style1 onmouseleave="javascript:this.className='lt0';" 
+                       onclick="javascript:top.main.location.href='Addgongcheng.aspx?id=<%#Eval("id") %>'" 
+                       onmouseenter="javascript:this.className='lt1';" ><span class="x"><%#Eval("classname") %></span></td>
+                </tr>
+            </ItemTemplate>
         </asp:Repeater>
-      <%--   <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='Editgongcheng.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">编辑工程案例</span></td>
-        </tr>--%>
       </table></td>
   </tr>
- <%--  <tr bgcolor="#FFFFFF"> 
-    <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">技术资料</font></strong></td>
-  </tr>
-   <tr bgcolor="#FFFFFF"> 
-    <td align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
-        <tr> 
-           <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='jishu.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">技术资料管理</span></td>
-        </tr>
-       
-      </table></td>
-  </tr>--%>
   <tr bgcolor="#FFFFFF"> 
     <td height="25" align="center" bgcolor="#3A76AF"><strong><font color="#FFFFFF">留言管理</font></strong></td>
   </tr>
@@ -250,10 +132,9 @@ BODY    {	scrollbar-face-color: #45ACE5;
     <td align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
         <tr> 
            <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='book.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">留言信息</span></td>
+               onclick="javascript:top.main.location.href='book.aspx'" 
+               onmouseenter="javascript:this.className='lt1';" ><span class="x">留言信息</span></td>
         </tr>
-       
       </table></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
@@ -263,8 +144,8 @@ BODY    {	scrollbar-face-color: #45ACE5;
     <td height="25" align="center" bgcolor="#DEDDDD"><table width="100%" border="0" cellspacing="4" cellpadding="0">
         <tr> 
          <td class=style1 onmouseleave="javascript:this.className='lt0';" 
-    onclick="javascript:top.main.location.href='Edituser.aspx'" 
-    onmouseenter="javascript:this.className='lt1';" ><span class="x">管理员管理</span></td>
+             onclick="javascript:top.main.location.href='Edituser.aspx'" 
+             onmouseenter="javascript:this.className='lt1';" ><span class="x">管理员管理</span></td>
         </tr>
         <tr> 
           <td align="center"><span class="x"><font color="#FF3300">
@@ -273,10 +154,7 @@ BODY    {	scrollbar-face-color: #45ACE5;
         </tr>
       </table></td>
   </tr>
-  
-  
   </table>
-
     </form>
 </body>
 </html>
