@@ -24,16 +24,6 @@
                     <view class="row">
                         简介:{{item.ContentValidity}}
                     </view>
-                    <!--<view class="row">
-                        <view class="tag">导演:</view><view wx:for="{{item.directors}}" wx:for-item="d">
-                            {{d.name}}
-                        </view>
-                    </view>
-                    <view class="row">
-                        <view class="tag">主演:</view><view wx:for="{{item.casts}}" wx:for-item="c">
-                            {{c.name}}
-                        </view>
-                    </view>-->
                 </view>
             </view>
         </block>
