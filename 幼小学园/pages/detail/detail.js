@@ -1,36 +1,90 @@
-// pages/detail/detail.js
-var app = getApp()
+var api = require('../../utils/api.js');
+
 Page({
   data: {
-    tempFilePaths: ''
+    count: 10,
+    pn: 0,
+    list: [],
+    showMore: true,
+    showLoading: true,
+    a: {},
+    text: ''
   },
-  onLoad: function () {
+  btn_default: function (e) {
+    this.setData({
+      text: e.target.dataset.idx
+
+      //   添加订单  
+
+
+
+
+
+
+    })
   },
-  chooseimage: function () {
-    var _this = this;
-    wx.chooseImage({
-      count: 1, // 默认9  
-      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有  
-      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有  
-      success: function (res) {
-        var tempFilePaths0 = res.tempFilePaths
-        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片  
-        _this.setData({
-          tempFilePaths: tempFilePaths0
+  scrolltolower: function (e) {
+    //console.log(e);
+    if (!this.data.showMore) return;
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        // Do something with return value
+        console.log(value)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": that.data.pn * that.data.count, "count": that.data.count }
         })
-        wx.uploadFile({
-          url: 'http://api.test.com/apisk/upload', //仅为示例，非真实的接口地址
-          filePath: tempFilePaths0[0],
-          name: 'file',
-          formData: {
-            'user': 'test'
-          },
-          success: function (res) {
-            var data = res.data
-            //do something
-          }
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+    this.loadData(this.data.a);
+  },
+  loadData: function (obj) {
+    api.Api('viewGoods', obj).then(res => {
+      console.log(res);
+      if (res.length > 0) {
+        this.setData({
+          list: this.data.list.concat(res),
+          showLoading: false,
+          pn: this.data.pn + 1
+        })
+      } else {
+        this.setData({
+          showMore: false
         })
       }
     })
+  },
+  onLoad: function (options) {
+    // 页面初始化 options为页面跳转所带来的参数
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        // Do something with return value
+        console.log(value)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": 0, "count": that.data.count }
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+    console.log(this.data.a)
+    this.loadData(this.data.a);
+  },
+  onReady: function () {
+    // 页面渲染完成
+  },
+  onShow: function () {
+    // 页面显示
+  },
+  onHide: function () {
+    // 页面隐藏
+  },
+  onUnload: function () {
+    // 页面关闭
   }
-})  
+})

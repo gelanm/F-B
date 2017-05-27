@@ -1,1 +1,38 @@
-/* pages/detail/detail.wxss */
+/* pages/my/postGoods.wxss */
+.page-loading{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding-top: 20px;
+}
+.mod-list{
+  display: flex;
+  padding:10rpx;
+}
+.mod-list .row{
+  display: flex;
+  font-size: 14px;
+  line-height: 24px;
+}
+.left{
+  width:200rpx;
+  height:250rpx;
+  margin-right:20rpx;
+}
+.left image{
+  width:200rpx;
+  height: 250rpx;
+}
+.right{
+  width:500rpx;
+}
+.tag{
+  width: 90rpx;
+}
+.sv{
+  height: 1100rpx;
+}
+.page{
+  font-size: 14px;
+}
