@@ -107,6 +107,11 @@
                    onclick="javascript:top.main.location.href='AuditWeixinXuexi.aspx'" 
                    onmouseenter="javascript:this.className='lt1';" ><span class="x">审批学习资料</span></td>
             </tr>
+            <tr> 
+               <td class=style1 onmouseleave="javascript:this.className='lt0';" 
+                   onclick="javascript:top.main.location.href='Orders.aspx'" 
+                   onmouseenter="javascript:this.className='lt1';" ><span class="x">交换成功订单</span></td>
+            </tr>
           </table></td>
   </tr>
   <tr bgcolor="#FFFFFF"> 
