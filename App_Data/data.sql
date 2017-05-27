@@ -148,3 +148,35 @@ INSERT INTO `newsbig` VALUES ('6', '大动态', '0');
 INSERT INTO `newscontent` VALUES ('3', 'test', 'test ', '2017-05-05', 'test\r\n@import url(http://localhost/houtai/CuteSoft_Client/CuteEditor/Load.ashx?type=style&file=SyntaxHighlighter.css);', '1', null);
 INSERT INTO `user` VALUES ('1', 'admin', '202cb962ac59075b964b07152d234b70');
 INSERT INTO `wangzhan` VALUES ('1', 'b', 'a', 'a', '1', '1', '1', 'b', '<span style=\"font-size: 11pt\">&nbsp;<br />\r\n传 真： 86-21-XXXXXXXX<br />\r\n<br />\r\n诚聘英才： XXXXXXXXXXX<br />\r\n<br />\r\n公司地址：上海市嘉定区曹安路1877号628室\r\n</span>', null, null);
+
+
+/*
+MySQL Data Transfer
+Source Host: 192.168.6.222
+Source Database: new
+Target Host: 192.168.6.222
+Target Database: new
+Date: 2017/5/27 17:01:30
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for orders
+-- ----------------------------
+CREATE TABLE `orders` (
+  `Id` int(4) NOT NULL AUTO_INCREMENT,
+  `OrderNumber` bigint(16) NOT NULL,
+  `AId` int(4) NOT NULL,
+  `AGoodId` int(4) DEFAULT NULL,
+  `BId` int(4) NOT NULL,
+  `BGoodId` int(4) DEFAULT NULL,
+  `CreateDate` datetime NOT NULL,
+  `UpdateDate` datetime NOT NULL,
+  `Satus` varchar(50) NOT NULL,
+  `Memo` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records 
+-- ----------------------------
