@@ -27,6 +27,7 @@
                 </view>
                 <view class="btn-area">
                     <button formType="submit">交换</button>
+                    <button type="default" data-idx="" bindtap="">聊天</button>
                 </view>
             </view>
         </block>
