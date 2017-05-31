@@ -8,20 +8,21 @@ Page({
     showMore: true,
     showLoading: true,
     a: {},
-    text: ''
+    Bid: '',
+    Aid: 0
   },
+  //   添加订单  
   btn_default: function (e) {
     this.setData({
-      text: e.target.dataset.idx
-
-      //   添加订单  
-
-
-
-
-
-
-    })
+      Bid : e.target.dataset.idx      
+    }
+    )
+    var a;
+    var value = wx.getStorageSync('User')
+    a = { "OpenId": value.OpenId, "RegisterId": value.Id, "Aid": this.data.Aid, "Bid": this.data.Bid, Head : {"name": "", "auth": "", "id":value.Id }}
+    var response = api.Api('Orders', a);
+    console.log("成功"); 
+    
   },
   scrolltolower: function (e) {
     //console.log(e);
@@ -63,8 +64,11 @@ Page({
     try {
       var value = wx.getStorageSync('User')
       if (value) {
+        that.data.Aid = options.id;
         // Do something with return value
-        console.log(value)
+        console.log(value);
+        console.log('test');
+        console.log(that.data.Aid);
         that.setData({
           a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": 0, "count": that.data.count }
         })
