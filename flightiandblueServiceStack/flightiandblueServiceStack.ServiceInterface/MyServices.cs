@@ -81,5 +81,38 @@ namespace flightiandblueServiceStack.ServiceInterface
             };
             //return new WXUserResponse {Status= new BaseResponse{IsSuccess = true, ErrorMessage="" }};
         }
+
+
+        // 添加订单 
+        public object Any(flightiandblueServiceStack.ServiceModel.Orders request)
+        {
+
+
+            BLLDALMod.BLL.OrdersBLL objorders = new BLLDALMod.BLL.OrdersBLL();
+            BLLDALMod.Model.orders modeorder = new BLLDALMod.Model.orders();
+
+            BLLDALMod.BLL.goodsBLL objgood = new BLLDALMod.BLL.goodsBLL();
+            BLLDALMod.Model.Goods modegood = new BLLDALMod.Model.Goods();
+
+
+            modegood = objgood.GetModel(request.Aid);
+            modeorder.OrderNumber = "";
+            modeorder.Status = "01";
+            modeorder.AGoodId = request.Aid;
+            modeorder.BGoodId = request.Bid;
+            modeorder.Aid = modegood.UserId;
+            modeorder.Bid = request.Head.id;
+            modeorder.CreateDate = DateTime.Now;
+            modeorder.UpdateTime = DateTime.Now;
+            modeorder.Memo = "----memo----";
+            objorders.Add(modeorder);
+
+
+            return new OrdersResponse
+            {
+                Status = new BaseResponse { IsSuccess = true, ErrorMessage = "" }
+            };
+        
+        }
     }
 }
