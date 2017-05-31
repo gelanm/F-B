@@ -59,6 +59,7 @@
     <Compile Include="BLL\gscontent.cs" />
     <Compile Include="BLL\newsbig.cs" />
     <Compile Include="BLL\newscontent.cs" />
+    <Compile Include="BLL\OrdersBLL.cs" />
     <Compile Include="BLL\product.cs" />
     <Compile Include="BLL\productclass.cs" />
     <Compile Include="BLL\techsBLL.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="DAL\gscontent.cs" />
     <Compile Include="DAL\newsbig.cs" />
     <Compile Include="DAL\newscontent.cs" />
+    <Compile Include="DAL\ordersDAL.cs" />
     <Compile Include="DAL\product.cs" />
     <Compile Include="DAL\productclass.cs" />
     <Compile Include="DAL\techsDAL.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Model\gscontent.cs" />
     <Compile Include="Model\newsbig.cs" />
     <Compile Include="Model\newscontent.cs" />
+    <Compile Include="Model\orders.cs" />
     <Compile Include="Model\product.cs" />
     <Compile Include="Model\productclass.cs" />
     <Compile Include="Model\qxcp.cs" />

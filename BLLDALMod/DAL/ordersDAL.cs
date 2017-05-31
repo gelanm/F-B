@@ -23,20 +23,20 @@ namespace BLLDALMod.DAL
         public int InsertMysql(orders model)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("insert into WXUser(");
+            strSql.Append("insert into orders(");
             strSql.Append("OrderNumber, AId, BId, AGoodId, BGoodId, CreateDate, UpdateDate, Memo, Status)");
             strSql.Append(" values (");
             strSql.Append("@OrderNumber, @AId, @BId, @AGoodId, @BGoodId, @CreateDate, @UpdateDate, @Memo, @Status)");
             strSql.Append(";select @@IDENTITY");
 
             MySqlParameter[] parameters = {
-					new MySqlParameter("@OrderNumber", MySqlDbType.Int64,16),
-					new MySqlParameter("@AId", MySqlDbType.VarChar,100),
-					new MySqlParameter("@BId", MySqlDbType.VarChar,50),
-					new MySqlParameter("@AGoodId", MySqlDbType.VarChar,50),
-					new MySqlParameter("@BGoodId", MySqlDbType.VarChar,50),
-					new MySqlParameter("@CreateDate", MySqlDbType.DateTime),
-                    new MySqlParameter("@UpdateDate", MySqlDbType.DateTime),
+					new MySqlParameter("@OrderNumber", MySqlDbType.VarChar,100),
+					new MySqlParameter("@AId", MySqlDbType.Int16,4),
+					new MySqlParameter("@BId", MySqlDbType.Int16,4),
+					new MySqlParameter("@AGoodId", MySqlDbType.Int16,4),
+					new MySqlParameter("@BGoodId", MySqlDbType.Int16,4),
+					new MySqlParameter("@CreateDate", MySqlDbType.DateTime, 8),
+                    new MySqlParameter("@UpdateDate", MySqlDbType.DateTime, 8),
 					new MySqlParameter("@Memo", MySqlDbType.VarChar,1000),
 					new MySqlParameter("@Status", MySqlDbType.VarChar,10)};
             parameters[0].Value = model.OrderNumber;
@@ -46,8 +46,8 @@ namespace BLLDALMod.DAL
             parameters[4].Value = model.BGoodId;
             parameters[5].Value = model.CreateDate;
             parameters[6].Value = model.UpdateTime;
-            parameters[11].Value = model.Memo;
-            parameters[12].Value = model.Status;
+            parameters[7].Value = model.Memo;
+            parameters[8].Value = model.Status;
 
             object obj = DBhelpmysql.Insert(strSql.ToString(), parameters);
             if (obj == null)
