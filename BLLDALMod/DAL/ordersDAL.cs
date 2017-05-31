@@ -62,6 +62,16 @@ namespace BLLDALMod.DAL
         }
 
 
+
+
+        public DataTable GetAllList()
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select * from orders ");
+            DataTable dt = DBhelpmysql.Select(strSql.ToString(), null);
+
+            return dt;
+        }
         #endregion
 
     }

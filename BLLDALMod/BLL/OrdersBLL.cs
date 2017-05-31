@@ -26,6 +26,12 @@ namespace BLLDALMod.BLL
         }
 
 
+        public DataTable GetAllList()
+        {
+            return dal.GetAllList();
+        }
+
+
         #endregion
 
     }
