@@ -7,41 +7,13 @@ Page({
    */
   data: {
     userInfo: {},
-    projectSource: 'https://github.com/liuxuanqiang/wechat-weapp-mall',
+    projectSource: '',
     userListInfo: [{
       id: 1,
       icon: '../../img/iconfont-dingdan.png',
-      text: '补全信息',
+      text: '绑定接收推送订单',
       isunread: true,
       unreadNum: 3
-    }, {
-      id: 2,
-      icon: '../../img/iconfont-card.png',
-      text: '未分享的宝贝',
-      isunread: false,
-      unreadNum: 2
-    }, {
-      id: 3,
-      icon: '../../img/iconfont-icontuan.png',
-      text: '发布宝贝',
-      isunread: true,
-      unreadNum: 1
-    }, {
-      id: 4,
-      icon: '../../img/iconfont-shouhuodizhi.png',
-      text: '收货地址管理'
-    }, {
-      id: 5,
-      icon: '../../img/iconfont-kefu.png',
-      text: '联系客服'
-    }, {
-      id: 6,
-      icon: '../../img/iconfont-help.png',
-      text: '常见问题'
-    }, {
-      id: 'set',
-      icon: '../../img/set.png',
-      text: '设置'
     }]
   },
 
