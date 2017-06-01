@@ -87,15 +87,36 @@ namespace flightiandblueServiceStack.ServiceInterface
         public object Any(flightiandblueServiceStack.ServiceModel.Orders request)
         {
 
-
             BLLDALMod.BLL.OrdersBLL objorders = new BLLDALMod.BLL.OrdersBLL();
             BLLDALMod.Model.orders modeorder = new BLLDALMod.Model.orders();
-
             BLLDALMod.BLL.goodsBLL objgood = new BLLDALMod.BLL.goodsBLL();
             BLLDALMod.Model.Goods modegood = new BLLDALMod.Model.Goods();
 
 
+            modegood = objgood.GetModel(request.Bid);
+
+            if (modegood.State != "0")
+            {
+                return new OrdersResponse
+                {
+                    Status = new BaseResponse { IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品已经共享了" }
+                };
+            }
+            modegood.State = "1";
+            objgood.Update(modegood);
+
             modegood = objgood.GetModel(request.Aid);
+
+            if (modegood.State != "0")
+            {
+                return new OrdersResponse
+                {
+                    Status = new BaseResponse { IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品已经共享了" }
+                };
+            }
+            modegood.State = "1";
+            objgood.Update(modegood);
+
             modeorder.OrderNumber = "";
             modeorder.Status = "01";
             modeorder.AGoodId = request.Aid;
@@ -106,6 +127,9 @@ namespace flightiandblueServiceStack.ServiceInterface
             modeorder.UpdateTime = DateTime.Now;
             modeorder.Memo = "----memo----";
             objorders.Add(modeorder);
+
+
+
 
 
             return new OrdersResponse
