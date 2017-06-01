@@ -42,9 +42,9 @@ Page({
         icon: '../../img/iconfont-kefu.png',
       text: '联系客服'
     }, {
-        id: 6,
+        id: 'problem',
         icon: '../../img/iconfont-help.png',
-      text: '常见问题'
+        text: '常见问题'
     }, {
         id: 'set',
       icon: '../../img/set.png',

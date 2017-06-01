@@ -8,14 +8,15 @@
     "pages/my/mapAddress",
     "pages/my/unpostGoods",
     "pages/my/postGoods",
+    "pages/my/problem",
     "pages/share/share",
-    "pages/tech/tech",
+    "pages/tech/tech",    
     "pages/my/set"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "幼小学园",
+    "navigationBarTitleText": "智能玩具",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
