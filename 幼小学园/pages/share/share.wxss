@@ -36,3 +36,6 @@
 .page{
   font-size: 14px;
 }
+.btn-area{
+  width:100rpx;
+}

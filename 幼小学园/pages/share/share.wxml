@@ -26,8 +26,11 @@
                     </view>
                 </view>
                 <view class="btn-area">
-                    <button formType="submit">交换</button>
-                    <button type="default" data-idx="" bindtap="">聊天</button>
+                <view wx:if="{{item.State == 1}}">  
+                <button data-idx="{{item.id}}" type="warn" size="mini"
+        bindtap="redirect"> 交换 </button></view>
+        <button data-idx="{{item.id}}" type="default" size="mini"
+        bindtap="redirect"> 聊天 </button>
                 </view>
             </view>
         </block>
