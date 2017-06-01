@@ -20,9 +20,23 @@ Page({
     var a;
     var value = wx.getStorageSync('User')
     a = { "OpenId": value.OpenId, "RegisterId": value.Id, "Aid": this.data.Aid, "Bid": this.data.Bid, Head : {"name": "", "auth": "", "id":value.Id }}
-    var response = api.Api('Orders', a);
-    console.log("成功"); 
-    
+    api.Api('Orders', a).then(res => {
+      console.log(res);
+      if (res.Status.IsSuccess == false) {
+        wx.showToast({
+          title: res.Status.ErrorMessage,
+          icon: 'false',
+          duration: 2000
+        })
+      } else {
+        wx.showToast({
+          title: res.Status.ErrorMessage,
+          icon: 'success',
+          duration: 2000
+        })
+      }
+    })
+    }
   },
   scrolltolower: function (e) {
     //console.log(e);
