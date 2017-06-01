@@ -36,7 +36,7 @@ Page({
         })
       }
     })
-    }
+    
   },
   scrolltolower: function (e) {
     //console.log(e);
