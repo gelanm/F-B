@@ -26,11 +26,32 @@ namespace BLLDALMod.BLL
         }
 
 
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public BLLDALMod.Model.orders GetModel(int id)
+        {
+
+            return dal.GetModel(id);
+        }
+
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        public void Update(BLLDALMod.Model.orders model)
+        {
+            dal.Update(model);
+        }
+
         public DataTable GetAllList()
         {
             return dal.GetAllList();
         }
 
+        public DataTable GetList(string strWhere)
+        {
+            return dal.GetList(strWhere);
+        }
 
         #endregion
 
