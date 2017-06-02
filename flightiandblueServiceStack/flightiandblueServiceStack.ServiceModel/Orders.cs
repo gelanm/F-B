@@ -21,4 +21,13 @@ namespace flightiandblueServiceStack.ServiceModel
     {
               
     }
+
+    [Route("/EndExchange")]
+    public class EndOrders : IReturn<OrdersResponse>
+    {
+        public int RegisterId { get; set; }
+        public string OpenId { get; set; }
+        public int Id { get; set; }
+        public AuthHead Head { get; set; }
+    }
 }
