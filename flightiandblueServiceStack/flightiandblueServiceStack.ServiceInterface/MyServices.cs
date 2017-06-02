@@ -8,6 +8,7 @@ using System.Net;
 using BLLDALMod.Comm;
 using BLLDALMod.BLL;
 using BLLDALMod.Model;
+using System.Data;
 
 namespace flightiandblueServiceStack.ServiceInterface
 {
@@ -102,7 +103,7 @@ namespace flightiandblueServiceStack.ServiceInterface
                     Status = new BaseResponse { IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品已经共享了" }
                 };
             }
-            modegood.State = "1";
+            modegood.State = "2";
             objgood.Update(modegood);
 
             modegood = objgood.GetModel(request.Aid);
@@ -114,7 +115,7 @@ namespace flightiandblueServiceStack.ServiceInterface
                     Status = new BaseResponse { IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品已经共享了" }
                 };
             }
-            modegood.State = "1";
+            modegood.State = "2";
             objgood.Update(modegood);
 
             modeorder.OrderNumber = "";
@@ -137,6 +138,97 @@ namespace flightiandblueServiceStack.ServiceInterface
                 Status = new BaseResponse { IsSuccess = true, ErrorMessage = "" }
             };
         
+        }
+
+
+        // 结束订单 
+        public object Any(flightiandblueServiceStack.ServiceModel.EndOrders request)
+        {
+
+            BLLDALMod.BLL.OrdersBLL objorders = new BLLDALMod.BLL.OrdersBLL();
+            BLLDALMod.Model.orders modeorder = new BLLDALMod.Model.orders();
+            BLLDALMod.BLL.goodsBLL objgood = new BLLDALMod.BLL.goodsBLL();
+            BLLDALMod.Model.Goods modegood = new BLLDALMod.Model.Goods();
+            BLLDALMod.Model.Goods modegood2 = new BLLDALMod.Model.Goods();
+            int otherId;
+
+            modegood = objgood.GetModel(request.Id);
+
+            if (modegood.State != "2")
+            {
+                return new OrdersResponse
+                {
+                    Status = new BaseResponse { IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品不存在正在共享的订单" }
+                };
+            }
+            modegood.State = "1";
+            modegood.UpdateTime = DateTime.Now;
+
+            DataTable dt = objorders.GetList("  (AGoodId = " + request.Id + " or  AGoodId = " + request.Id + " ) and  Status = '01' order by CreateDate desc limit 0,1 ");
+            if (dt.Rows.Count == 0)
+            {
+                return new OrdersResponse
+                {
+                    Status = new BaseResponse { IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品不存在正在共享的订单" }
+                };
+            }
+            if (int.Parse(dt.Rows[0]["AGoodId"].ToString()) == request.Id)
+            {
+                otherId = int.Parse(dt.Rows[0]["BGoodId"].ToString());
+            }
+            else {
+                otherId = int.Parse(dt.Rows[0]["AGoodId"].ToString());
+            }
+
+
+
+
+
+            
+
+            modegood2 = objgood.GetModel(otherId);
+
+            if (modegood2.State != "2")
+            {
+                return new OrdersResponse
+                {
+                    Status = new BaseResponse { IsSuccess = false, ErrorMessage = modegood2.Title + ", 该商品不存在正在共享的订单" }
+                };
+            }
+            modegood2.State = "1";
+            modegood2.UpdateTime = DateTime.Now;
+            
+
+
+            modeorder = objorders.GetModel(int.Parse(dt.Rows[0]["Id"].ToString()));
+            modeorder.Status = "06";
+            modeorder.UpdateTime = DateTime.Now;
+
+            objgood.Update(modegood);
+            objgood.Update(modegood2);
+            objorders.Update(modeorder);
+
+
+            //modeorder.OrderNumber = "";
+            //modeorder.Status = "01";
+            //modeorder.AGoodId = request.Aid;
+            //modeorder.BGoodId = request.Bid;
+            //modeorder.Aid = modegood.UserId;
+            //modeorder.Bid = request.Head.id;
+            //modeorder.CreateDate = DateTime.Now;
+            //modeorder.UpdateTime = DateTime.Now;
+            //modeorder.Memo = "----memo----";
+            //objorders.Add(modeorder);
+
+
+
+
+
+            return new OrdersResponse
+            {
+                Status = new BaseResponse { IsSuccess = true, ErrorMessage = "" }
+            };
+
         }
     }
 }
