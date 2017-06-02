@@ -1,4 +1,5 @@
 var api = require('../../utils/api.js');
+var util = require('../../utils/util.js');
 
 Page({
   data: {
@@ -45,9 +46,25 @@ Page({
   loadData: function (obj) {
     api.Api('viewGoods', obj).then(res => {
       console.log(res);
+      var storage = [];
       if (res.length > 0) {
+        res.forEach(function (t) {
+          storage.push({
+            id: t.id,
+            ContentValidity: t.ContentValidity,
+            MainImage: t.MainImage,
+            Price: t.Price,
+            State: t.State,
+            TableName: t.TableName,
+            Title: t.Title,
+            UserId: t.UserId,
+            AddTime: util.getLocalTime(t.AddTime.replace("/Date(", "").replace("-0000)/", "")),
+            PurchaseDate: util.getLocalTime(t.PurchaseDate.replace("/Date(", "").replace("-0000)/", "")),
+            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", ""))
+          })
+        })
         this.setData({
-          list: this.data.list.concat(res),
+          list: this.data.list.concat(storage),
           showLoading: false,
           pn: this.data.pn + 1
         })

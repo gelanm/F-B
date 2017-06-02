@@ -7,7 +7,7 @@
 <block wx:else>
     <scroll-view class="sv" scroll-top="0" scroll-y bindscrolltolower="scrolltolower">
         <block wx:for="{{list}}">
-            <view data-id="{{item.id}}" bindtap="redirect" class="mod-list">
+            <view data-id="{{item.id}}"  class="mod-list">
                 <view class="left">
                     <image src="http://api.test.com/uploads/{{item.MainImage}}"></image>
                 </view>
@@ -25,7 +25,7 @@
                         简介:{{item.ContentValidity}}
                     </view>
                      <view class="btn-area">
-                        <button type="default" data-idx="{{item.id}}" bindtap="btn_default">交换结束</button>
+                        <button type="default" data-idx="{{item.id}}" size="mini"  bindtap="endExchange">交换结束</button>
                    </view>
                 </view>
             </view>

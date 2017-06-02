@@ -1,5 +1,5 @@
 var api = require('../../utils/api.js');
-
+var util = require('../../utils/util.js');
 Page({
   data: {
     count:10,
@@ -44,10 +44,42 @@ Page({
   },
   loadData: function (obj) {
     api.Api('viewGoods', obj).then(res => {
-      console.log(res);
+       console.log(res);
+      // console.log(Date.now());
+      // console.log(new Date);
+      // console.log(util.formatTime(new Date));
+      // var datetime;
+      // datetime = new Date("1476113456849");
+    
+      // console.log(datetime);
+      // console.log(util.formatTime(datetime));
+      // console.log(util.formatTime("1476113456849"));
+      var storage = [];
       if (res.length > 0) {
+        res.forEach(function (t) {
+          //console.log(util.date('Y-m-d', (parseInt(t.AddTime.replace("/Date(", "").replace("-0000)/", ""))/1000).toString()))
+          //console.log(Date.now())
+          //console.log(new Date(t.AddTime))
+          //console.log(new Date(t.AddTime.replace("/Date(", "").replace("-0000)/", "")))
+          //console.log(t.AddTime.replace("/Date(", "").replace("-0000)/", ""))
+          //var datetime;
+          //datetime = new Date("1476113456849");
+          storage.push({
+            id: t.id,
+            ContentValidity: t.ContentValidity,
+            MainImage: t.MainImage,
+            Price:t.Price,
+            State:t.State,
+            TableName:t.TableName,
+            Title:t.Title,
+            UserId:t.UserId,
+            AddTime: util.getLocalTime(t.AddTime.replace("/Date(","").replace("-0000)/","")),
+            PurchaseDate: util.getLocalTime( t.PurchaseDate.replace("/Date(", "").replace("-0000)/", "")),
+            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", ""))
+          })
+        })
         this.setData({
-          list: this.data.list.concat(res),
+          list: this.data.list.concat(storage),
           showLoading: false,
           pn: this.data.pn + 1
         })

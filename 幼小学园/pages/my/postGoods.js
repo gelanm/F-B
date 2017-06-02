@@ -1,4 +1,5 @@
 var api = require('../../utils/api.js');
+var util = require('../../utils/util.js');
 
 Page({
   data: {
@@ -8,22 +9,56 @@ Page({
     showMore: true,
     showLoading: true,
     a: {}
-  },
-  redirect: function (e) {
-    var id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '/pages/detail/detail?id=' + id,
-      success: function (res) {
-        // success
-      },
-      fail: function (res) {
-        // fail
-      },
-      complete: function (res) {
-        // complete
+  }, 
+  endExchange: function (e) {
+    console.log("changeOver")
+    console.log(e)
+    var id = e.currentTarget.dataset.idx;
+    console.log(id)
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        var b = { "OpenId": value.OpenId, "RegisterId": value.Id, "Id": id, Head: { "name": "", "auth": "", "id": value.Id }}
+        api.Api('EndOrders', b).then(res => {
+            console.log(res);
+            if (res.Status.IsSuccess == false) {
+              wx.showToast({
+                title: res.Status.ErrorMessage,
+                icon: 'false',
+                duration: 2000
+              })
+            } else {
+              wx.showToast({
+                title: res.Status.ErrorMessage,
+                icon: 'success',
+                duration: 2000
+              })
+            }
+          })
+        }
       }
-    })
+    catch (e) {
+      // Do something when catch error
+    }
   },
+  // redirect: function (e) {
+  //   console.log("redirect")
+  //   console.log(e)
+  //   var id = e.currentTarget.dataset.id;
+  //   wx.navigateTo({
+  //     url: '/pages/detail/detail?id=' + id,
+  //     success: function (res) {
+  //       // success
+  //     },
+  //     fail: function (res) {
+  //       // fail
+  //     },
+  //     complete: function (res) {
+  //       // complete
+  //     }
+  //   })
+  // },
   scrolltolower: function (e) {
     //console.log(e);
     if (!this.data.showMore) return;
@@ -45,9 +80,25 @@ Page({
   loadData: function (obj) {
     api.Api('viewGoods', obj).then(res => {
       console.log(res);
+      var storage = [];
       if (res.length > 0) {
+        res.forEach(function (t) {
+          storage.push({
+            id: t.id,
+            ContentValidity: t.ContentValidity,
+            MainImage: t.MainImage,
+            Price: t.Price,
+            State: t.State,
+            TableName: t.TableName,
+            Title: t.Title,
+            UserId: t.UserId,
+            AddTime: util.getLocalTime(t.AddTime.replace("/Date(", "").replace("-0000)/", "")),
+            PurchaseDate: util.getLocalTime(t.PurchaseDate.replace("/Date(", "").replace("-0000)/", "")),
+            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", ""))
+          })
+        })
         this.setData({
-          list: this.data.list.concat(res),
+          list: this.data.list.concat(storage),
           showLoading: false,
           pn: this.data.pn + 1
         })

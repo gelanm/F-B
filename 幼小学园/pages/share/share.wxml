@@ -26,7 +26,7 @@
                     </view>
                 </view>
                 <view class="btn-area">
-                <view wx:if="{{item.State == 1}}">  
+                <view wx:if="{{item.State == 1 }}">  
                 <button data-idx="{{item.id}}" type="warn" size="mini"
         bindtap="redirect"> 交换 </button></view>
         <button data-idx="{{item.id}}" type="default" size="mini"

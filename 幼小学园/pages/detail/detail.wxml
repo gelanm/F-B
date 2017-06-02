@@ -37,7 +37,5 @@
                 <text>没有更多内容了。。。</text>
             </view>
         </block>
-
-        <view>提示：{{text}}</view>
     </scroll-view>
 </block>

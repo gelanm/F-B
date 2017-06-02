@@ -25,7 +25,7 @@
                         简介:{{item.ContentValidity}}
                     </view>
                     <view class="btn-area">
-                        <button type="default" data-idx="{{item.id}}" bindtap="btn_default">等待确认/确认共享</button>
+                        <button type="default" data-idx="{{item.id}}" size="mini"  bindtap="btn_default">等待确认/确认共享</button>
                     </view>
                 </view>
             </view>
