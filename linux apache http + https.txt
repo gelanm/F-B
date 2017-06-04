@@ -135,6 +135,6 @@ https://ninghao.net/blog/4449
 自己生产 ssl
 https://selfservice.console.aliyun.com/ticket/scene/cdn/CDN/detail?categoryId=498
 
-
-
+官网申请免费的 ssl
+https://selfservice.console.aliyun.com/ticket/scene/cdn/CDN/detail?categoryId=498
 
