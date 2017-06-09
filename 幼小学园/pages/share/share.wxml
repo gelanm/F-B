@@ -30,7 +30,7 @@
                 <button data-idx="{{item.id}}" type="warn" size="mini"
         bindtap="redirect"> 交换 </button></view>
         <button data-idx="{{item.id}}" type="default" size="mini"
-        bindtap="redirect"> 聊天 </button>
+        bindtap="chat"> 聊天 </button>
                 </view>
             </view>
         </block>

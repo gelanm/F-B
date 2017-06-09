@@ -1,6 +1,6 @@
 <!--pages/home/home.wxml-->
 <view class="container">
-    <view bindtap="bindViewTap">
+    <view >
         <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
                 autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
             <block wx:for="{{images}}">

@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/chat/chat",
+    
     "pages/home/home",
     "pages/detail/detail",
     "pages/my/index",
@@ -10,7 +12,8 @@
     "pages/my/postGoods",
     "pages/my/problem",
     "pages/share/share",
-    "pages/tech/tech",    
+    "pages/tech/tech",   
+   
     "pages/my/set"
   ],
   "window":{

@@ -22,22 +22,29 @@
           </view>
         </view>
     </view>
-
+    <block wx:if="{{isnull}}">
+        <block wx:for="{{msg}}">
+            <!--<template is='msg-box' data ="{{...item}}"></template>-->
+            <template is="{{item.type === 1 ? 'msg-box' : 'msg-boxme'}}" data ="{{...item}}"></template>
+        </block>    
+    </block>
  </view>
+    
     <view class="send-msg-box-wrapper">
       <view class="send-msg-box">
         <view class="voice">
           <button type="primary" size="mini" class="add-user-btn">新加</button>
         </view>
         <view class="input-area">
-          <input type="text" class="msg-content" />
+          <input type="text" class="msg-content" bindinput="MessageInput"/>
         </view>
         <view class="btn-area">
-          <button type="primary" size="mini" class="send-msg-btn">发送</button>
+          <button type="primary" size="mini" class="send-msg-btn" bindtap="sendMessage"  >发送</button>
         </view>
       </view>
     </view>
   </view>
+
 
   <!-- 消息模板 -->
   <template name="msg-box">
@@ -46,12 +53,12 @@
       <view class="chat-item">
         <view class="clearfix">
           <view class="avatar">
-            <div class="user-avatar" style="background-image: url({{userInfo.avatarUrl}});"></div>
+            <div class="user-avatar" style="background-image: url({{avatarUrl}});"></div>
           </view>
           <view class="msg-bubble-box">
             <div class="msg-bubble-area clearfix">
               <view class="msg-bubble">
-                <text class="text">你好, 先生</text>
+                <text class="text">{{text}}</text>
               </view>
             </div>
           </view>
@@ -59,6 +66,26 @@
       </view>
     </view>
   </template>
+<!-- 消息模板 -->
+  <template name="msg-boxme">
+    <!-- 每条信息 -->
+  <view class="msg-box">
+        <view class="chat-item me">
+          <view class="clearfix">
+            <view class="avatar">
+              <div class="user-avatar" style="background-image: url({{avatarUrl}});"></div>
+            </view>
+            <view class="msg-bubble-box">
+              <div class="msg-bubble-area clearfix">
+                <view class="msg-bubble">
+                  <text class="text">{{text}}</text>
+                </view>
+              </div>
+            </view>
+          </view>
+        </view>
+    </view>
+    </template>
 </view>
 
 

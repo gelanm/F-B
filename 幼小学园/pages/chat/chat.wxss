@@ -125,3 +125,28 @@
 .input-area {
   border-bottom: 1px solid #eee;
 }
+
+view,
+text,
+.text {
+  margin: 0;
+  font-family: "pingfang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1;
+}
+/*清除浮动*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+

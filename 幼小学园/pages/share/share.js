@@ -11,7 +11,7 @@ Page({
     a: {}
   },
   redirect: function (e) {
-    var id = e.currentTarget.dataset.id;
+    var id = e.currentTarget.dataset.idx;
     wx.navigateTo({
       url: '/pages/detail/detail?id=' + id,
       success: function (res) {
@@ -75,6 +75,38 @@ Page({
       }
     })
   },
+  loadNewData: function (obj) {
+    api.Api('viewGoods', obj).then(res => {
+      console.log(res);
+      var storage = [];
+      if (res.length > 0) {
+        res.forEach(function (t) {
+          storage.push({
+            id: t.id,
+            ContentValidity: t.ContentValidity,
+            MainImage: t.MainImage,
+            Price: t.Price,
+            State: t.State,
+            TableName: t.TableName,
+            Title: t.Title,
+            UserId: t.UserId,
+            AddTime: util.getLocalTime(t.AddTime.replace("/Date(", "").replace("-0000)/", "")),
+            PurchaseDate: util.getLocalTime(t.PurchaseDate.replace("/Date(", "").replace("-0000)/", "")),
+            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", ""))
+          })
+        })
+        this.setData({
+          list: storage,
+          showLoading: false,
+          pn: this.data.pn + 1
+        })
+      } else {
+        this.setData({
+          showMore: false
+        })
+      }
+    })
+  },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     var that = this;
@@ -97,7 +129,21 @@ Page({
     // 页面渲染完成
   },
   onShow: function () {
-    // 页面显示
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        // Do something with return value
+        console.log(value)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": 0, "count": that.data.count }
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+    console.log(this.data.a)
+    this.loadNewData(this.data.a);
   },
   onHide: function () {
     // 页面隐藏

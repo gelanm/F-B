@@ -22,7 +22,7 @@ Page({
     a = { "OpenId": value.OpenId, "RegisterId": value.Id, "Aid": this.data.Aid, "Bid": this.data.Bid, Head : {"name": "", "auth": "", "id":value.Id }}
     api.Api('Orders', a).then(res => {
       console.log(res);
-      if (res.Status.IsSuccess == false) {
+      if (res.Status.IsSuccess === false) {
         wx.showToast({
           title: res.Status.ErrorMessage,
           icon: 'false',
@@ -33,7 +33,21 @@ Page({
           title: res.Status.ErrorMessage,
           icon: 'success',
           duration: 2000
-        })
+        }) 
+        var that = this;
+        try {
+          var value = wx.getStorageSync('User')
+          if (value) {
+            // Do something with return value
+            console.log(value)
+            that.setData({
+              a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": 0, "count": that.data.count }
+            })
+          }
+        } catch (e) {
+          // Do something when catch error
+        }
+        this.loadNewData(this.data.a);
       }
     })
     
@@ -72,13 +86,32 @@ Page({
       }
     })
   },
+  loadNewData: function (obj) {
+    api.Api('viewGoods', obj).then(res => {
+      console.log(res);
+      if (res.length > 0) {
+        this.setData({
+          list: res,
+          showLoading: false,
+          pn: this.data.pn + 1
+        })
+      } else {
+        this.setData({
+          showMore: false
+        })
+      }
+    })
+  },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
+    console.log(options);
     var that = this;
     try {
       var value = wx.getStorageSync('User')
       if (value) {
-        that.data.Aid = options.id;
+        that.setData({
+          Aid : options.id
+        })
         // Do something with return value
         console.log(value);
         console.log('test');
