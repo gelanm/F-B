@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AddLog.cs" />
     <Compile Include="BLL\book.cs" />
+    <Compile Include="BLL\ChatRoomBLL.cs" />
     <Compile Include="BLL\goodsBLL.cs" />
     <Compile Include="BLL\gsclass.cs" />
     <Compile Include="BLL\gscontent.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Comm\JsonHelper.cs" />
     <Compile Include="DAL\book.cs" />
     <Compile Include="DAL\bookDAL.cs" />
+    <Compile Include="DAL\ChatRoomDAL.cs" />
     <Compile Include="DAL\goodsDAL.cs" />
     <Compile Include="DAL\gsclass.cs" />
     <Compile Include="DAL\gscontent.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="DBUtility\PubConstant.cs" />
     <Compile Include="DBUtility\SQLHelper.cs" />
     <Compile Include="Model\book.cs" />
+    <Compile Include="Model\ChatRoom.cs" />
     <Compile Include="Model\goods.cs" />
     <Compile Include="Model\gsclass.cs" />
     <Compile Include="Model\gscontent.cs" />
