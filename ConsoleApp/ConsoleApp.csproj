@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D7680B4-0224-4F0C-B1F6-74FB7586EBDC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fleck.Samples.ConsoleApp</RootNamespace>
+    <AssemblyName>Fleck.Samples.ConsoleApp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AopSdk">
+      <HintPath>Framework\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="ApiClient">
+      <HintPath>Framework\ApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>Framework\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Web.C1WebGrid.2">
+      <HintPath>Framework\C1.Web.C1WebGrid.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Web.UI.4">
+      <HintPath>Framework\C1.Web.UI.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Web.UI.Controls.4">
+      <HintPath>Framework\C1.Web.UI.Controls.4.dll</HintPath>
+    </Reference>
+    <Reference Include="CM.BLL">
+      <HintPath>Framework\CM.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CM.Common">
+      <HintPath>Framework\CM.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CM.DAL">
+      <HintPath>Framework\CM.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="CM.Facade">
+      <HintPath>Framework\CM.Facade.dll</HintPath>
+    </Reference>
+    <Reference Include="CM.Module">
+      <HintPath>Framework\CM.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="CommLib.BdPush">
+      <HintPath>Framework\CommLib.BdPush.dll</HintPath>
+    </Reference>
+    <Reference Include="CServiceStack.Mega">
+      <HintPath>Framework\CServiceStack.Mega.dll</HintPath>
+    </Reference>
+    <Reference Include="Fleck, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Framework\Fleck.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Framework\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>Framework\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>Framework\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>Framework\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>Framework\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>Framework\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Framework\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>Framework\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceAPI">
+      <HintPath>Framework\ServiceAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceContact">
+      <HintPath>Framework\ServiceContact.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceProcess">
+      <HintPath>Framework\ServiceProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.XML" />
+    <Reference Include="TopSdk">
+      <HintPath>Framework\TopSdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\MessageBLL.cs" />
+    <Compile Include="Common\SendEmail.cs" />
+    <Compile Include="Data\ChatUser.cs" />
+    <Compile Include="Data\ConnectUsers.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Message\ConnectUserMessage.cs" />
+    <Compile Include="Message\LoginMessage.cs" />
+    <Compile Include="Message\MessageBase.cs" />
+    <Compile Include="Message\SystemMessage.cs" />
+    <Compile Include="Message\UserMessage.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="client.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Fakes Include="Fakes\Fleck.fakes" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FlighingandBlueThreeBllDll\BLLDALMod\BLLDALMod.csproj">
+      <Project>{f7c040f5-73d7-4565-8db4-31d14f223123}</Project>
+      <Name>BLLDALMod</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
