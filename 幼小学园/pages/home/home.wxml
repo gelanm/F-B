@@ -20,15 +20,15 @@
         <view class="venues_list">
             <block wx:for="{{venuesItems}}">
                 <view class="venues_item">
-                    <navigator url="../chat/chat">
+                    <!--<navigator url="../chat/chat">-->
                         <image src="{{item.smallpic}}"/>
-                    </navigator>
+                    <!--</navigator>-->
                 </view>
             </block>
         </view>
     </view>
 
-    <view class="text">
+    <!--<view class="text">
         <view class="line_flag"></view>
         <text>环球精选</text>
     </view>
@@ -48,6 +48,6 @@
 
     <loading hidden="{{loadingHidden}}">
         加载中...
-    </loading>
+    </loading>-->
 
 </view>
