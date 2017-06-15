@@ -20,6 +20,7 @@ namespace flightiandblueServiceStack.ServiceModel
         public int Id { get; set; }
         public string OpenId { get; set; }
         public string UnionId { get; set; }
+        public string avatarUrl { get; set; }
     }
 
     public class WXjscode2sessionResponseType

@@ -31,10 +31,15 @@ namespace flightiandblueServiceStack.ServiceInterface
 
         public object Any(viewGoods request)
         {
+            ChatRoomBLL objChatRoomBLL = new ChatRoomBLL();
             if (request.Type == 0)
             {
                 goodsBLL objBll = new goodsBLL();
                 List<Goods> listmode = objBll.GetModelList(" State = '" + request.State.ToString() + "' and UserId = " + request.RegisterId + " limit " + request.start + "," + request.count);
+                foreach (Goods g in listmode) {
+                    int a = objChatRoomBLL.getChatCount(g.UserId);
+                    g.Remark = a.ToString();
+                }
                 return listmode;
             }
             else if (request.Type == 1)
@@ -78,6 +83,7 @@ namespace flightiandblueServiceStack.ServiceInterface
                 Id = new ServiceProcess.WXService().InsertMysqlWXUserInf(WXUserInfo),
                 OpenId = WXUserInfo.openId,
                 UnionId = WXUserInfo.unionId,
+                avatarUrl = WXUserInfo.avatarUrl,
                 Status = new BaseResponse { IsSuccess = true, ErrorMessage = "" }
             };
             //return new WXUserResponse {Status= new BaseResponse{IsSuccess = true, ErrorMessage="" }};

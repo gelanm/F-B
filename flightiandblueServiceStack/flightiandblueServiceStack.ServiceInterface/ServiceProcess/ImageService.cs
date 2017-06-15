@@ -127,7 +127,7 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
 
                     Goods objGoods = new Goods();
                     objGoods.Title = request.Title;
-                    objGoods.MainImage = idcreatedir + "/350/" + fname1;
+                    objGoods.MainImage = PublicConfig.ImgPath + idcreatedir + "/350/" + fname1;
                     objGoods.ContentValidity = request.Desc;
                     objGoods.PurchaseDate = request.PurchaseDate;
                     objGoods.AddTime = DateTime.Now;
