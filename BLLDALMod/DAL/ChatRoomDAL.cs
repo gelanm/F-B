@@ -23,7 +23,7 @@ namespace BLLDALMod.DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into ChatRoom(");
-            strSql.Append("FromID, ToID, Content, CreateDateTime, [Type], Status)");
+            strSql.Append("FromID, ToID, Content, CreateDateTime, Type, Status)");
             strSql.Append(" values (");
             strSql.Append("@FromID, @ToID, @Content, @CreateDateTime, @Type, @Status)");
             strSql.Append(";select @@IDENTITY");
@@ -53,21 +53,46 @@ namespace BLLDALMod.DAL
 
         public bool Update(ChatRoom model)
         {
-            return true;
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update ChatRoom set ");
+            strSql.Append("Status=@Status,");
+            strSql.Append("UpdateDate=@UpdateDate");
+            strSql.Append(" where id=@id");
+            MySqlParameter[] parameters = {
+					new MySqlParameter("@Status", MySqlDbType.Int32,16),
+					new MySqlParameter("@UpdateDate", MySqlDbType.DateTime),
+                    new MySqlParameter("@id", MySqlDbType.Int32,4)};
+            parameters[0].Value = model.intStatus;
+            parameters[1].Value = model.dtmUpdateDate;
+            parameters[2].Value = model.intID;
+
+            int rows = DBhelpmysql.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool Delete(int Id)
         {
             return true;
         }
-
+        public int getChatCount(int userId)
+        {
+            string sql = string.Format("select  count(1)  from ChatRoom where ToId = {0} and Status = 0 order by CreateDateTime desc ", userId);
+            return DBhelpmysql.Count(sql);
+        }
         /// <summary>
         /// 获得数据列表
         /// </summary>
         public DataTable GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select FromID, ToID, Content, CreateDateTime, [Type] ");
+            strSql.Append("select *  ");
             strSql.Append(" FROM ChatRoom ");
             if (strWhere.Trim() != "")
             {
@@ -77,13 +102,18 @@ namespace BLLDALMod.DAL
         }
         
         public DataTable GetCurrentMessageList(int fid, int tid, int count){
-            string sql = string.Format("select top {2} * from ChatRoom where FromId = {0} and ToId = {1} or  FromId = {1} and ToId = {0} order by CreateDateTime desc ", fid, tid, count);
+            string sql = string.Format("select * from ChatRoom where FromId = {0} and ToId = {1} or  FromId = {1} and ToId = {0} order by CreateDateTime desc limit 0,{2} ", fid, tid, count);
             return DBhelpmysql.Select(sql, null);
         }
 
         public DataTable GetCurrentMessageList(int userid, int count)
         {
-            string sql = string.Format("select top {1} * from ChatRoom where ToId = {0} order by CreateDateTime desc ", userid, count);
+            string sql = string.Format("select * from ChatRoom where ToId = {0} order by CreateDateTime desc limit 0,{1} ", userid, count);
+            return DBhelpmysql.Select(sql, null);
+        }
+        public DataTable GetCurrentMessageList(int userid)
+        {
+            string sql = string.Format("select * from ChatRoom where ToId = {0} and Status = 0 order by CreateDateTime desc ", userid);
             return DBhelpmysql.Select(sql, null);
         }
         #endregion

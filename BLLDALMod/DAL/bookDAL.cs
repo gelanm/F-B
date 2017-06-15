@@ -62,7 +62,7 @@ namespace Maticsoft.DAL
             strSql.Append("liuyantitle=@liuyantitle,");
             strSql.Append("liuyangcontent=@liuyangcontent,");
             strSql.Append("liuyantitme=@liuyantitme,");
-            strSql.Append("hueifu=@hueifu,");
+            strSql.Append("hueifu=@hueifu");
             strSql.Append(" where id=@id");
             MySqlParameter[] parameters = {
 					new MySqlParameter("@liuyantitle", MySqlDbType.VarChar,50),

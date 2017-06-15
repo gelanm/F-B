@@ -12,7 +12,22 @@ namespace BLLDALMod.Model
         {
             //构造函数
         }
- 
+
+        private int _intID = int.MinValue;
+        ///<summary>
+        ///</summary>
+        public int intID
+        {
+            get
+            {
+                return _intID;
+            }
+            set
+            {
+                _intID = value;
+            }
+        }
+
         private int _intFromID = int.MinValue;
         ///<summary>
         ///</summary>
