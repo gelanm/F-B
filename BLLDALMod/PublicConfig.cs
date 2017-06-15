@@ -30,6 +30,10 @@ public class PublicConfig
         /// </summary>
         public static string XmlPath = GetConfigNodeValue("XmlPath");
         /// <summary>
+        /// 图片地址
+        /// </summary>
+        public static string ImgPath = GetConfigNodeValue("ImgPath");
+        /// <summary>
         /// 
         /// </summary>
         public static string IsSQLLog = GetConfigNodeValue("IsSQLLog");
