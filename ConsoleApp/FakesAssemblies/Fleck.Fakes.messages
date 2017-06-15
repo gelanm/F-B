@@ -1,0 +1,40 @@
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.ISocket 生成存根: method System.IO.Stream Fleck.ISocket.get_Stream() unstubbable: 方法是抽象的，因此无法用作存根，类型 System.IO.Stream 在目标框架版本中不可用。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.LogLevel 生成存根: 类型是一个值类型。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.WebSocketConnectionInfo 生成存根: 类型没有系列可见的构造函数。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.IntExtensions 生成存根: 类型已密封。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.FrameType 生成存根: 类型是一个值类型。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.WebSocketStatusCodes 生成存根: 类型已密封。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.SubProtocolNegotiator 生成存根: 类型已密封。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.QueuedStream 生成存根: 类型不受支持，因为它不可用或已在版本之间更改。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Helpers.MonoHelper 生成存根: 类型已密封。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.Draft76Handler 生成存根: 类型已密封。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.Hybi13Handler 生成存根: 类型已密封。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 <PrivateImplementationDetails> 生成存根: 类型已密封。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.ISocket 生成填充码: 类型是一个接口。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.IWebSocketConnection 生成填充码: 类型是一个接口。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.LogLevel 生成填充码: 类型是一个枚举。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.FleckLog+<>c 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.IWebSocketServer 生成填充码: 类型是一个接口。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.IWebSocketConnectionInfo 生成填充码: 类型是一个接口。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.SocketWrapper+<>c__DisplayClass21_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.SocketWrapper+<>c__DisplayClass22_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.SocketWrapper+<>c__DisplayClass26_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.SocketWrapper+<>c__DisplayClass9_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.WebSocketServer+<>c 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.WebSocketServer+<>c__DisplayClass39_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.WebSocketConnection+<>c 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.WebSocketConnection+<>c__DisplayClass67_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.WebSocketConnection+<>c__DisplayClass69_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.FrameType 生成填充码: 类型是一个枚举。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.IHandler 生成填充码: 类型是一个接口。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.QueuedStream+<>c__DisplayClass27_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.QueuedStream+QueuedWriteResult 生成填充码: 类型对 exported or assembly(Fleck.Fakes) 不可见。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.QueuedStream+WriteData 生成填充码: 类型对 exported or assembly(Fleck.Fakes) 不可见。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.ComposableHandler+<>c 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.Draft76Handler+<>c 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.Draft76Handler+<>c__DisplayClass3_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.FlashSocketPolicyRequestHandler+<>c__DisplayClass1_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.Hybi13Handler+<>c 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.Hybi13Handler+<>c__DisplayClass0_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 Fleck.Handlers.Hybi13Handler+<>c__DisplayClass2_0 生成填充码: 类型不受支持，因为存在于内部限制。
+F:\git2\branches\flightingandbluechat\ConsoleApp\Fakes\Fleck.fakes : warning : 无法为 <PrivateImplementationDetails> 生成填充码: 类型不受支持，因为存在于内部限制。

@@ -1,0 +1,2330 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fleck.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Fleck.Fakes.ShimConnectionNotAvailableException">
+            <summary>Fleck.ConnectionNotAvailableException 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimConnectionNotAvailableException.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimConnectionNotAvailableException.#ctor(Fleck.ConnectionNotAvailableException)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimConnectionNotAvailableException.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimConnectionNotAvailableException.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimConnectionNotAvailableException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimConnectionNotAvailableException.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimConnectionNotAvailableException.Constructor">
+            <summary>设置 ConnectionNotAvailableException.ConnectionNotAvailableException() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimConnectionNotAvailableException.ConstructorString">
+            <summary>设置 ConnectionNotAvailableException.ConnectionNotAvailableException(String message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimConnectionNotAvailableException.ConstructorStringException">
+            <summary>设置 ConnectionNotAvailableException.ConnectionNotAvailableException(String message, Exception innerException) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimConnectionNotAvailableException.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimFleckLog">
+            <summary>Fleck.FleckLog 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimFleckLog.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimFleckLog.#ctor(Fleck.FleckLog)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimFleckLog.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimFleckLog.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimFleckLog.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimFleckLog.Constructor">
+            <summary>设置 FleckLog.FleckLog() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimFleckLog.DebugStringException">
+            <summary>设置 FleckLog.Debug(String message, Exception ex) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimFleckLog.ErrorStringException">
+            <summary>设置 FleckLog.Error(String message, Exception ex) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimFleckLog.InfoStringException">
+            <summary>设置 FleckLog.Info(String message, Exception ex) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimFleckLog.StaticConstructor">
+            <summary>设置 FleckLog.FleckLog() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimFleckLog.WarnStringException">
+            <summary>设置 FleckLog.Warn(String message, Exception ex) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimFleckLog.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimHandlerFactory">
+            <summary>Fleck.HandlerFactory 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandlerFactory.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandlerFactory.#ctor(Fleck.HandlerFactory)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandlerFactory.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandlerFactory.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimHandlerFactory.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimHandlerFactory.BuildHandlerWebSocketHttpRequestActionOfStringActionActionOfByteArrayActionOfByteArrayActionOfByteArray">
+            <summary>设置 HandlerFactory.BuildHandler(WebSocketHttpRequest request, Action`1&lt;String&gt; onMessage, Action onClose, Action`1&lt;Byte[]&gt; onBinary, Action`1&lt;Byte[]&gt; onPing, Action`1&lt;Byte[]&gt; onPong) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimHandlerFactory.Constructor">
+            <summary>设置 HandlerFactory.HandlerFactory() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimHandlerFactory.GetVersionWebSocketHttpRequest">
+            <summary>设置 HandlerFactory.GetVersion(WebSocketHttpRequest request) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimHandlerFactory.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimHandshakeException">
+            <summary>Fleck.HandshakeException 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandshakeException.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandshakeException.#ctor(Fleck.HandshakeException)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandshakeException.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandshakeException.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimHandshakeException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimHandshakeException.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimHandshakeException.Constructor">
+            <summary>设置 HandshakeException.HandshakeException() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimHandshakeException.ConstructorString">
+            <summary>设置 HandshakeException.HandshakeException(String message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimHandshakeException.ConstructorStringException">
+            <summary>设置 HandshakeException.HandshakeException(String message, Exception innerException) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimHandshakeException.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimIntExtensions">
+            <summary>Fleck.IntExtensions 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimIntExtensions.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimIntExtensions.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimIntExtensions.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimIntExtensions.ToBigEndianBytesOf1Int32``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Int32,System.Byte[]})">
+            <summary>设置 IntExtensions.ToBigEndianBytes(Int32 source) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimIntExtensions.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimIntExtensions.ToLittleEndianIntByteArray">
+            <summary>设置 IntExtensions.ToLittleEndianInt(Byte[] source) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimQueuedStream">
+            <summary>Fleck.QueuedStream 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimQueuedStream.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimQueuedStream.#ctor(Fleck.QueuedStream)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimQueuedStream.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimQueuedStream.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimQueuedStream.Bind(System.IDisposable)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.BeginReadByteArrayInt32Int32AsyncCallbackObject">
+            <summary>设置 QueuedStream.BeginRead(Byte[] buffer, Int32 offset, Int32 count, AsyncCallback callback, Object state) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.BeginWriteByteArrayInt32Int32AsyncCallbackObject">
+            <summary>设置 QueuedStream.BeginWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncCallback callback, Object state) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.CanReadGet">
+            <summary>设置 QueuedStream.get_CanRead() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.CanSeekGet">
+            <summary>设置 QueuedStream.get_CanSeek() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.CanWriteGet">
+            <summary>设置 QueuedStream.get_CanWrite() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.Close">
+            <summary>设置 QueuedStream.Close() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.ConstructorStream">
+            <summary>设置 QueuedStream.QueuedStream(Stream stream) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.DisposeBoolean">
+            <summary>设置 QueuedStream.Dispose(Boolean disposing) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.EndReadIAsyncResult">
+            <summary>设置 QueuedStream.EndRead(IAsyncResult asyncResult) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.EndWriteIAsyncResult">
+            <summary>设置 QueuedStream.EndWrite(IAsyncResult asyncResult) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.Flush">
+            <summary>设置 QueuedStream.Flush() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.LengthGet">
+            <summary>设置 QueuedStream.get_Length() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.PositionGet">
+            <summary>设置 QueuedStream.get_Position() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.PositionSetInt64">
+            <summary>设置 QueuedStream.set_Position(Int64 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.ReadByteArrayInt32Int32">
+            <summary>设置 QueuedStream.Read(Byte[] buffer, Int32 offset, Int32 count) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.SeekInt64SeekOrigin">
+            <summary>设置 QueuedStream.Seek(Int64 offset, SeekOrigin origin) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.SetLengthInt64">
+            <summary>设置 QueuedStream.SetLength(Int64 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.WriteByteArrayInt32Int32">
+            <summary>设置 QueuedStream.Write(Byte[] buffer, Int32 offset, Int32 count) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimQueuedStream.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.BeginReadByteArrayInt32Int32AsyncCallbackObject">
+            <summary>设置 QueuedStream.BeginRead(Byte[] buffer, Int32 offset, Int32 count, AsyncCallback callback, Object state) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.BeginWriteByteArrayInt32Int32AsyncCallbackObject">
+            <summary>设置 QueuedStream.BeginWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncCallback callback, Object state) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.CanReadGet">
+            <summary>设置 QueuedStream.get_CanRead() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.CanSeekGet">
+            <summary>设置 QueuedStream.get_CanSeek() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.CanWriteGet">
+            <summary>设置 QueuedStream.get_CanWrite() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.Close">
+            <summary>设置 QueuedStream.Close() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.DisposeBoolean">
+            <summary>设置 QueuedStream.Dispose(Boolean disposing) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.EndReadIAsyncResult">
+            <summary>设置 QueuedStream.EndRead(IAsyncResult asyncResult) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.EndWriteIAsyncResult">
+            <summary>设置 QueuedStream.EndWrite(IAsyncResult asyncResult) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.Flush">
+            <summary>设置 QueuedStream.Flush() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.LengthGet">
+            <summary>设置 QueuedStream.get_Length() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.PositionGet">
+            <summary>设置 QueuedStream.get_Position() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.PositionSetInt64">
+            <summary>设置 QueuedStream.set_Position(Int64 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.ReadByteArrayInt32Int32">
+            <summary>设置 QueuedStream.Read(Byte[] buffer, Int32 offset, Int32 count) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.SeekInt64SeekOrigin">
+            <summary>设置 QueuedStream.Seek(Int64 offset, SeekOrigin origin) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.SetLengthInt64">
+            <summary>设置 QueuedStream.SetLength(Int64 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimQueuedStream.AllInstances.WriteByteArrayInt32Int32">
+            <summary>设置 QueuedStream.Write(Byte[] buffer, Int32 offset, Int32 count) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimReadState">
+            <summary>Fleck.ReadState 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimReadState.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimReadState.#ctor(Fleck.ReadState)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimReadState.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimReadState.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.Clear">
+            <summary>设置 ReadState.Clear() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.Constructor">
+            <summary>设置 ReadState.ReadState() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.DataGet">
+            <summary>设置 ReadState.get_Data() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.DataSetListOfByte">
+            <summary>设置 ReadState.set_Data(List`1&lt;Byte&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.FrameTypeGet">
+            <summary>设置 ReadState.get_FrameType() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.FrameTypeSetNullableOfFrameType">
+            <summary>设置 ReadState.set_FrameType(Nullable`1&lt;FrameType&gt; value) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimReadState.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.AllInstances.Clear">
+            <summary>设置 ReadState.Clear() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.AllInstances.DataGet">
+            <summary>设置 ReadState.get_Data() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.AllInstances.DataSetListOfByte">
+            <summary>设置 ReadState.set_Data(List`1&lt;Byte&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.AllInstances.FrameTypeGet">
+            <summary>设置 ReadState.get_FrameType() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimReadState.AllInstances.FrameTypeSetNullableOfFrameType">
+            <summary>设置 ReadState.set_FrameType(Nullable`1&lt;FrameType&gt; value) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimRequestParser">
+            <summary>Fleck.RequestParser 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimRequestParser.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimRequestParser.#ctor(Fleck.RequestParser)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimRequestParser.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimRequestParser.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimRequestParser.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimRequestParser.Constructor">
+            <summary>设置 RequestParser.RequestParser() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimRequestParser.ParseByteArray">
+            <summary>设置 RequestParser.Parse(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimRequestParser.ParseByteArrayString">
+            <summary>设置 RequestParser.Parse(Byte[] bytes, String scheme) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimRequestParser.StaticConstructor">
+            <summary>设置 RequestParser.RequestParser() 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimRequestParser.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimSocketWrapper">
+            <summary>Fleck.SocketWrapper 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSocketWrapper.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSocketWrapper.#ctor(Fleck.SocketWrapper)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSocketWrapper.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSocketWrapper.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSocketWrapper.Bind(Fleck.ISocket)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AcceptActionOfISocketActionOfException">
+            <summary>设置 SocketWrapper.Accept(Action`1&lt;ISocket&gt; callback, Action`1&lt;Exception&gt; error) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AuthenticateX509Certificate2SslProtocolsActionActionOfException">
+            <summary>设置 SocketWrapper.Authenticate(X509Certificate2 certificate, SslProtocols enabledSslProtocols, Action callback, Action`1&lt;Exception&gt; error) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.BindEndPoint">
+            <summary>设置 SocketWrapper.Bind(EndPoint endPoint) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.Close">
+            <summary>设置 SocketWrapper.Close() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.ConnectedGet">
+            <summary>设置 SocketWrapper.get_Connected() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.ConstructorSocket">
+            <summary>设置 SocketWrapper.SocketWrapper(Socket socket) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.Dispose">
+            <summary>设置 SocketWrapper.Dispose() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.EndSendIAsyncResult">
+            <summary>设置 SocketWrapper.EndSend(IAsyncResult asyncResult) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.ListenInt32">
+            <summary>设置 SocketWrapper.Listen(Int32 backlog) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.LocalEndPointGet">
+            <summary>设置 SocketWrapper.get_LocalEndPoint() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.NoDelayGet">
+            <summary>设置 SocketWrapper.get_NoDelay() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.NoDelaySetBoolean">
+            <summary>设置 SocketWrapper.set_NoDelay(Boolean value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.ReceiveByteArrayActionOfInt32ActionOfExceptionInt32">
+            <summary>设置 SocketWrapper.Receive(Byte[] buffer, Action`1&lt;Int32&gt; callback, Action`1&lt;Exception&gt; error, Int32 offset) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.RemoteIpAddressGet">
+            <summary>设置 SocketWrapper.get_RemoteIpAddress() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.RemotePortGet">
+            <summary>设置 SocketWrapper.get_RemotePort() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.SendByteArrayActionActionOfException">
+            <summary>设置 SocketWrapper.Send(Byte[] buffer, Action callback, Action`1&lt;Exception&gt; error) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.StreamGet">
+            <summary>设置 SocketWrapper.get_Stream() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper._Acceptb__22_0IAsyncResult">
+            <summary>设置 SocketWrapper.&lt;Accept&gt;b__22_0(IAsyncResult r) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimSocketWrapper.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.AcceptActionOfISocketActionOfException">
+            <summary>设置 SocketWrapper.Accept(Action`1&lt;ISocket&gt; callback, Action`1&lt;Exception&gt; error) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.AuthenticateX509Certificate2SslProtocolsActionActionOfException">
+            <summary>设置 SocketWrapper.Authenticate(X509Certificate2 certificate, SslProtocols enabledSslProtocols, Action callback, Action`1&lt;Exception&gt; error) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.BindEndPoint">
+            <summary>设置 SocketWrapper.Bind(EndPoint endPoint) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.Close">
+            <summary>设置 SocketWrapper.Close() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.ConnectedGet">
+            <summary>设置 SocketWrapper.get_Connected() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.Dispose">
+            <summary>设置 SocketWrapper.Dispose() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.EndSendIAsyncResult">
+            <summary>设置 SocketWrapper.EndSend(IAsyncResult asyncResult) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.ListenInt32">
+            <summary>设置 SocketWrapper.Listen(Int32 backlog) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.LocalEndPointGet">
+            <summary>设置 SocketWrapper.get_LocalEndPoint() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.NoDelayGet">
+            <summary>设置 SocketWrapper.get_NoDelay() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.NoDelaySetBoolean">
+            <summary>设置 SocketWrapper.set_NoDelay(Boolean value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.ReceiveByteArrayActionOfInt32ActionOfExceptionInt32">
+            <summary>设置 SocketWrapper.Receive(Byte[] buffer, Action`1&lt;Int32&gt; callback, Action`1&lt;Exception&gt; error, Int32 offset) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.RemoteIpAddressGet">
+            <summary>设置 SocketWrapper.get_RemoteIpAddress() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.RemotePortGet">
+            <summary>设置 SocketWrapper.get_RemotePort() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.SendByteArrayActionActionOfException">
+            <summary>设置 SocketWrapper.Send(Byte[] buffer, Action callback, Action`1&lt;Exception&gt; error) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances.StreamGet">
+            <summary>设置 SocketWrapper.get_Stream() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSocketWrapper.AllInstances._Acceptb__22_0IAsyncResult">
+            <summary>设置 SocketWrapper.&lt;Accept&gt;b__22_0(IAsyncResult r) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimSubProtocolNegotiationFailureException">
+            <summary>Fleck.SubProtocolNegotiationFailureException 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.#ctor(Fleck.SubProtocolNegotiationFailureException)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.Constructor">
+            <summary>设置 SubProtocolNegotiationFailureException.SubProtocolNegotiationFailureException() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.ConstructorString">
+            <summary>设置 SubProtocolNegotiationFailureException.SubProtocolNegotiationFailureException(String message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.ConstructorStringException">
+            <summary>设置 SubProtocolNegotiationFailureException.SubProtocolNegotiationFailureException(String message, Exception innerException) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimSubProtocolNegotiationFailureException.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimSubProtocolNegotiator">
+            <summary>Fleck.SubProtocolNegotiator 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSubProtocolNegotiator.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSubProtocolNegotiator.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimSubProtocolNegotiator.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSubProtocolNegotiator.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimSubProtocolNegotiator.NegotiateIEnumerableOfStringIEnumerableOfString">
+            <summary>设置 SubProtocolNegotiator.Negotiate(IEnumerable`1&lt;String&gt; server, IEnumerable`1&lt;String&gt; client) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketConnection">
+            <summary>Fleck.WebSocketConnection 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnection.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnection.#ctor(Fleck.WebSocketConnection)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnection.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnection.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnection.Bind(Fleck.IWebSocketConnection)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnection.SendOf1M0FuncOfM0ByteArray``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0,System.Func{``0,System.Byte[]},System.Threading.Tasks.Task})">
+            <summary>设置 WebSocketConnection.Send(!!0 message, Func`2&lt;!!0,Byte[]&gt; createFrame) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.Close">
+            <summary>设置 WebSocketConnection.Close() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.CloseInt32">
+            <summary>设置 WebSocketConnection.Close(Int32 code) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.CloseSocket">
+            <summary>设置 WebSocketConnection.CloseSocket() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.ConnectionInfoGet">
+            <summary>设置 WebSocketConnection.get_ConnectionInfo() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.ConnectionInfoSetIWebSocketConnectionInfo">
+            <summary>设置 WebSocketConnection.set_ConnectionInfo(IWebSocketConnectionInfo value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.ConstructorISocketActionOfIWebSocketConnectionFuncOfByteArrayWebSocketHttpRequestFuncOfWebSocketHttpRequestIHandlerFuncOfIEnumerableOfStringString">
+            <summary>设置 WebSocketConnection.WebSocketConnection(ISocket socket, Action`1&lt;IWebSocketConnection&gt; initialize, Func`2&lt;Byte[],WebSocketHttpRequest&gt; parseRequest, Func`2&lt;WebSocketHttpRequest,IHandler&gt; handlerFactory, Func`2&lt;IEnumerable`1&lt;String&gt;,String&gt; negotiateSubProtocol) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.CreateHandlerIEnumerableOfByte">
+            <summary>设置 WebSocketConnection.CreateHandler(IEnumerable`1&lt;Byte&gt; data) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.HandleReadErrorException">
+            <summary>设置 WebSocketConnection.HandleReadError(Exception e) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.HandlerGet">
+            <summary>设置 WebSocketConnection.get_Handler() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.HandlerSetIHandler">
+            <summary>设置 WebSocketConnection.set_Handler(IHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.IsAvailableGet">
+            <summary>设置 WebSocketConnection.get_IsAvailable() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.IsLoginGet">
+            <summary>设置 WebSocketConnection.get_IsLogin() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.IsLoginSetBoolean">
+            <summary>设置 WebSocketConnection.set_IsLogin(Boolean value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnBinaryGet">
+            <summary>设置 WebSocketConnection.get_OnBinary() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnBinarySetActionOfByteArray">
+            <summary>设置 WebSocketConnection.set_OnBinary(Action`1&lt;Byte[]&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnCloseGet">
+            <summary>设置 WebSocketConnection.get_OnClose() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnCloseSetAction">
+            <summary>设置 WebSocketConnection.set_OnClose(Action value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnErrorGet">
+            <summary>设置 WebSocketConnection.get_OnError() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnErrorSetActionOfException">
+            <summary>设置 WebSocketConnection.set_OnError(Action`1&lt;Exception&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnMessageGet">
+            <summary>设置 WebSocketConnection.get_OnMessage() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnMessageSetActionOfString">
+            <summary>设置 WebSocketConnection.set_OnMessage(Action`1&lt;String&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnOpenGet">
+            <summary>设置 WebSocketConnection.get_OnOpen() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnOpenSetAction">
+            <summary>设置 WebSocketConnection.set_OnOpen(Action value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnPingGet">
+            <summary>设置 WebSocketConnection.get_OnPing() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnPingSetActionOfByteArray">
+            <summary>设置 WebSocketConnection.set_OnPing(Action`1&lt;Byte[]&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnPongGet">
+            <summary>设置 WebSocketConnection.get_OnPong() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.OnPongSetActionOfByteArray">
+            <summary>设置 WebSocketConnection.set_OnPong(Action`1&lt;Byte[]&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.ReadListOfByteByteArray">
+            <summary>设置 WebSocketConnection.Read(List`1&lt;Byte&gt; data, Byte[] buffer) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.SendByteArray">
+            <summary>设置 WebSocketConnection.Send(Byte[] message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.SendBytesByteArrayAction">
+            <summary>设置 WebSocketConnection.SendBytes(Byte[] bytes, Action callback) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.SendPingByteArray">
+            <summary>设置 WebSocketConnection.SendPing(Byte[] message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.SendPongByteArray">
+            <summary>设置 WebSocketConnection.SendPong(Byte[] message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.SendString">
+            <summary>设置 WebSocketConnection.Send(String message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.SocketGet">
+            <summary>设置 WebSocketConnection.get_Socket() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.SocketSetISocket">
+            <summary>设置 WebSocketConnection.set_Socket(ISocket value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.StartReceiving">
+            <summary>设置 WebSocketConnection.StartReceiving() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.UserIdGet">
+            <summary>设置 WebSocketConnection.get_UserId() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.UserIdSetInt32">
+            <summary>设置 WebSocketConnection.set_UserId(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection._SendBytesb__69_1Exception">
+            <summary>设置 WebSocketConnection.&lt;SendBytes&gt;b__69_1(Exception e) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection._ctorb__0_4ByteArray">
+            <summary>设置 WebSocketConnection.&lt;.ctor&gt;b__0_4(Byte[] x) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketConnection.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnection.AllInstances.SendOf1M0FuncOfM0ByteArray``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Fleck.WebSocketConnection,``0,System.Func{``0,System.Byte[]},System.Threading.Tasks.Task})">
+            <summary>设置 WebSocketConnection.Send(!!0 message, Func`2&lt;!!0,Byte[]&gt; createFrame) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.Close">
+            <summary>设置 WebSocketConnection.Close() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.CloseInt32">
+            <summary>设置 WebSocketConnection.Close(Int32 code) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.CloseSocket">
+            <summary>设置 WebSocketConnection.CloseSocket() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.ConnectionInfoGet">
+            <summary>设置 WebSocketConnection.get_ConnectionInfo() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.ConnectionInfoSetIWebSocketConnectionInfo">
+            <summary>设置 WebSocketConnection.set_ConnectionInfo(IWebSocketConnectionInfo value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.CreateHandlerIEnumerableOfByte">
+            <summary>设置 WebSocketConnection.CreateHandler(IEnumerable`1&lt;Byte&gt; data) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.HandleReadErrorException">
+            <summary>设置 WebSocketConnection.HandleReadError(Exception e) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.HandlerGet">
+            <summary>设置 WebSocketConnection.get_Handler() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.HandlerSetIHandler">
+            <summary>设置 WebSocketConnection.set_Handler(IHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.IsAvailableGet">
+            <summary>设置 WebSocketConnection.get_IsAvailable() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.IsLoginGet">
+            <summary>设置 WebSocketConnection.get_IsLogin() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.IsLoginSetBoolean">
+            <summary>设置 WebSocketConnection.set_IsLogin(Boolean value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnBinaryGet">
+            <summary>设置 WebSocketConnection.get_OnBinary() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnBinarySetActionOfByteArray">
+            <summary>设置 WebSocketConnection.set_OnBinary(Action`1&lt;Byte[]&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnCloseGet">
+            <summary>设置 WebSocketConnection.get_OnClose() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnCloseSetAction">
+            <summary>设置 WebSocketConnection.set_OnClose(Action value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnErrorGet">
+            <summary>设置 WebSocketConnection.get_OnError() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnErrorSetActionOfException">
+            <summary>设置 WebSocketConnection.set_OnError(Action`1&lt;Exception&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnMessageGet">
+            <summary>设置 WebSocketConnection.get_OnMessage() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnMessageSetActionOfString">
+            <summary>设置 WebSocketConnection.set_OnMessage(Action`1&lt;String&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnOpenGet">
+            <summary>设置 WebSocketConnection.get_OnOpen() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnOpenSetAction">
+            <summary>设置 WebSocketConnection.set_OnOpen(Action value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnPingGet">
+            <summary>设置 WebSocketConnection.get_OnPing() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnPingSetActionOfByteArray">
+            <summary>设置 WebSocketConnection.set_OnPing(Action`1&lt;Byte[]&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnPongGet">
+            <summary>设置 WebSocketConnection.get_OnPong() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.OnPongSetActionOfByteArray">
+            <summary>设置 WebSocketConnection.set_OnPong(Action`1&lt;Byte[]&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.ReadListOfByteByteArray">
+            <summary>设置 WebSocketConnection.Read(List`1&lt;Byte&gt; data, Byte[] buffer) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.SendByteArray">
+            <summary>设置 WebSocketConnection.Send(Byte[] message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.SendBytesByteArrayAction">
+            <summary>设置 WebSocketConnection.SendBytes(Byte[] bytes, Action callback) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.SendPingByteArray">
+            <summary>设置 WebSocketConnection.SendPing(Byte[] message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.SendPongByteArray">
+            <summary>设置 WebSocketConnection.SendPong(Byte[] message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.SendString">
+            <summary>设置 WebSocketConnection.Send(String message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.SocketGet">
+            <summary>设置 WebSocketConnection.get_Socket() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.SocketSetISocket">
+            <summary>设置 WebSocketConnection.set_Socket(ISocket value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.StartReceiving">
+            <summary>设置 WebSocketConnection.StartReceiving() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.UserIdGet">
+            <summary>设置 WebSocketConnection.get_UserId() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances.UserIdSetInt32">
+            <summary>设置 WebSocketConnection.set_UserId(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances._SendBytesb__69_1Exception">
+            <summary>设置 WebSocketConnection.&lt;SendBytes&gt;b__69_1(Exception e) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnection.AllInstances._ctorb__0_4ByteArray">
+            <summary>设置 WebSocketConnection.&lt;.ctor&gt;b__0_4(Byte[] x) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketConnectionInfo">
+            <summary>Fleck.WebSocketConnectionInfo 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnectionInfo.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnectionInfo.#ctor(Fleck.WebSocketConnectionInfo)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnectionInfo.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnectionInfo.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketConnectionInfo.Bind(Fleck.IWebSocketConnectionInfo)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.ClientIpAddressGet">
+            <summary>设置 WebSocketConnectionInfo.get_ClientIpAddress() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.ClientIpAddressSetString">
+            <summary>设置 WebSocketConnectionInfo.set_ClientIpAddress(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.ClientPortGet">
+            <summary>设置 WebSocketConnectionInfo.get_ClientPort() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.ClientPortSetInt32">
+            <summary>设置 WebSocketConnectionInfo.set_ClientPort(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.Constructor">
+            <summary>设置 WebSocketConnectionInfo.WebSocketConnectionInfo() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.CookiesGet">
+            <summary>设置 WebSocketConnectionInfo.get_Cookies() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.CookiesSetIDictionaryOfStringString">
+            <summary>设置 WebSocketConnectionInfo.set_Cookies(IDictionary`2&lt;String,String&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.CreateWebSocketHttpRequestStringInt32StringInt32">
+            <summary>设置 WebSocketConnectionInfo.Create(WebSocketHttpRequest request, String clientIp, Int32 clientPort, String negotiatedSubprotocol, Int32 userid) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.HeadersGet">
+            <summary>设置 WebSocketConnectionInfo.get_Headers() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.HeadersSetIDictionaryOfStringString">
+            <summary>设置 WebSocketConnectionInfo.set_Headers(IDictionary`2&lt;String,String&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.HostGet">
+            <summary>设置 WebSocketConnectionInfo.get_Host() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.HostSetString">
+            <summary>设置 WebSocketConnectionInfo.set_Host(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.IdGet">
+            <summary>设置 WebSocketConnectionInfo.get_Id() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.IdSetGuid">
+            <summary>设置 WebSocketConnectionInfo.set_Id(Guid value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.NegotiatedSubProtocolGet">
+            <summary>设置 WebSocketConnectionInfo.get_NegotiatedSubProtocol() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.NegotiatedSubProtocolSetString">
+            <summary>设置 WebSocketConnectionInfo.set_NegotiatedSubProtocol(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.OriginGet">
+            <summary>设置 WebSocketConnectionInfo.get_Origin() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.OriginSetString">
+            <summary>设置 WebSocketConnectionInfo.set_Origin(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.PathGet">
+            <summary>设置 WebSocketConnectionInfo.get_Path() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.PathSetString">
+            <summary>设置 WebSocketConnectionInfo.set_Path(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.StaticConstructor">
+            <summary>设置 WebSocketConnectionInfo.WebSocketConnectionInfo() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.SubProtocolGet">
+            <summary>设置 WebSocketConnectionInfo.get_SubProtocol() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.SubProtocolSetString">
+            <summary>设置 WebSocketConnectionInfo.set_SubProtocol(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.UserIdGet">
+            <summary>设置 WebSocketConnectionInfo.get_UserId() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.UserIdSetInt32">
+            <summary>设置 WebSocketConnectionInfo.set_UserId(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.ClientIpAddressGet">
+            <summary>设置 WebSocketConnectionInfo.get_ClientIpAddress() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.ClientIpAddressSetString">
+            <summary>设置 WebSocketConnectionInfo.set_ClientIpAddress(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.ClientPortGet">
+            <summary>设置 WebSocketConnectionInfo.get_ClientPort() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.ClientPortSetInt32">
+            <summary>设置 WebSocketConnectionInfo.set_ClientPort(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.CookiesGet">
+            <summary>设置 WebSocketConnectionInfo.get_Cookies() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.CookiesSetIDictionaryOfStringString">
+            <summary>设置 WebSocketConnectionInfo.set_Cookies(IDictionary`2&lt;String,String&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.HeadersGet">
+            <summary>设置 WebSocketConnectionInfo.get_Headers() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.HeadersSetIDictionaryOfStringString">
+            <summary>设置 WebSocketConnectionInfo.set_Headers(IDictionary`2&lt;String,String&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.HostGet">
+            <summary>设置 WebSocketConnectionInfo.get_Host() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.HostSetString">
+            <summary>设置 WebSocketConnectionInfo.set_Host(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.IdGet">
+            <summary>设置 WebSocketConnectionInfo.get_Id() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.IdSetGuid">
+            <summary>设置 WebSocketConnectionInfo.set_Id(Guid value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.NegotiatedSubProtocolGet">
+            <summary>设置 WebSocketConnectionInfo.get_NegotiatedSubProtocol() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.NegotiatedSubProtocolSetString">
+            <summary>设置 WebSocketConnectionInfo.set_NegotiatedSubProtocol(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.OriginGet">
+            <summary>设置 WebSocketConnectionInfo.get_Origin() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.OriginSetString">
+            <summary>设置 WebSocketConnectionInfo.set_Origin(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.PathGet">
+            <summary>设置 WebSocketConnectionInfo.get_Path() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.PathSetString">
+            <summary>设置 WebSocketConnectionInfo.set_Path(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.SubProtocolGet">
+            <summary>设置 WebSocketConnectionInfo.get_SubProtocol() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.SubProtocolSetString">
+            <summary>设置 WebSocketConnectionInfo.set_SubProtocol(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.UserIdGet">
+            <summary>设置 WebSocketConnectionInfo.get_UserId() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketConnectionInfo.AllInstances.UserIdSetInt32">
+            <summary>设置 WebSocketConnectionInfo.set_UserId(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketException">
+            <summary>Fleck.WebSocketException 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketException.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketException.#ctor(Fleck.WebSocketException)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketException.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketException.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketException.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketException.ConstructorUInt16">
+            <summary>设置 WebSocketException.WebSocketException(UInt16 statusCode) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketException.ConstructorUInt16String">
+            <summary>设置 WebSocketException.WebSocketException(UInt16 statusCode, String message) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketException.ConstructorUInt16StringException">
+            <summary>设置 WebSocketException.WebSocketException(UInt16 statusCode, String message, Exception innerException) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketException.StatusCodeGet">
+            <summary>设置 WebSocketException.get_StatusCode() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketException.StatusCodeSetUInt16">
+            <summary>设置 WebSocketException.set_StatusCode(UInt16 value) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketException.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketException.AllInstances.StatusCodeGet">
+            <summary>设置 WebSocketException.get_StatusCode() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketException.AllInstances.StatusCodeSetUInt16">
+            <summary>设置 WebSocketException.set_StatusCode(UInt16 value) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketHttpRequest">
+            <summary>Fleck.WebSocketHttpRequest 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketHttpRequest.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketHttpRequest.#ctor(Fleck.WebSocketHttpRequest)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketHttpRequest.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketHttpRequest.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.BodyGet">
+            <summary>设置 WebSocketHttpRequest.get_Body() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.BodySetString">
+            <summary>设置 WebSocketHttpRequest.set_Body(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.BytesGet">
+            <summary>设置 WebSocketHttpRequest.get_Bytes() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.BytesSetByteArray">
+            <summary>设置 WebSocketHttpRequest.set_Bytes(Byte[] value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.Constructor">
+            <summary>设置 WebSocketHttpRequest.WebSocketHttpRequest() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.HeadersGet">
+            <summary>设置 WebSocketHttpRequest.get_Headers() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.ItemGetString">
+            <summary>设置 WebSocketHttpRequest.get_Item(String name) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.MethodGet">
+            <summary>设置 WebSocketHttpRequest.get_Method() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.MethodSetString">
+            <summary>设置 WebSocketHttpRequest.set_Method(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.PathGet">
+            <summary>设置 WebSocketHttpRequest.get_Path() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.PathSetString">
+            <summary>设置 WebSocketHttpRequest.set_Path(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.SchemeGet">
+            <summary>设置 WebSocketHttpRequest.get_Scheme() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.SchemeSetString">
+            <summary>设置 WebSocketHttpRequest.set_Scheme(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.SubProtocolsGet">
+            <summary>设置 WebSocketHttpRequest.get_SubProtocols() 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.BodyGet">
+            <summary>设置 WebSocketHttpRequest.get_Body() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.BodySetString">
+            <summary>设置 WebSocketHttpRequest.set_Body(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.BytesGet">
+            <summary>设置 WebSocketHttpRequest.get_Bytes() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.BytesSetByteArray">
+            <summary>设置 WebSocketHttpRequest.set_Bytes(Byte[] value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.HeadersGet">
+            <summary>设置 WebSocketHttpRequest.get_Headers() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.ItemGetString">
+            <summary>设置 WebSocketHttpRequest.get_Item(String name) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.MethodGet">
+            <summary>设置 WebSocketHttpRequest.get_Method() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.MethodSetString">
+            <summary>设置 WebSocketHttpRequest.set_Method(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.PathGet">
+            <summary>设置 WebSocketHttpRequest.get_Path() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.PathSetString">
+            <summary>设置 WebSocketHttpRequest.set_Path(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.SchemeGet">
+            <summary>设置 WebSocketHttpRequest.get_Scheme() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.SchemeSetString">
+            <summary>设置 WebSocketHttpRequest.set_Scheme(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketHttpRequest.AllInstances.SubProtocolsGet">
+            <summary>设置 WebSocketHttpRequest.get_SubProtocols() 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketServer">
+            <summary>Fleck.WebSocketServer 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketServer.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketServer.#ctor(Fleck.WebSocketServer)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketServer.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketServer.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketServer.Bind(Fleck.IWebSocketServer)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketServer.Bind(System.IDisposable)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.CertificateGet">
+            <summary>设置 WebSocketServer.get_Certificate() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.CertificateSetX509Certificate2">
+            <summary>设置 WebSocketServer.set_Certificate(X509Certificate2 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.ConstructorInt32String">
+            <summary>设置 WebSocketServer.WebSocketServer(Int32 port, String location) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.ConstructorString">
+            <summary>设置 WebSocketServer.WebSocketServer(String location) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.Dispose">
+            <summary>设置 WebSocketServer.Dispose() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.EnabledSslProtocolsGet">
+            <summary>设置 WebSocketServer.get_EnabledSslProtocols() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.EnabledSslProtocolsSetSslProtocols">
+            <summary>设置 WebSocketServer.set_EnabledSslProtocols(SslProtocols value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.IsSecureGet">
+            <summary>设置 WebSocketServer.get_IsSecure() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.ListenForClients">
+            <summary>设置 WebSocketServer.ListenForClients() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.ListenerSocketGet">
+            <summary>设置 WebSocketServer.get_ListenerSocket() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.ListenerSocketSetISocket">
+            <summary>设置 WebSocketServer.set_ListenerSocket(ISocket value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.LocationGet">
+            <summary>设置 WebSocketServer.get_Location() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.LocationSetString">
+            <summary>设置 WebSocketServer.set_Location(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.OnClientConnectISocket">
+            <summary>设置 WebSocketServer.OnClientConnect(ISocket clientSocket) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.ParseIPAddressUri">
+            <summary>设置 WebSocketServer.ParseIPAddress(Uri uri) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.PortGet">
+            <summary>设置 WebSocketServer.get_Port() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.PortSetInt32">
+            <summary>设置 WebSocketServer.set_Port(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.RestartAfterListenErrorGet">
+            <summary>设置 WebSocketServer.get_RestartAfterListenError() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.RestartAfterListenErrorSetBoolean">
+            <summary>设置 WebSocketServer.set_RestartAfterListenError(Boolean value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.StartActionOfIWebSocketConnection">
+            <summary>设置 WebSocketServer.Start(Action`1&lt;IWebSocketConnection&gt; config) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.SupportedSubProtocolsGet">
+            <summary>设置 WebSocketServer.get_SupportedSubProtocols() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.SupportedSubProtocolsSetIEnumerableOfString">
+            <summary>设置 WebSocketServer.set_SupportedSubProtocols(IEnumerable`1&lt;String&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer._ListenForClientsb__38_0Exception">
+            <summary>设置 WebSocketServer.&lt;ListenForClients&gt;b__38_0(Exception e) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer._OnClientConnectb__39_0ByteArray">
+            <summary>设置 WebSocketServer.&lt;OnClientConnect&gt;b__39_0(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer._OnClientConnectb__39_6IEnumerableOfString">
+            <summary>设置 WebSocketServer.&lt;OnClientConnect&gt;b__39_6(IEnumerable`1&lt;String&gt; s) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketServer.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.CertificateGet">
+            <summary>设置 WebSocketServer.get_Certificate() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.CertificateSetX509Certificate2">
+            <summary>设置 WebSocketServer.set_Certificate(X509Certificate2 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.Dispose">
+            <summary>设置 WebSocketServer.Dispose() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.EnabledSslProtocolsGet">
+            <summary>设置 WebSocketServer.get_EnabledSslProtocols() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.EnabledSslProtocolsSetSslProtocols">
+            <summary>设置 WebSocketServer.set_EnabledSslProtocols(SslProtocols value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.IsSecureGet">
+            <summary>设置 WebSocketServer.get_IsSecure() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.ListenForClients">
+            <summary>设置 WebSocketServer.ListenForClients() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.ListenerSocketGet">
+            <summary>设置 WebSocketServer.get_ListenerSocket() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.ListenerSocketSetISocket">
+            <summary>设置 WebSocketServer.set_ListenerSocket(ISocket value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.LocationGet">
+            <summary>设置 WebSocketServer.get_Location() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.LocationSetString">
+            <summary>设置 WebSocketServer.set_Location(String value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.OnClientConnectISocket">
+            <summary>设置 WebSocketServer.OnClientConnect(ISocket clientSocket) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.ParseIPAddressUri">
+            <summary>设置 WebSocketServer.ParseIPAddress(Uri uri) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.PortGet">
+            <summary>设置 WebSocketServer.get_Port() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.PortSetInt32">
+            <summary>设置 WebSocketServer.set_Port(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.RestartAfterListenErrorGet">
+            <summary>设置 WebSocketServer.get_RestartAfterListenError() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.RestartAfterListenErrorSetBoolean">
+            <summary>设置 WebSocketServer.set_RestartAfterListenError(Boolean value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.StartActionOfIWebSocketConnection">
+            <summary>设置 WebSocketServer.Start(Action`1&lt;IWebSocketConnection&gt; config) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.SupportedSubProtocolsGet">
+            <summary>设置 WebSocketServer.get_SupportedSubProtocols() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances.SupportedSubProtocolsSetIEnumerableOfString">
+            <summary>设置 WebSocketServer.set_SupportedSubProtocols(IEnumerable`1&lt;String&gt; value) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances._ListenForClientsb__38_0Exception">
+            <summary>设置 WebSocketServer.&lt;ListenForClients&gt;b__38_0(Exception e) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances._OnClientConnectb__39_0ByteArray">
+            <summary>设置 WebSocketServer.&lt;OnClientConnect&gt;b__39_0(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketServer.AllInstances._OnClientConnectb__39_6IEnumerableOfString">
+            <summary>设置 WebSocketServer.&lt;OnClientConnect&gt;b__39_6(IEnumerable`1&lt;String&gt; s) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.ShimWebSocketStatusCodes">
+            <summary>Fleck.WebSocketStatusCodes 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketStatusCodes.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketStatusCodes.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Fakes.ShimWebSocketStatusCodes.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketStatusCodes.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.ShimWebSocketStatusCodes.StaticConstructor">
+            <summary>设置 WebSocketStatusCodes.WebSocketStatusCodes() 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubConnectionNotAvailableException">
+            <summary>Fleck.ConnectionNotAvailableException 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.#ctor(System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.#ctor(System.String,System.Exception)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.AttachBackingFieldToHelpLink">
+            <summary>附加委托以将 StubConnectionNotAvailableException.HelpLink 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.AttachBackingFieldToSource">
+            <summary>附加委托以将 StubConnectionNotAvailableException.Source 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.DataGet">
+            <summary>设置 Exception.get_Data() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.GetBaseException">
+            <summary>设置 Exception.GetBaseException() 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.GetBaseException01">
+            <summary>设置 Exception.GetBaseException() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>设置 Exception.GetObjectData(SerializationInfo info, StreamingContext context) 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>设置 Exception.GetObjectData(SerializationInfo info, StreamingContext context) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.HelpLinkGet">
+            <summary>设置 Exception.get_HelpLink() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.HelpLinkSetString">
+            <summary>设置 Exception.set_HelpLink(String value) 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.InitializeStub">
+            <summary>初始化 type StubConnectionNotAvailableException 的新实例</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.MessageGet">
+            <summary>设置 Exception.get_Message() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.SourceGet">
+            <summary>设置 Exception.get_Source() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.SourceSetString">
+            <summary>设置 Exception.set_Source(String value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.StackTraceGet">
+            <summary>设置 Exception.get_StackTrace() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubConnectionNotAvailableException.ToString">
+            <summary>设置 Exception.ToString() 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubConnectionNotAvailableException.ToString01">
+            <summary>设置 Exception.ToString() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubConnectionNotAvailableException.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubConnectionNotAvailableException.Data">
+            <summary>设置 Exception.get_Data() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubConnectionNotAvailableException.HelpLink">
+            <summary>设置 Exception.get_HelpLink() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubConnectionNotAvailableException.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubConnectionNotAvailableException.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubConnectionNotAvailableException.Message">
+            <summary>设置 Exception.get_Message() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubConnectionNotAvailableException.Source">
+            <summary>设置 Exception.get_Source() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubConnectionNotAvailableException.StackTrace">
+            <summary>设置 Exception.get_StackTrace() 的 stub</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubFleckLog">
+            <summary>Fleck.FleckLog 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubFleckLog.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubFleckLog.InitializeStub">
+            <summary>初始化 type StubFleckLog 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubFleckLog.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubFleckLog.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubFleckLog.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubHandlerFactory">
+            <summary>Fleck.HandlerFactory 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandlerFactory.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandlerFactory.InitializeStub">
+            <summary>初始化 type StubHandlerFactory 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandlerFactory.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandlerFactory.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandlerFactory.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubHandshakeException">
+            <summary>Fleck.HandshakeException 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.#ctor(System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.#ctor(System.String,System.Exception)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.AttachBackingFieldToHelpLink">
+            <summary>附加委托以将 StubHandshakeException.HelpLink 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.AttachBackingFieldToSource">
+            <summary>附加委托以将 StubHandshakeException.Source 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.DataGet">
+            <summary>设置 Exception.get_Data() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.GetBaseException">
+            <summary>设置 Exception.GetBaseException() 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.GetBaseException01">
+            <summary>设置 Exception.GetBaseException() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>设置 Exception.GetObjectData(SerializationInfo info, StreamingContext context) 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>设置 Exception.GetObjectData(SerializationInfo info, StreamingContext context) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.HelpLinkGet">
+            <summary>设置 Exception.get_HelpLink() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.HelpLinkSetString">
+            <summary>设置 Exception.set_HelpLink(String value) 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.InitializeStub">
+            <summary>初始化 type StubHandshakeException 的新实例</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.MessageGet">
+            <summary>设置 Exception.get_Message() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.SourceGet">
+            <summary>设置 Exception.get_Source() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.SourceSetString">
+            <summary>设置 Exception.set_Source(String value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.StackTraceGet">
+            <summary>设置 Exception.get_StackTrace() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubHandshakeException.ToString">
+            <summary>设置 Exception.ToString() 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubHandshakeException.ToString01">
+            <summary>设置 Exception.ToString() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandshakeException.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandshakeException.Data">
+            <summary>设置 Exception.get_Data() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandshakeException.HelpLink">
+            <summary>设置 Exception.get_HelpLink() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandshakeException.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandshakeException.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandshakeException.Message">
+            <summary>设置 Exception.get_Message() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandshakeException.Source">
+            <summary>设置 Exception.get_Source() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubHandshakeException.StackTrace">
+            <summary>设置 Exception.get_StackTrace() 的 stub</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubIHandler">
+            <summary>Fleck.IHandler 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIHandler.#ctor">
+            <summary>初始化 type StubIHandler 的新实例</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIHandler.CreateHandshakeString">
+            <summary>设置 IHandler.CreateHandshake(String subProtocol) 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIHandler.f::Fleck#IHandler#CreateHandshake(System.String)">
+            <summary>设置 IHandler.CreateHandshake(String subProtocol) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIHandler.f::Fleck#IHandler#FrameBinary(System.Byte[])">
+            <summary>设置 IHandler.FrameBinary(Byte[] bytes) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIHandler.f::Fleck#IHandler#FrameClose(System.Int32)">
+            <summary>设置 IHandler.FrameClose(Int32 code) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIHandler.f::Fleck#IHandler#FramePing(System.Byte[])">
+            <summary>设置 IHandler.FramePing(Byte[] bytes) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIHandler.f::Fleck#IHandler#FramePong(System.Byte[])">
+            <summary>设置 IHandler.FramePong(Byte[] bytes) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIHandler.f::Fleck#IHandler#FrameText(System.String)">
+            <summary>设置 IHandler.FrameText(String text) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIHandler.f::Fleck#IHandler#Receive(System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>设置 IHandler.Receive(IEnumerable`1&lt;Byte&gt; data) 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIHandler.FrameBinaryByteArray">
+            <summary>设置 IHandler.FrameBinary(Byte[] bytes) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIHandler.FrameCloseInt32">
+            <summary>设置 IHandler.FrameClose(Int32 code) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIHandler.FramePingByteArray">
+            <summary>设置 IHandler.FramePing(Byte[] bytes) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIHandler.FramePongByteArray">
+            <summary>设置 IHandler.FramePong(Byte[] bytes) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIHandler.FrameTextString">
+            <summary>设置 IHandler.FrameText(String text) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIHandler.ReceiveIEnumerableOfByte">
+            <summary>设置 IHandler.Receive(IEnumerable`1&lt;Byte&gt; data) 的 stub</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubIWebSocketConnection">
+            <summary>Fleck.IWebSocketConnection 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.#ctor">
+            <summary>初始化 type StubIWebSocketConnection 的新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToIsLogin">
+            <summary>附加委托以将 StubIWebSocketConnection.IsLogin 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToOnBinary">
+            <summary>附加委托以将 StubIWebSocketConnection.OnBinary 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToOnClose">
+            <summary>附加委托以将 StubIWebSocketConnection.OnClose 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToOnError">
+            <summary>附加委托以将 StubIWebSocketConnection.OnError 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToOnMessage">
+            <summary>附加委托以将 StubIWebSocketConnection.OnMessage 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToOnOpen">
+            <summary>附加委托以将 StubIWebSocketConnection.OnOpen 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToOnPing">
+            <summary>附加委托以将 StubIWebSocketConnection.OnPing 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToOnPong">
+            <summary>附加委托以将 StubIWebSocketConnection.OnPong 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.AttachBackingFieldToUserId">
+            <summary>附加委托以将 StubIWebSocketConnection.UserId 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.Close">
+            <summary>设置 IWebSocketConnection.Close() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.ConnectionInfoGet">
+            <summary>设置 IWebSocketConnection.get_ConnectionInfo() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#Close">
+            <summary>设置 IWebSocketConnection.Close() 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#Send(System.String)">
+            <summary>设置 IWebSocketConnection.Send(String message) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#Send(System.Byte[])">
+            <summary>设置 IWebSocketConnection.Send(Byte[] message) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#SendPing(System.Byte[])">
+            <summary>设置 IWebSocketConnection.SendPing(Byte[] message) 的 存根</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#SendPong(System.Byte[])">
+            <summary>设置 IWebSocketConnection.SendPong(Byte[] message) 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.IsAvailableGet">
+            <summary>设置 IWebSocketConnection.get_IsAvailable() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.IsLoginGet">
+            <summary>设置 IWebSocketConnection.get_IsLogin() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.IsLoginSetBoolean">
+            <summary>设置 IWebSocketConnection.set_IsLogin(Boolean value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnBinaryGet">
+            <summary>设置 IWebSocketConnection.get_OnBinary() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnBinarySetActionOfByteArray">
+            <summary>设置 IWebSocketConnection.set_OnBinary(Action`1&lt;Byte[]&gt; value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnCloseGet">
+            <summary>设置 IWebSocketConnection.get_OnClose() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnCloseSetAction">
+            <summary>设置 IWebSocketConnection.set_OnClose(Action value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnErrorGet">
+            <summary>设置 IWebSocketConnection.get_OnError() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnErrorSetActionOfException">
+            <summary>设置 IWebSocketConnection.set_OnError(Action`1&lt;Exception&gt; value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnMessageGet">
+            <summary>设置 IWebSocketConnection.get_OnMessage() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnMessageSetActionOfString">
+            <summary>设置 IWebSocketConnection.set_OnMessage(Action`1&lt;String&gt; value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnOpenGet">
+            <summary>设置 IWebSocketConnection.get_OnOpen() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnOpenSetAction">
+            <summary>设置 IWebSocketConnection.set_OnOpen(Action value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnPingGet">
+            <summary>设置 IWebSocketConnection.get_OnPing() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnPingSetActionOfByteArray">
+            <summary>设置 IWebSocketConnection.set_OnPing(Action`1&lt;Byte[]&gt; value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnPongGet">
+            <summary>设置 IWebSocketConnection.get_OnPong() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.OnPongSetActionOfByteArray">
+            <summary>设置 IWebSocketConnection.set_OnPong(Action`1&lt;Byte[]&gt; value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.SendByteArray">
+            <summary>设置 IWebSocketConnection.Send(Byte[] message) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.SendPingByteArray">
+            <summary>设置 IWebSocketConnection.SendPing(Byte[] message) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.SendPongByteArray">
+            <summary>设置 IWebSocketConnection.SendPong(Byte[] message) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.SendString">
+            <summary>设置 IWebSocketConnection.Send(String message) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.UserIdGet">
+            <summary>设置 IWebSocketConnection.get_UserId() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnection.UserIdSetInt32">
+            <summary>设置 IWebSocketConnection.set_UserId(Int32 value) 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#ConnectionInfo">
+            <summary>设置 IWebSocketConnection.get_ConnectionInfo() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#IsAvailable">
+            <summary>设置 IWebSocketConnection.get_IsAvailable() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#IsLogin">
+            <summary>设置 IWebSocketConnection.get_IsLogin() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#OnBinary">
+            <summary>设置 IWebSocketConnection.get_OnBinary() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#OnClose">
+            <summary>设置 IWebSocketConnection.get_OnClose() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#OnError">
+            <summary>设置 IWebSocketConnection.get_OnError() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#OnMessage">
+            <summary>设置 IWebSocketConnection.get_OnMessage() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#OnOpen">
+            <summary>设置 IWebSocketConnection.get_OnOpen() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#OnPing">
+            <summary>设置 IWebSocketConnection.get_OnPing() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#OnPong">
+            <summary>设置 IWebSocketConnection.get_OnPong() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnection.f::Fleck#IWebSocketConnection#UserId">
+            <summary>设置 IWebSocketConnection.get_UserId() 的 stub</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubIWebSocketConnectionInfo">
+            <summary>Fleck.IWebSocketConnectionInfo 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketConnectionInfo.#ctor">
+            <summary>初始化 type StubIWebSocketConnectionInfo 的新实例</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.ClientIpAddressGet">
+            <summary>设置 IWebSocketConnectionInfo.get_ClientIpAddress() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.ClientPortGet">
+            <summary>设置 IWebSocketConnectionInfo.get_ClientPort() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.CookiesGet">
+            <summary>设置 IWebSocketConnectionInfo.get_Cookies() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.HeadersGet">
+            <summary>设置 IWebSocketConnectionInfo.get_Headers() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.HostGet">
+            <summary>设置 IWebSocketConnectionInfo.get_Host() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.IdGet">
+            <summary>设置 IWebSocketConnectionInfo.get_Id() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.NegotiatedSubProtocolGet">
+            <summary>设置 IWebSocketConnectionInfo.get_NegotiatedSubProtocol() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.OriginGet">
+            <summary>设置 IWebSocketConnectionInfo.get_Origin() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.PathGet">
+            <summary>设置 IWebSocketConnectionInfo.get_Path() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.SubProtocolGet">
+            <summary>设置 IWebSocketConnectionInfo.get_SubProtocol() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketConnectionInfo.UserIdGet">
+            <summary>设置 IWebSocketConnectionInfo.get_UserId() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#ClientIpAddress">
+            <summary>设置 IWebSocketConnectionInfo.get_ClientIpAddress() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#ClientPort">
+            <summary>设置 IWebSocketConnectionInfo.get_ClientPort() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#Cookies">
+            <summary>设置 IWebSocketConnectionInfo.get_Cookies() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#Headers">
+            <summary>设置 IWebSocketConnectionInfo.get_Headers() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#Host">
+            <summary>设置 IWebSocketConnectionInfo.get_Host() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#Id">
+            <summary>设置 IWebSocketConnectionInfo.get_Id() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#NegotiatedSubProtocol">
+            <summary>设置 IWebSocketConnectionInfo.get_NegotiatedSubProtocol() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#Origin">
+            <summary>设置 IWebSocketConnectionInfo.get_Origin() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#Path">
+            <summary>设置 IWebSocketConnectionInfo.get_Path() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#SubProtocol">
+            <summary>设置 IWebSocketConnectionInfo.get_SubProtocol() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubIWebSocketConnectionInfo.f::Fleck#IWebSocketConnectionInfo#UserId">
+            <summary>设置 IWebSocketConnectionInfo.get_UserId() 的 stub</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubIWebSocketServer">
+            <summary>Fleck.IWebSocketServer 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketServer.#ctor">
+            <summary>初始化 type StubIWebSocketServer 的新实例</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketServer.Dispose">
+            <summary>设置 IDisposable.Dispose() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketServer.f::Fleck#IWebSocketServer#Start(System.Action{Fleck.IWebSocketConnection})">
+            <summary>设置 IWebSocketServer.Start(Action`1&lt;IWebSocketConnection&gt; config) 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubIWebSocketServer.StartActionOfIWebSocketConnection">
+            <summary>设置 IWebSocketServer.Start(Action`1&lt;IWebSocketConnection&gt; config) 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubIWebSocketServer.global::System#IDisposable#Dispose">
+            <summary>设置 IDisposable.Dispose() 的 存根</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubReadState">
+            <summary>Fleck.ReadState 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubReadState.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubReadState.InitializeStub">
+            <summary>初始化 type StubReadState 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubReadState.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubReadState.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubReadState.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubRequestParser">
+            <summary>Fleck.RequestParser 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubRequestParser.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubRequestParser.InitializeStub">
+            <summary>初始化 type StubRequestParser 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubRequestParser.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubRequestParser.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubRequestParser.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubSocketWrapper">
+            <summary>Fleck.SocketWrapper 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSocketWrapper.#ctor(System.Net.Sockets.Socket)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSocketWrapper.InitializeStub">
+            <summary>初始化 type StubSocketWrapper 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSocketWrapper.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSocketWrapper.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSocketWrapper.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubSubProtocolNegotiationFailureException">
+            <summary>Fleck.SubProtocolNegotiationFailureException 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.#ctor(System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.#ctor(System.String,System.Exception)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.AttachBackingFieldToHelpLink">
+            <summary>附加委托以将 StubSubProtocolNegotiationFailureException.HelpLink 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.AttachBackingFieldToSource">
+            <summary>附加委托以将 StubSubProtocolNegotiationFailureException.Source 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.DataGet">
+            <summary>设置 Exception.get_Data() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.GetBaseException">
+            <summary>设置 Exception.GetBaseException() 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.GetBaseException01">
+            <summary>设置 Exception.GetBaseException() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>设置 Exception.GetObjectData(SerializationInfo info, StreamingContext context) 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>设置 Exception.GetObjectData(SerializationInfo info, StreamingContext context) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.HelpLinkGet">
+            <summary>设置 Exception.get_HelpLink() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.HelpLinkSetString">
+            <summary>设置 Exception.set_HelpLink(String value) 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.InitializeStub">
+            <summary>初始化 type StubSubProtocolNegotiationFailureException 的新实例</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.MessageGet">
+            <summary>设置 Exception.get_Message() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.SourceGet">
+            <summary>设置 Exception.get_Source() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.SourceSetString">
+            <summary>设置 Exception.set_Source(String value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.StackTraceGet">
+            <summary>设置 Exception.get_StackTrace() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubSubProtocolNegotiationFailureException.ToString">
+            <summary>设置 Exception.ToString() 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubSubProtocolNegotiationFailureException.ToString01">
+            <summary>设置 Exception.ToString() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSubProtocolNegotiationFailureException.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSubProtocolNegotiationFailureException.Data">
+            <summary>设置 Exception.get_Data() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSubProtocolNegotiationFailureException.HelpLink">
+            <summary>设置 Exception.get_HelpLink() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSubProtocolNegotiationFailureException.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSubProtocolNegotiationFailureException.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSubProtocolNegotiationFailureException.Message">
+            <summary>设置 Exception.get_Message() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSubProtocolNegotiationFailureException.Source">
+            <summary>设置 Exception.get_Source() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubSubProtocolNegotiationFailureException.StackTrace">
+            <summary>设置 Exception.get_StackTrace() 的 stub</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubWebSocketConnection">
+            <summary>Fleck.WebSocketConnection 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketConnection.#ctor(Fleck.ISocket,System.Action{Fleck.IWebSocketConnection},System.Func{System.Byte[],Fleck.WebSocketHttpRequest},System.Func{Fleck.WebSocketHttpRequest,Fleck.IHandler},System.Func{System.Collections.Generic.IEnumerable{System.String},System.String})">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketConnection.InitializeStub">
+            <summary>初始化 type StubWebSocketConnection 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketConnection.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketConnection.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketConnection.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubWebSocketException">
+            <summary>Fleck.WebSocketException 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.#ctor(System.UInt16)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.#ctor(System.UInt16,System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.#ctor(System.UInt16,System.String,System.Exception)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.AttachBackingFieldToHelpLink">
+            <summary>附加委托以将 StubWebSocketException.HelpLink 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.AttachBackingFieldToSource">
+            <summary>附加委托以将 StubWebSocketException.Source 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.DataGet">
+            <summary>设置 Exception.get_Data() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.GetBaseException">
+            <summary>设置 Exception.GetBaseException() 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.GetBaseException01">
+            <summary>设置 Exception.GetBaseException() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>设置 Exception.GetObjectData(SerializationInfo info, StreamingContext context) 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>设置 Exception.GetObjectData(SerializationInfo info, StreamingContext context) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.HelpLinkGet">
+            <summary>设置 Exception.get_HelpLink() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.HelpLinkSetString">
+            <summary>设置 Exception.set_HelpLink(String value) 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.InitializeStub">
+            <summary>初始化 type StubWebSocketException 的新实例</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.MessageGet">
+            <summary>设置 Exception.get_Message() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.SourceGet">
+            <summary>设置 Exception.get_Source() 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.SourceSetString">
+            <summary>设置 Exception.set_Source(String value) 的 stub</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.StackTraceGet">
+            <summary>设置 Exception.get_StackTrace() 的 stub</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketException.ToString">
+            <summary>设置 Exception.ToString() 的 存根</summary>
+        </member>
+        <member name="F:Fleck.Fakes.StubWebSocketException.ToString01">
+            <summary>设置 Exception.ToString() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketException.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketException.Data">
+            <summary>设置 Exception.get_Data() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketException.HelpLink">
+            <summary>设置 Exception.get_HelpLink() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketException.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketException.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketException.Message">
+            <summary>设置 Exception.get_Message() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketException.Source">
+            <summary>设置 Exception.get_Source() 的 stub</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketException.StackTrace">
+            <summary>设置 Exception.get_StackTrace() 的 stub</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubWebSocketHttpRequest">
+            <summary>Fleck.WebSocketHttpRequest 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketHttpRequest.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketHttpRequest.InitializeStub">
+            <summary>初始化 type StubWebSocketHttpRequest 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketHttpRequest.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketHttpRequest.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketHttpRequest.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Fakes.StubWebSocketServer">
+            <summary>Fleck.WebSocketServer 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketServer.#ctor(System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketServer.#ctor(System.Int32,System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Fakes.StubWebSocketServer.InitializeStub">
+            <summary>初始化 type StubWebSocketServer 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketServer.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketServer.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Fakes.StubWebSocketServer.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Handlers.Fakes.ShimComposableHandler">
+            <summary>Fleck.Handlers.ComposableHandler 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimComposableHandler.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimComposableHandler.#ctor(Fleck.Handlers.ComposableHandler)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimComposableHandler.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimComposableHandler.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimComposableHandler.Bind(Fleck.IHandler)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.Constructor">
+            <summary>设置 ComposableHandler.ComposableHandler() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.CreateHandshakeString">
+            <summary>设置 ComposableHandler.CreateHandshake(String subProtocol) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.FrameBinaryByteArray">
+            <summary>设置 ComposableHandler.FrameBinary(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.FrameCloseInt32">
+            <summary>设置 ComposableHandler.FrameClose(Int32 code) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.FramePingByteArray">
+            <summary>设置 ComposableHandler.FramePing(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.FramePongByteArray">
+            <summary>设置 ComposableHandler.FramePong(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.FrameTextString">
+            <summary>设置 ComposableHandler.FrameText(String text) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.ReceiveIEnumerableOfByte">
+            <summary>设置 ComposableHandler.Receive(IEnumerable`1&lt;Byte&gt; data) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Handlers.Fakes.ShimComposableHandler.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.AllInstances.CreateHandshakeString">
+            <summary>设置 ComposableHandler.CreateHandshake(String subProtocol) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.AllInstances.FrameBinaryByteArray">
+            <summary>设置 ComposableHandler.FrameBinary(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.AllInstances.FrameCloseInt32">
+            <summary>设置 ComposableHandler.FrameClose(Int32 code) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.AllInstances.FramePingByteArray">
+            <summary>设置 ComposableHandler.FramePing(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.AllInstances.FramePongByteArray">
+            <summary>设置 ComposableHandler.FramePong(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.AllInstances.FrameTextString">
+            <summary>设置 ComposableHandler.FrameText(String text) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimComposableHandler.AllInstances.ReceiveIEnumerableOfByte">
+            <summary>设置 ComposableHandler.Receive(IEnumerable`1&lt;Byte&gt; data) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Handlers.Fakes.ShimDraft76Handler">
+            <summary>Fleck.Handlers.Draft76Handler 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimDraft76Handler.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimDraft76Handler.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimDraft76Handler.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimDraft76Handler.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimDraft76Handler.CalculateAnswerBytesStringStringArraySegmentOfByte">
+            <summary>设置 Draft76Handler.CalculateAnswerBytes(String key1, String key2, ArraySegment`1&lt;Byte&gt; challenge) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimDraft76Handler.CreateWebSocketHttpRequestActionOfString">
+            <summary>设置 Draft76Handler.Create(WebSocketHttpRequest request, Action`1&lt;String&gt; onMessage) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimDraft76Handler.FrameTextString">
+            <summary>设置 Draft76Handler.FrameText(String data) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimDraft76Handler.HandshakeWebSocketHttpRequestString">
+            <summary>设置 Draft76Handler.Handshake(WebSocketHttpRequest request, String subProtocol) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimDraft76Handler.ParseKeyString">
+            <summary>设置 Draft76Handler.ParseKey(String key) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimDraft76Handler.ReceiveDataActionOfStringListOfByte">
+            <summary>设置 Draft76Handler.ReceiveData(Action`1&lt;String&gt; onMessage, List`1&lt;Byte&gt; data) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler">
+            <summary>Fleck.Handlers.FlashSocketPolicyRequestHandler 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.#ctor(Fleck.Handlers.FlashSocketPolicyRequestHandler)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.Constructor">
+            <summary>设置 FlashSocketPolicyRequestHandler.FlashSocketPolicyRequestHandler() 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.CreateWebSocketHttpRequest">
+            <summary>设置 FlashSocketPolicyRequestHandler.Create(WebSocketHttpRequest request) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.HandshakeWebSocketHttpRequestString">
+            <summary>设置 FlashSocketPolicyRequestHandler.Handshake(WebSocketHttpRequest request, String subProtocol) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.StaticConstructor">
+            <summary>设置 FlashSocketPolicyRequestHandler.FlashSocketPolicyRequestHandler() 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Handlers.Fakes.ShimFlashSocketPolicyRequestHandler.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:Fleck.Handlers.Fakes.ShimHybi13Handler">
+            <summary>Fleck.Handlers.Hybi13Handler 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimHybi13Handler.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimHybi13Handler.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.ShimHybi13Handler.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimHybi13Handler.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimHybi13Handler.BuildHandshakeWebSocketHttpRequestString">
+            <summary>设置 Hybi13Handler.BuildHandshake(WebSocketHttpRequest request, String subProtocol) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimHybi13Handler.CreateResponseKeyString">
+            <summary>设置 Hybi13Handler.CreateResponseKey(String requestKey) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimHybi13Handler.CreateWebSocketHttpRequestActionOfStringActionActionOfByteArrayActionOfByteArrayActionOfByteArray">
+            <summary>设置 Hybi13Handler.Create(WebSocketHttpRequest request, Action`1&lt;String&gt; onMessage, Action onClose, Action`1&lt;Byte[]&gt; onBinary, Action`1&lt;Byte[]&gt; onPing, Action`1&lt;Byte[]&gt; onPong) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimHybi13Handler.FrameDataByteArrayFrameType">
+            <summary>设置 Hybi13Handler.FrameData(Byte[] payload, FrameType frameType) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimHybi13Handler.ProcessFrameFrameTypeByteArrayActionOfStringActionActionOfByteArrayActionOfByteArrayActionOfByteArray">
+            <summary>设置 Hybi13Handler.ProcessFrame(FrameType frameType, Byte[] data, Action`1&lt;String&gt; onMessage, Action onClose, Action`1&lt;Byte[]&gt; onBinary, Action`1&lt;Byte[]&gt; onPing, Action`1&lt;Byte[]&gt; onPong) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimHybi13Handler.ReadUTF8PayloadDataByteArray">
+            <summary>设置 Hybi13Handler.ReadUTF8PayloadData(Byte[] bytes) 的 填充码</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.ShimHybi13Handler.ReceiveDataListOfByteReadStateActionOfFrameTypeByteArray">
+            <summary>设置 Hybi13Handler.ReceiveData(List`1&lt;Byte&gt; data, ReadState readState, Action`2&lt;FrameType,Byte[]&gt; processFrame) 的 填充码</summary>
+        </member>
+        <member name="T:Fleck.Handlers.Fakes.StubComposableHandler">
+            <summary>Fleck.Handlers.ComposableHandler 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.StubComposableHandler.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.StubComposableHandler.InitializeStub">
+            <summary>初始化 type StubComposableHandler 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.StubComposableHandler.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.StubComposableHandler.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.StubComposableHandler.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Handlers.Fakes.StubFlashSocketPolicyRequestHandler">
+            <summary>Fleck.Handlers.FlashSocketPolicyRequestHandler 的存根类型</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.StubFlashSocketPolicyRequestHandler.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:Fleck.Handlers.Fakes.StubFlashSocketPolicyRequestHandler.InitializeStub">
+            <summary>初始化 type StubFlashSocketPolicyRequestHandler 的新实例</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.StubFlashSocketPolicyRequestHandler.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.StubFlashSocketPolicyRequestHandler.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:Fleck.Handlers.Fakes.StubFlashSocketPolicyRequestHandler.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:Fleck.Helpers.Fakes.ShimMonoHelper">
+            <summary>Fleck.Helpers.MonoHelper 的填充码类型</summary>
+        </member>
+        <member name="M:Fleck.Helpers.Fakes.ShimMonoHelper.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:Fleck.Helpers.Fakes.ShimMonoHelper.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:Fleck.Helpers.Fakes.ShimMonoHelper.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:Fleck.Helpers.Fakes.ShimMonoHelper.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:Fleck.Helpers.Fakes.ShimMonoHelper.IsRunningOnMono">
+            <summary>设置 MonoHelper.IsRunningOnMono() 的 填充码</summary>
+        </member>
+    </members>
+</doc>
