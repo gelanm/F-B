@@ -9,7 +9,7 @@
         <block wx:for="{{list}}" wx:key="{{item.id}}">
             <view data-id="{{item.id}}" class="mod-list">
                 <view class="left">
-                    <image src="http://api.test.com/uploads/{{item.MainImage}}"></image>
+                    <image src="{{item.MainImage}}"></image>
                 </view>
                 <view class="right">                    
                     <view class="row">

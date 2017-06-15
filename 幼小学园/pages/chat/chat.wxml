@@ -3,10 +3,10 @@
   <view class="main-chat">
     <view class="msg-items">
       <view class="chat-status chat-system-notice-area">
-        <view class="chat-system-notice">系统消息: 欢迎 LY {{text}} 加入群聊</view>
+        <!--<view class="chat-system-notice">系统消息: 欢迎 LY {{text}} 加入群聊</view>-->
       </view>
       <!-- 每条信息 -->
-      <view class="msg-box">
+      <!--<view class="msg-box">
         <view class="chat-item me">
           <view class="clearfix">
             <view class="avatar">
@@ -21,7 +21,7 @@
             </view>
           </view>
         </view>
-    </view>
+    </view>-->
     <block wx:if="{{isnull}}">
         <block wx:for="{{msg}}">
             <!--<template is='msg-box' data ="{{...item}}"></template>-->
@@ -53,7 +53,7 @@
       <view class="chat-item">
         <view class="clearfix">
           <view class="avatar">
-            <div class="user-avatar" style="background-image: url({{avatarUrl}});"></div>
+            <div class="user-avatar" style="background-image: url({{fname}});"></div>
           </view>
           <view class="msg-bubble-box">
             <div class="msg-bubble-area clearfix">
@@ -73,7 +73,7 @@
         <view class="chat-item me">
           <view class="clearfix">
             <view class="avatar">
-              <div class="user-avatar" style="background-image: url({{avatarUrl}});"></div>
+              <div class="user-avatar" style="background-image: url({{fname}});"></div>
             </view>
             <view class="msg-bubble-box">
               <div class="msg-bubble-area clearfix">

@@ -13,7 +13,7 @@ Page({
       id: 'postGoods',
       icon: '../../img/iconfont-dingdan.png',
       text: '已分享的宝贝',
-      isunread: true,
+      isunread: false,
       unreadNum: 3
     }, {
         id: 'unpostGoods',
@@ -25,13 +25,13 @@ Page({
         id: 'uploadGoods',
         icon: '../../img/iconfont-icontuan.png',
       text: '发布宝贝',
-      isunread: true,
+      isunread: false,
       unreadNum: 1
     }, {
       id: 'uploadTech',
       icon: '../../img/iconfont-icontuan.png',
       text: '发布技术视频',
-      isunread: true,
+      isunread: false,
       unreadNum: 1
     }, {
         id: 'mapAddress',

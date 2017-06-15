@@ -25,6 +25,21 @@ Page({
       }
     })
   },
+  chat: function (e) {
+    var id = e.currentTarget.dataset.idx;
+    wx.navigateTo({
+      url: '/pages/chat/chat?id=' + id,
+      success: function (res) {
+        // success
+      },
+      fail: function (res) {
+        // fail
+      },
+      complete: function (res) {
+        // complete
+      }
+    })
+  },
   scrolltolower: function (e) {
     //console.log(e);
     if (!this.data.showMore) return;

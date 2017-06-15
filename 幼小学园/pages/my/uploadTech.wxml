@@ -15,11 +15,11 @@
 <form bindsubmit="formSubmit" bindreset="formReset" >
     <view class="add-option">
         <label for="addTitle">标题:</label>
-        <input type="text" class="{{titleClass}}" placeholder="请输入宝贝标题" bindinput="verifyNotT" name="title" id="addTitle" maxlength = '30' placeholder-style="color:#103a64;font-size:1rem" />
+        <input type="text" class="{{titleClass}}" placeholder="请输入宝贝标题" bindinput="verifyNotT" name="title" id="addTitle" maxlength = '30' placeholder-style="color:#103a64;font-size:0.6rem" />
     </view>
     <view class="add-option">
         <label for="addUrl">技术视频:</label>
-        <input type="text" class="{{urlClass}}" placeholder="技术视频的网页地址" bindinput="verifyHtpp" name="url" id="addUrl" placeholder-style="color:#103a64;font-size:1rem" />
+        <input type="text" class="{{urlClass}}" placeholder="技术视频的网页地址" bindinput="verifyHtpp" name="url" id="addUrl" placeholder-style="color:#103a64;font-size:0.6rem" />
     </view>
     <!--<view class="add-option">
          <label for="addWho">who:</label>
@@ -43,7 +43,7 @@
     </view>-->
     <view class="add-desc">
         <label for="addDesc">宝贝简介:</label>
-        <input type="text"  class="{{descClass}}" bindinput="verifyNotD" placeholder="对宝贝的描述" name="desc" id="addDesc" placeholder-style="color:#103a64;font-size:1rem" />
+        <input type="text"  class="{{descClass}}" bindinput="verifyNotD" placeholder="对宝贝的描述" name="desc" id="addDesc" placeholder-style="color:#103a64;font-size:0.6rem" />
     </view>
     <view class="btn-area">
         <button formType="submit">提交</button>

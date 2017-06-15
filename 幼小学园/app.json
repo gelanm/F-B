@@ -1,7 +1,5 @@
 {
   "pages":[
-    "pages/chat/chat",
-    
     "pages/home/home",
     "pages/detail/detail",
     "pages/my/index",
@@ -13,7 +11,7 @@
     "pages/my/problem",
     "pages/share/share",
     "pages/tech/tech",   
-   
+    "pages/chat/chat",
     "pages/my/set"
   ],
   "window":{
@@ -24,7 +22,7 @@
   },
   "tabBar": {
     "color": "#000000",
-    "selectedColor": "blue",
+    "selectedColor": "yellow",
     "backgroundColor": "#dfdfdf",
     "list": [{
       "pagePath": "pages/home/home",

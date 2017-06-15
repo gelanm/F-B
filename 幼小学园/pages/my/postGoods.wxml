@@ -9,7 +9,7 @@
         <block wx:for="{{list}}">
             <view data-id="{{item.id}}"  class="mod-list">
                 <view class="left">
-                    <image src="http://api.test.com/uploads/{{item.MainImage}}"></image>
+                    <image src="{{item.MainImage}}"></image>
                 </view>
                 <view class="right">
                     <view class="row">
@@ -26,6 +26,8 @@
                     </view>
                      <view class="btn-area">
                         <button type="default" data-idx="{{item.id}}" size="mini"  bindtap="endExchange">交换结束</button>
+                        <button type="default" data-idx="{{item.UserId}}" size="mini"  bindtap="chat">聊天</button>
+                        <view wx:if="{{item.bool}}" class="badge">{{item.unreadNum}}</view>
                    </view>
                 </view>
             </view>

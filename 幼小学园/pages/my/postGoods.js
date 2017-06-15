@@ -10,6 +10,21 @@ Page({
     showLoading: true,
     a: {}
   }, 
+  chat: function (e) {
+    var id = e.currentTarget.dataset.idx;
+    wx.navigateTo({
+      url: '/pages/chat/chat?id=' + id,
+      success: function (res) {
+        // success
+      },
+      fail: function (res) {
+        // fail
+      },
+      complete: function (res) {
+        // complete
+      }
+    })
+  },
   endExchange: function (e) {
     console.log("changeOver")
     console.log(e)
@@ -94,7 +109,9 @@ Page({
             UserId: t.UserId,
             AddTime: util.getLocalTime(t.AddTime.replace("/Date(", "").replace("-0000)/", "")),
             PurchaseDate: util.getLocalTime(t.PurchaseDate.replace("/Date(", "").replace("-0000)/", "")),
-            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", ""))
+            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", "")),
+            unreadNum: parseInt(t.Remark),
+            bool: parseInt(t.Remark)>0?true:false
           })
         })
         this.setData({

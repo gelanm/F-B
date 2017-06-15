@@ -9,7 +9,7 @@
         <block wx:for="{{list}}">
             <view data-id="{{item.id}}" bindtap="redirect" class="mod-list">
                 <view class="left">
-                    <image src="http://api.test.com/uploads/{{item.MainImage}}"></image>
+                    <image src="{{item.MainImage}}"></image>
                 </view>
                 <view class="right">
                     <view class="row">
@@ -29,7 +29,7 @@
                 <view wx:if="{{item.State == 1 }}">  
                 <button data-idx="{{item.id}}" type="warn" size="mini"
         bindtap="redirect"> 交换 </button></view>
-        <button data-idx="{{item.id}}" type="default" size="mini"
+        <button data-idx="{{item.UserId}}" type="default" size="mini"
         bindtap="chat"> 聊天 </button>
                 </view>
             </view>
