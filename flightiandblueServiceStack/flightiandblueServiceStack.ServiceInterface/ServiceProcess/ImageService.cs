@@ -21,7 +21,8 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
         const int ThumbnailSize = 100;
         //readonly string UploadsDir = "~/uploads".MapHostAbsolutePath();
         //public string UploadsDir = "E:\\www\\servicestack\\Imgur\\uploads\\";
-        public string UploadsDir = HttpContext.Current.Server.MapPath("/uploads/");
+        //public string UploadsDir = HttpContext.Current.Server.MapPath("/uploads/");
+        public string UploadsDir = PublicConfig.uploadPath;
         //readonly string ThumbnailsDir = "~/uploads/thumbnails".MapHostAbsolutePath();
         readonly List<string> ImageSizes = new[] { "50", "100", "160", "350" }.ToList();
         //readonly List<string> ImageSizes = new[] { "320x480", "640x960", "640x1136", "768x1024", "1536x2048" }.ToList();
