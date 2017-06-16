@@ -34,6 +34,10 @@ public class PublicConfig
         /// </summary>
         public static string ImgPath = GetConfigNodeValue("ImgPath");
         /// <summary>
+        /// 日志地址
+        /// </summary>
+        public static string uploadPath = GetConfigNodeValue("uploadPath");
+        /// <summary>
         /// 
         /// </summary>
         public static string IsSQLLog = GetConfigNodeValue("IsSQLLog");
