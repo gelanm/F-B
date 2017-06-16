@@ -32,82 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AopSdk">
-      <HintPath>Framework\AopSdk.dll</HintPath>
-    </Reference>
-    <Reference Include="ApiClient">
-      <HintPath>Framework\ApiClient.dll</HintPath>
-    </Reference>
-    <Reference Include="AutoMapper">
-      <HintPath>Framework\AutoMapper.dll</HintPath>
-    </Reference>
-    <Reference Include="C1.Web.C1WebGrid.2">
-      <HintPath>Framework\C1.Web.C1WebGrid.2.dll</HintPath>
-    </Reference>
-    <Reference Include="C1.Web.UI.4">
-      <HintPath>Framework\C1.Web.UI.4.dll</HintPath>
-    </Reference>
-    <Reference Include="C1.Web.UI.Controls.4">
-      <HintPath>Framework\C1.Web.UI.Controls.4.dll</HintPath>
-    </Reference>
-    <Reference Include="CM.BLL">
-      <HintPath>Framework\CM.BLL.dll</HintPath>
-    </Reference>
-    <Reference Include="CM.Common">
-      <HintPath>Framework\CM.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="CM.DAL">
-      <HintPath>Framework\CM.DAL.dll</HintPath>
-    </Reference>
-    <Reference Include="CM.Facade">
-      <HintPath>Framework\CM.Facade.dll</HintPath>
-    </Reference>
-    <Reference Include="CM.Module">
-      <HintPath>Framework\CM.Module.dll</HintPath>
-    </Reference>
-    <Reference Include="CommLib.BdPush">
-      <HintPath>Framework\CommLib.BdPush.dll</HintPath>
-    </Reference>
-    <Reference Include="CServiceStack.Mega">
-      <HintPath>Framework\CServiceStack.Mega.dll</HintPath>
-    </Reference>
     <Reference Include="Fleck, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Framework\Fleck.dll</HintPath>
+      <HintPath>..\..\FlighingandBlueThreeBllDll\BinDll\Fleck.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Framework\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="LitJson">
-      <HintPath>Framework\LitJson.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>Framework\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity">
-      <HintPath>Framework\Microsoft.Practices.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity.Configuration">
-      <HintPath>Framework\Microsoft.Practices.Unity.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Data">
-      <HintPath>Framework\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Framework\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="NPOI">
-      <HintPath>Framework\NPOI.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceAPI">
-      <HintPath>Framework\ServiceAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceContact">
-      <HintPath>Framework\ServiceContact.dll</HintPath>
-    </Reference>
-    <Reference Include="ServiceProcess">
-      <HintPath>Framework\ServiceProcess.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FlighingandBlueThreeBllDll\BinDll\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -115,9 +46,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.XML" />
-    <Reference Include="TopSdk">
-      <HintPath>Framework\TopSdk.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\MessageBLL.cs" />
