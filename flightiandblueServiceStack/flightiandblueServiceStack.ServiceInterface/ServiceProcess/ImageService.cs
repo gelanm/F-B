@@ -73,7 +73,8 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
                     string fname2 = null;
                     int idcreatedir = 0;
                     idcreatedir = Convert.ToInt32(request.RegisterId) / 10000;
-                    UploadsDir = HttpContext.Current.Server.MapPath("/uploads/" + idcreatedir);
+                    //UploadsDir = HttpContext.Current.Server.MapPath("/uploads/" + idcreatedir);
+                    UploadsDir = PublicConfig.uploadPath + idcreatedir;
                     //UploadsDir = ("~/uploads/"+idcreatedir).MapHostAbsolutePath(); 
                     //UploadsDir = "F:\\www\\servicestack\\uploads\\" + idcreatedir;
                     //if (request.Card == null || (request.Card.Length != 15 && request.Card.Length != 18))
@@ -185,7 +186,7 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
                         strErrorStackTrace += "" + ex.StackTrace + "";
                         strErrorMsg = ex.Message + strErrorMsg;
                     }
-                    //CommModule.AddLog.AddWebLog(CommModule.PublicEnum.LogType.GlobalError, "Global捕获页面异常", strErrorMsg, strErrorStackTrace);
+                    AddLog.AddWebLog(PublicEnum.LogType.GlobalError, "Global捕获页面异常", strErrorMsg, strErrorStackTrace);
                     return "认证失败";//失败
                 }
                 //        string strErr = string.Empty; //p_CmdParms 参数值                        
