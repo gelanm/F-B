@@ -28,7 +28,7 @@
         </view>
     </view>
 
-    <!--<view class="text">
+    <view class="text">
         <view class="line_flag"></view>
         <text>环球精选</text>
     </view>
@@ -48,6 +48,6 @@
 
     <loading hidden="{{loadingHidden}}">
         加载中...
-    </loading>-->
+    </loading>
 
 </view>
