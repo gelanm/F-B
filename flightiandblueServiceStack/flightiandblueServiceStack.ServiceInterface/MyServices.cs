@@ -131,7 +131,7 @@ namespace flightiandblueServiceStack.ServiceInterface
             modeorder.AGoodId = request.Aid;
             modeorder.BGoodId = request.Bid;
             modeorder.Aid = modegood.UserId;
-            modeorder.Bid = request.Head.id;
+            modeorder.Bid = request.RegisterId;
             modeorder.CreateDate = DateTime.Now;
             modeorder.UpdateTime = DateTime.Now;
             modeorder.Memo = "----memo----";
