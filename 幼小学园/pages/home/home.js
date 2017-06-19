@@ -11,7 +11,8 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1000,
-    loadingHidden: false  // loading
+    loadingHidden: false,  // loading
+    images: [{ picurl: "../../img/banner_001.jpg" }, { picurl: "../../img/banner_002.jpg" }]
   },
   //事件处理函数
   swiperchange: function (e) {
@@ -55,20 +56,20 @@ Page({
     })
 
     //sliderList
-    wx.request({
-      url: 'http://huanqiuxiaozhen.com/wemall/slider/list',
-      method: 'GET',
-      data: {},
-      header: {
-        'Accept': 'application/json'
-      },
-      success: function (res) {
-        console.log(res.data)
-        that.setData({
-          images: res.data
-        })
-      }
-    })
+    // wx.request({
+    //   url: 'http://huanqiuxiaozhen.com/wemall/slider/list',
+    //   method: 'GET',
+    //   data: {},
+    //   header: {
+    //     'Accept': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     console.log(res.data)
+    //     that.setData({
+    //       images: res.data
+    //     })
+    //   }
+    // })
 
     //venuesList
     wx.request({
