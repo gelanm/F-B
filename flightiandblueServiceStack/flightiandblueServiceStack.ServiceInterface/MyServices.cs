@@ -83,10 +83,10 @@ namespace flightiandblueServiceStack.ServiceInterface
                 Id = new ServiceProcess.WXService().InsertMysqlWXUserInf(WXUserInfo),
                 OpenId = WXUserInfo.openId,
                 UnionId = WXUserInfo.unionId,
-                avatarUrl = WXUserInfo.avatarUrl//,
-                //Status = new BaseResponse { IsSuccess = true, ErrorMessage = "" }
+                avatarUrl = WXUserInfo.avatarUrl,
+                Status = new BaseResponse { IsSuccess = true, Message = "" }
             };
-            //return new WXUserResponse {Status= new BaseResponse{IsSuccess = true, ErrorMessage="" }};
+            //return new WXUserResponse {Status= new BaseResponse{IsSuccess = true, Message="" }};
         }
 
 
@@ -104,9 +104,9 @@ namespace flightiandblueServiceStack.ServiceInterface
 
             if (modegood.State == "2")
             {
-                return new BaseResponse
+                return new OrdersResponse
                 {
-                    IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品已经共享了" 
+                    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" }
                 };
             }
             modegood.State = "2";
@@ -117,9 +117,9 @@ namespace flightiandblueServiceStack.ServiceInterface
 
             if (modegood.State == "2")
             {
-                return new BaseResponse
+                return new OrdersResponse
                 {
-                     IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品已经共享了" 
+                    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" }
                 };
             }
             modegood.State = "2";
@@ -131,7 +131,7 @@ namespace flightiandblueServiceStack.ServiceInterface
             modeorder.AGoodId = request.Aid;
             modeorder.BGoodId = request.Bid;
             modeorder.Aid = modegood.UserId;
-            modeorder.Bid = request.RegisterId;
+            modeorder.Bid = request.Head.id;
             modeorder.CreateDate = DateTime.Now;
             modeorder.UpdateTime = DateTime.Now;
             modeorder.Memo = "----memo----";
@@ -141,9 +141,9 @@ namespace flightiandblueServiceStack.ServiceInterface
 
 
 
-            return new BaseResponse
+            return new OrdersResponse
             {
-                 IsSuccess = true, ErrorMessage = "" 
+                Status = new BaseResponse { IsSuccess = true, Message = "" }
             };
         
         }
@@ -163,9 +163,9 @@ namespace flightiandblueServiceStack.ServiceInterface
 
             if (modegood.State != "2")
             {
-                return new BaseResponse
+                return new OrdersResponse
                 {
-                     IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品不存在正在共享的订单" 
+                    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品不存在正在共享的订单" }
                 };
             }
             modegood.State = "1";
@@ -174,9 +174,9 @@ namespace flightiandblueServiceStack.ServiceInterface
             DataTable dt = objorders.GetList("  (AGoodId = " + request.Id + " or  AGoodId = " + request.Id + " ) and  Status = '01' order by CreateDate desc limit 0,1 ");
             if (dt.Rows.Count == 0)
             {
-                return new BaseResponse
+                return new OrdersResponse
                 {
-                     IsSuccess = false, ErrorMessage = modegood.Title + ", 该商品不存在正在共享的订单" 
+                    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品不存在正在共享的订单" }
                 };
             }
             
@@ -184,9 +184,9 @@ namespace flightiandblueServiceStack.ServiceInterface
             if ((DateTime.Now.AddDays(-7) < DateTime.Parse(dt.Rows[0]["CreateDate"].ToString()))
                 && (DateTime.Now.AddDays(-2) > DateTime.Parse(dt.Rows[0]["CreateDate"].ToString())))
             {
-                return new BaseResponse
+                return new OrdersResponse
                 {
-                     IsSuccess = false, ErrorMessage = "请于"+ DateTime.Parse(dt.Rows[0]["CreateDate"].ToString()).AddDays(7).ToString()+"后，再结束订单。" 
+                    Status = new BaseResponse { IsSuccess = false, Message = "请于"+ DateTime.Parse(dt.Rows[0]["CreateDate"].ToString()).AddDays(7).ToString()+"后，再结束订单。" }
                 };
             }
             //if (int.Parse(dt.Rows[0]["AGoodId"].ToString()) == request.Id)
@@ -203,7 +203,7 @@ namespace flightiandblueServiceStack.ServiceInterface
             //{
             //    return new OrdersResponse
             //    {
-            //        Status = new BaseResponse { IsSuccess = false, ErrorMessage = modegood2.Title + ", 该商品不存在正在共享的订单" }
+            //        Status = new BaseResponse { IsSuccess = false, Message = modegood2.Title + ", 该商品不存在正在共享的订单" }
             //    };
             //}
             //modegood2.State = "1";
@@ -235,9 +235,9 @@ namespace flightiandblueServiceStack.ServiceInterface
 
 
 
-            return new BaseResponse
+            return new OrdersResponse
             {
-                 IsSuccess = true, ErrorMessage = "" 
+                Status = new BaseResponse { IsSuccess = true, Message = "" }
             };
 
         }
