@@ -84,7 +84,7 @@ Page({
         // Do something with return value
         console.log(value)
         that.setData({
-          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": that.data.pn * that.data.count, "count": that.data.count }
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 3, "start": that.data.pn * that.data.count, "count": that.data.count }
         })
       }
     } catch (e) {
@@ -135,7 +135,7 @@ Page({
         // Do something with return value
         console.log(value)
         that.setData({
-          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": 0, "count": that.data.count }
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 3, "start": 0, "count": that.data.count }
         })
       }
     } catch (e) {
