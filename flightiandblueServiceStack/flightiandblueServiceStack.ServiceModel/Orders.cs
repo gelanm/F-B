@@ -14,10 +14,10 @@ namespace flightiandblueServiceStack.ServiceModel
         public string OpenId { get; set; }
         public int Aid { get; set; }
         public int Bid { get; set; }
-        //public AuthHead Head { get; set; }
+        public AuthHead Head { get; set; }
     }
 
-    public class OrdersResponse //: BaseResponseType
+    public class OrdersResponse : BaseResponseType
     {
               
     }
@@ -28,6 +28,6 @@ namespace flightiandblueServiceStack.ServiceModel
         public int RegisterId { get; set; }
         public string OpenId { get; set; }
         public int Id { get; set; }
-        //public AuthHead Head { get; set; }
+        public AuthHead Head { get; set; }
     }
 }
