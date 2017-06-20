@@ -84,7 +84,7 @@ namespace flightiandblueServiceStack.ServiceInterface
                 OpenId = WXUserInfo.openId,
                 UnionId = WXUserInfo.unionId,
                 avatarUrl = WXUserInfo.avatarUrl,
-                Status = new BaseResponse { IsSuccess = true, Message = "" }
+                //Status = new BaseResponse { IsSuccess = true, Message = "" }
             };
             //return new WXUserResponse {Status= new BaseResponse{IsSuccess = true, Message="" }};
         }
