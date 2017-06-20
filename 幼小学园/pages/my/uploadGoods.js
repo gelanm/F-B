@@ -216,7 +216,7 @@ Page({
     console.log(this.data)
     console.log(valueAll)
         wx.uploadFile({
-          url: 'http://api.test.com/apisk/upload', //仅为示例，非真实的接口地址
+          url: 'http://serviceapi.flightingandblue.com/upload', //仅为示例，非真实的接口地址
           filePath: _self.data.tempFilePaths[0],
           name: 'file',
           formData: {

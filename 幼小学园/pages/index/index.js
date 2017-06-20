@@ -19,6 +19,7 @@ Page({
     var that = this
     wx.login({
       success: function(res) {
+        console.log(1)
         console.log(res)
         if (res.code) {
           wx.getUserInfo({

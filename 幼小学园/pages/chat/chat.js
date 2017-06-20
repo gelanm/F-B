@@ -77,6 +77,7 @@ Page({
 
     }
 
+
     const that = this
     this.getUserInfo((res) => {
       that.data.totalPeoples.push(res)
@@ -94,7 +95,7 @@ Page({
     //创建一个 socket 连接(必须是wss协议)
     wx.connectSocket({
       // url: 'ws://localhost:3000',
-      url: 'ws://192.168.6.235:8181',
+      url: 'ws://flightingandblue.com:8181',
       data: {
         x: '',
         y: ''

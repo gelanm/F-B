@@ -52,6 +52,7 @@ Page({
         that.setData({
           a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": that.data.pn * that.data.count, "count": that.data.count }
         })
+        
       }
     } catch (e) {
       // Do something when catch error
@@ -133,6 +134,7 @@ Page({
         that.setData({
           a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": 0, "count": that.data.count }
         })
+        console.log(a);
       }
     } catch (e) {
       // Do something when catch error

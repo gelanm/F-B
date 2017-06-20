@@ -67,17 +67,18 @@ Page({
               that.setData({
                 userInfo: res1.userInfo
               })
+              console.log(res1)
               var a = { "Code": res.code, "IV": res1.iv, "EncryptedData": res1.encryptedData}
               api.Api("WXUser", a).then(res2 => {
-                //console.log(res2);
-                if (res2.Status.IsSuccess) {
+                console.log(res2);
+                if (res2.Id>0) {
                   console.log(res2)
                   wx.setStorage({
                     key: "User",
                     data: res2
                   })
                 } else {
-                  console.log(res2.Status.ErrorMessage)
+                  //console.log(res2.Status.ErrorMessage)
                 }
               })//.catch(rej=>{
               //   console.log(rej)
