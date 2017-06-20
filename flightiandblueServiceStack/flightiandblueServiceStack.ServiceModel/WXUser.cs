@@ -15,7 +15,7 @@ namespace flightiandblueServiceStack.ServiceModel
         public string EncryptedData { get; set; }
     }
 
-    public class WXUserResponse : BaseResponseType
+    public class WXUserResponse //: BaseResponseType
     {
         public int Id { get; set; }
         public string OpenId { get; set; }
