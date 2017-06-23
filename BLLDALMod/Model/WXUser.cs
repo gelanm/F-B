@@ -26,6 +26,8 @@ namespace BLLDALMod.Model
         private DateTime _updatetime;
         private string _memo;
         private string _status;
+        private string _latitude;
+        private string _longitude;
 
         /// <summary>
         /// 
@@ -147,6 +149,24 @@ namespace BLLDALMod.Model
             set { _status = value; }
             get { return _status; }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Latitude
+        {
+            set { _latitude = value; }
+            get { return _latitude; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Longitude
+        {
+            set { _longitude = value; }
+            get { return _longitude; }
+        }
+
+
         #endregion Model
 
     }
