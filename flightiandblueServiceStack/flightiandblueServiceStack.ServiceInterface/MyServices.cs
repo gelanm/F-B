@@ -32,33 +32,54 @@ namespace flightiandblueServiceStack.ServiceInterface
         public object Any(viewGoods request)
         {
             ChatRoomBLL objChatRoomBLL = new ChatRoomBLL();
+            OrdersBLL objOrdersBLL = new OrdersBLL();
+            goodsBLL objgoodsBll = new goodsBLL();
+            techsBLL objtechsBll = new techsBLL();
             if (request.Type == 0)
             {
-                goodsBLL objBll = new goodsBLL();
-                List<Goods> listmode = objBll.GetModelList(" State = '" + request.State.ToString() + "' and UserId = " + request.RegisterId + " limit " + request.start + "," + request.count);
+
+                List<Goods> listmode = objgoodsBll.GetModelList(" State = '" + request.State.ToString() + "' and UserId = " + request.RegisterId + " limit " + request.start + "," + request.count);
                 foreach (Goods g in listmode) {
                     int a = objChatRoomBLL.getChatCount(g.UserId);
                     g.Remark = a.ToString();
+                    //int b = objOrdersBLL.getOtherGoodId(g.id);
                 }
                 return listmode;
             }
             else if (request.Type == 1)
             {
-                techsBLL objBll = new techsBLL();
-                List<techs> listmode = objBll.GetModelList(" 1=1 limit " + request.start + "," + request.count);
+
+                List<techs> listmode = objtechsBll.GetModelList(" 1=1 limit " + request.start + "," + request.count);
                 return listmode;
             }
             else if (request.Type == 2)
             {
-                goodsBLL objBll = new goodsBLL();
-                List<Goods> listmode = objBll.GetModelList(" State in ( '" + request.State.ToString() + "','2') and UserId != " + request.RegisterId + " limit " + request.start + "," + request.count);
+                List<Goods> listmode = objgoodsBll.GetModelList(" State in ( '" + request.State.ToString() + "','2') and UserId != " + request.RegisterId + " limit " + request.start + "," + request.count);
                 return listmode;
             }
             else
             {
-                goodsBLL objBll = new goodsBLL();
-                List<Goods> listmode = objBll.GetModelList(" State in ( '" + request.State.ToString() + "','2') and UserId = " + request.RegisterId + " limit " + request.start + "," + request.count);
-                return listmode;
+                List<OrderGoodsResponse> listOGR = new List<OrderGoodsResponse>();
+                OrderGoodsResponse objOGR = new OrderGoodsResponse();
+                List<orders> listmode = objOrdersBLL.GetModelList("  status = '01' and ( AId = " + request.RegisterId + " or BId  = " + request.RegisterId + " )");
+                foreach (orders g in listmode)
+                {
+                    objOGR.objorders = g;
+                    if (g.Aid != request.RegisterId)
+                    {
+                        objOGR.objGoodsA = objgoodsBll.GetModel(g.AGoodId);
+                        objOGR.objGoodsB = objgoodsBll.GetModel(g.BGoodId);
+                        objOGR.objGoodsB.Remark = objChatRoomBLL.getChatCount(objOGR.objGoodsB.UserId).ToString();
+                    }
+                    else
+                    {
+                        objOGR.objGoodsA = objgoodsBll.GetModel(g.BGoodId);
+                        objOGR.objGoodsB = objgoodsBll.GetModel(g.AGoodId);
+                        objOGR.objGoodsB.Remark = objChatRoomBLL.getChatCount(objOGR.objGoodsB.UserId).ToString();
+                    }
+                    listOGR.Add(objOGR);
+                }
+                return listOGR;
             }
         }
 
@@ -155,7 +176,6 @@ namespace flightiandblueServiceStack.ServiceInterface
         
         }
 
-
         // 结束订单 
         public object Any(flightiandblueServiceStack.ServiceModel.EndOrders request)
         {
@@ -164,83 +184,45 @@ namespace flightiandblueServiceStack.ServiceInterface
             BLLDALMod.BLL.goodsBLL objgood = new BLLDALMod.BLL.goodsBLL();
             BLLDALMod.Model.Goods modegood = new BLLDALMod.Model.Goods();
             BLLDALMod.Model.Goods modegood2 = new BLLDALMod.Model.Goods();
-            int otherId;
 
-            modegood = objgood.GetModel(request.Id);
-
-            if (modegood.State != "2")
+            modeorder = objorders.GetModel(request.Id);
+            if (modeorder == null)
             {
                 return new OrdersResponse
                 {
-                    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品不存在正在共享的订单" }
+                    Status = new BaseResponse { IsSuccess = false, Message = "该商品不存在正在共享的订单" }
                 };
             }
+
+            if (modeorder.Status != "01")
+            {
+                return new OrdersResponse
+                {
+                    Status = new BaseResponse { IsSuccess = false, Message = "该商品不存在正在共享的订单" }
+                };
+            }
+            if ((DateTime.Now.AddDays(-7) < modeorder.CreateDate)
+                && (DateTime.Now.AddDays(-2) > modeorder.CreateDate))
+            {
+                return new OrdersResponse
+                {
+                    Status = new BaseResponse { IsSuccess = false, Message = "请于" + modeorder.CreateDate.AddDays(7).ToString() + "后，再结束订单。" }
+                };
+            }
+            modeorder.Status = "06";
+            modeorder.UpdateTime = DateTime.Now;
+
+            modegood = objgood.GetModel(modeorder.AGoodId);
             modegood.State = "1";
             modegood.UpdateTime = DateTime.Now;
 
-            DataTable dt = objorders.GetList("  (AGoodId = " + request.Id + " or  AGoodId = " + request.Id + " ) and  Status = '01' order by CreateDate desc limit 0,1 ");
-            if (dt.Rows.Count == 0)
-            {
-                return new OrdersResponse
-                {
-                    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品不存在正在共享的订单" }
-                };
-            }
-            
+            modegood2 = objgood.GetModel(modeorder.BGoodId);
+            modegood2.State = "1";
+            modegood2.UpdateTime = DateTime.Now;
 
-            if ((DateTime.Now.AddDays(-7) < DateTime.Parse(dt.Rows[0]["CreateDate"].ToString()))
-                && (DateTime.Now.AddDays(-2) > DateTime.Parse(dt.Rows[0]["CreateDate"].ToString())))
-            {
-                return new OrdersResponse
-                {
-                    Status = new BaseResponse { IsSuccess = false, Message = "请于"+ DateTime.Parse(dt.Rows[0]["CreateDate"].ToString()).AddDays(7).ToString()+"后，再结束订单。" }
-                };
-            }
-            //if (int.Parse(dt.Rows[0]["AGoodId"].ToString()) == request.Id)
-            //{
-            //    otherId = int.Parse(dt.Rows[0]["BGoodId"].ToString());
-            //}
-            //else {
-            //    otherId = int.Parse(dt.Rows[0]["AGoodId"].ToString());
-            //}
-
-            //modegood2 = objgood.GetModel(otherId);
-
-            //if (modegood2.State != "2")
-            //{
-            //    return new OrdersResponse
-            //    {
-            //        Status = new BaseResponse { IsSuccess = false, Message = modegood2.Title + ", 该商品不存在正在共享的订单" }
-            //    };
-            //}
-            //modegood2.State = "1";
-            //modegood2.UpdateTime = DateTime.Now;
-            
-
-
-            //modeorder = objorders.GetModel(int.Parse(dt.Rows[0]["Id"].ToString()));
-            //modeorder.Status = "06";
-            //modeorder.UpdateTime = DateTime.Now;
-
-            objgood.Update(modegood);
-            //objgood.Update(modegood2);
             objorders.Update(modeorder);
-
-
-            //modeorder.OrderNumber = "";
-            //modeorder.Status = "01";
-            //modeorder.AGoodId = request.Aid;
-            //modeorder.BGoodId = request.Bid;
-            //modeorder.Aid = modegood.UserId;
-            //modeorder.Bid = request.Head.id;
-            //modeorder.CreateDate = DateTime.Now;
-            //modeorder.UpdateTime = DateTime.Now;
-            //modeorder.Memo = "----memo----";
-            //objorders.Add(modeorder);
-
-
-
-
+            objgood.Update(modegood);
+            objgood.Update(modegood2);
 
             return new OrdersResponse
             {
@@ -248,5 +230,97 @@ namespace flightiandblueServiceStack.ServiceInterface
             };
 
         }
+        // 结束订单 
+        //public object Any(flightiandblueServiceStack.ServiceModel.EndOrders request)
+        //{
+        //    BLLDALMod.BLL.OrdersBLL objorders = new BLLDALMod.BLL.OrdersBLL();
+        //    BLLDALMod.Model.orders modeorder = new BLLDALMod.Model.orders();
+        //    BLLDALMod.BLL.goodsBLL objgood = new BLLDALMod.BLL.goodsBLL();
+        //    BLLDALMod.Model.Goods modegood = new BLLDALMod.Model.Goods();
+        //    BLLDALMod.Model.Goods modegood2 = new BLLDALMod.Model.Goods();
+        //    int otherId;
+
+        //    modegood = objgood.GetModel(request.Id);
+
+        //    if (modegood.State != "2")
+        //    {
+        //        return new OrdersResponse
+        //        {
+        //            Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品不存在正在共享的订单" }
+        //        };
+        //    }
+        //    modegood.State = "1";
+        //    modegood.UpdateTime = DateTime.Now;
+
+        //    DataTable dt = objorders.GetList("  (AGoodId = " + request.Id + " or  AGoodId = " + request.Id + " ) and  Status = '01' order by CreateDate desc limit 0,1 ");
+        //    if (dt.Rows.Count == 0)
+        //    {
+        //        return new OrdersResponse
+        //        {
+        //            Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品不存在正在共享的订单" }
+        //        };
+        //    }
+            
+
+        //    if ((DateTime.Now.AddDays(-7) < DateTime.Parse(dt.Rows[0]["CreateDate"].ToString()))
+        //        && (DateTime.Now.AddDays(-2) > DateTime.Parse(dt.Rows[0]["CreateDate"].ToString())))
+        //    {
+        //        return new OrdersResponse
+        //        {
+        //            Status = new BaseResponse { IsSuccess = false, Message = "请于"+ DateTime.Parse(dt.Rows[0]["CreateDate"].ToString()).AddDays(7).ToString()+"后，再结束订单。" }
+        //        };
+        //    }
+        //    //if (int.Parse(dt.Rows[0]["AGoodId"].ToString()) == request.Id)
+        //    //{
+        //    //    otherId = int.Parse(dt.Rows[0]["BGoodId"].ToString());
+        //    //}
+        //    //else {
+        //    //    otherId = int.Parse(dt.Rows[0]["AGoodId"].ToString());
+        //    //}
+
+        //    //modegood2 = objgood.GetModel(otherId);
+
+        //    //if (modegood2.State != "2")
+        //    //{
+        //    //    return new OrdersResponse
+        //    //    {
+        //    //        Status = new BaseResponse { IsSuccess = false, Message = modegood2.Title + ", 该商品不存在正在共享的订单" }
+        //    //    };
+        //    //}
+        //    //modegood2.State = "1";
+        //    //modegood2.UpdateTime = DateTime.Now;
+            
+
+
+        //    //modeorder = objorders.GetModel(int.Parse(dt.Rows[0]["Id"].ToString()));
+        //    //modeorder.Status = "06";
+        //    //modeorder.UpdateTime = DateTime.Now;
+
+        //    objgood.Update(modegood);
+        //    //objgood.Update(modegood2);
+        //    objorders.Update(modeorder);
+
+
+        //    //modeorder.OrderNumber = "";
+        //    //modeorder.Status = "01";
+        //    //modeorder.AGoodId = request.Aid;
+        //    //modeorder.BGoodId = request.Bid;
+        //    //modeorder.Aid = modegood.UserId;
+        //    //modeorder.Bid = request.Head.id;
+        //    //modeorder.CreateDate = DateTime.Now;
+        //    //modeorder.UpdateTime = DateTime.Now;
+        //    //modeorder.Memo = "----memo----";
+        //    //objorders.Add(modeorder);
+
+
+
+
+
+        //    return new OrdersResponse
+        //    {
+        //        Status = new BaseResponse { IsSuccess = true, Message = "" }
+        //    };
+
+        //}
     }
 }
