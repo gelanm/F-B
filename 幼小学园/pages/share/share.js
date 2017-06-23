@@ -26,18 +26,23 @@ Page({
     })
   },
   chat: function (e) {
-    var id = e.currentTarget.dataset.idx;
-    wx.navigateTo({
-      url: '/pages/chat/chat?id=' + id,
-      success: function (res) {
-        // success
-      },
-      fail: function (res) {
-        // fail
-      },
-      complete: function (res) {
-        // complete
-      }
+    // var id = e.currentTarget.dataset.idx;
+    // wx.navigateTo({
+    //   url: '/pages/chat/chat?id=' + id,
+    //   success: function (res) {
+    //     // success
+    //   },
+    //   fail: function (res) {
+    //     // fail
+    //   },
+    //   complete: function (res) {
+    //     // complete
+    //   }
+    // })
+    wx.showToast({
+      title: "如果该商品未点击交换，请先点击交换，再进行聊天，2天内可取消交换。如果该商品已被交换，请耐心等待交换结束，先查看其它商品",
+      icon: 'loading',
+      duration: 6000
     })
   },
   scrolltolower: function (e) {

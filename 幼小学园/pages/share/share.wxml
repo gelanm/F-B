@@ -7,7 +7,7 @@
 <block wx:else>
     <scroll-view class="sv" scroll-top="0" scroll-y bindscrolltolower="scrolltolower">
         <block wx:for="{{list}}">
-            <view data-id="{{item.id}}" bindtap="redirect" class="mod-list">
+            <view data-id="{{item.id}}"  class="mod-list">
                 <view class="left">
                     <image src="{{item.MainImage}}"></image>
                 </view>
