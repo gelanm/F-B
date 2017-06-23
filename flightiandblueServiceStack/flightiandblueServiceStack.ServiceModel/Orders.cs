@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BLLDALMod.Model;
 
 namespace flightiandblueServiceStack.ServiceModel
 {
@@ -20,6 +21,12 @@ namespace flightiandblueServiceStack.ServiceModel
     public class OrdersResponse : BaseResponseType
     {
               
+    }
+    public class OrderGoodsResponse
+    {
+        public orders objorders { get; set; }
+        public Goods objGoodsA { get; set; }
+        public Goods objGoodsB { get; set; }
     }
 
     [Route("/EndExchange")]
