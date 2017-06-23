@@ -81,9 +81,14 @@ namespace BLLDALMod.DAL
         {
             return true;
         }
-        public int getChatCount(int userId)
+        public int getChatCount(int fuserId,int tuserId)
         {
-            string sql = string.Format("select  count(1)  from ChatRoom where ToId = {0} and Status = 0 order by CreateDateTime desc ", userId);
+            string sql = string.Format("select  count(1)  from ChatRoom where FromID = {0} and ToId = {1} and Status = 0 order by CreateDateTime desc ", fuserId, tuserId);
+            return DBhelpmysql.Count(sql);
+        }
+        public int getChatCount(int tuserId)
+        {
+            string sql = string.Format("select  count(1)  from ChatRoom where  ToId = {0} and Status = 0 order by CreateDateTime desc ", tuserId);
             return DBhelpmysql.Count(sql);
         }
         /// <summary>
