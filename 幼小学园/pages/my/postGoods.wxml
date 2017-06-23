@@ -7,8 +7,44 @@
 <block wx:else>
     <scroll-view class="sv" scroll-top="0" scroll-y bindscrolltolower="scrolltolower">
         <block wx:for="{{list}}">
-            <view data-id="{{item.id}}"  class="mod-list">
-                <view class="left">
+            <view data-id="{{item.objorders.id}}"  class="mod-list">
+              <view class="left">
+                  <image src="{{item.objGoodsA.MainImage}}"></image>
+              </view>
+              <view class="right">
+                  <view class="row">
+                      {{item.objGoodsA.Title}}
+                  </view>
+                  <view class="row">
+                      价格:{{item.objGoodsA.Price}}
+                  </view>
+                  <view class="row">
+                      简介:{{item.objGoodsA.ContentValidity}}
+                  </view>
+              </view>
+              <view class="left">
+                  <image src="{{item.objGoodsB.MainImage}}"></image>
+              </view>
+              <view class="right">
+                  <view class="row">
+                      {{item.objGoodsB.Title}}
+                  </view>
+                  <view class="row">
+                      价格:{{item.objGoodsB.Price}}
+                  </view>
+                  <view class="row">
+                      简介:{{item.objGoodsB.ContentValidity}}
+                  </view>
+              </view>     
+            </view>
+            <view class="btn-area">
+                        <button type="default" data-idx="{{item.objorders.id}}" size="mini"  bindtap="endExchange">交换结束</button>
+                        <button type="default" data-idx="{{item.objGoodsB.UserId}}" size="mini"  bindtap="chat">聊天<view wx:if="{{item.bool}}" class="badge">
+                        {{item.unreadNum}}
+                        </view></button>
+                        
+                   </view>  
+                <!--<view class="left">
                     <image src="{{item.MainImage}}"></image>
                 </view>
                 <view class="right">
@@ -23,14 +59,14 @@
                     </view>
                     <view class="row">
                         简介:{{item.ContentValidity}}
-                    </view>
-                     <view class="btn-area">
+                    </view>-->
+                     <!--<view class="btn-area">
                         <button type="default" data-idx="{{item.id}}" size="mini"  bindtap="endExchange">交换结束</button>
                         <button type="default" data-idx="{{item.UserId}}" size="mini"  bindtap="chat">聊天</button>
                         <view wx:if="{{item.bool}}" class="badge">{{item.unreadNum}}</view>
                    </view>
-                </view>
-            </view>
+                </view>-->
+            
         </block>
         <block wx:if="{{showMore}}">
             <view class="page-loading">

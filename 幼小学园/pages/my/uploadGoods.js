@@ -175,9 +175,19 @@ Page({
       })
     }
     if (verifyInt(valueAll.price) || (valueAll.price === 0)) {
-      this.setData({
-        "priceClass": "priceClass"
-      })
+      if(valueAll.price>100)
+      {
+        wx.showToast({
+          title: '宝贝价格不能高于100元',
+          icon: 'loading',
+          duration: 2000
+        })
+      }
+      else{
+        this.setData({
+          "priceClass": "priceClass"
+        })
+      }
     }
     // if (verifyHttp(valueAll.url)) {
     //   this.setData({

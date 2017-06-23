@@ -1,6 +1,6 @@
 //var baseUrl = "https://api.test.com/api/api.ashx/json/";
-//var baseUrl = "https://api.test.com/apisk/json/reply/";
-var baseUrl = "https://serviceapi.flightingandblue.com/json/reply/"
+var baseUrl = "https://api.test.com/apisk/json/reply/";
+//var baseUrl = "https://serviceapi.flightingandblue.com/json/reply/"
 //var baseUrl = "https://api.test.com/json/reply/";
 
 function fetchApi(name, param) {
