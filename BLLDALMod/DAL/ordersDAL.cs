@@ -187,6 +187,14 @@ namespace BLLDALMod.DAL
             return DBhelpmysql.Select(strSql.ToString(), null);
         }
 
+        //public int getOtherGoodId(int id)
+        //{
+        //    StringBuilder strSql = new StringBuilder();
+        //    strSql.Append("select * ");
+        //    strSql.Append(" FROM orders ");
+        //    strSql.Append(" Where  AGoodId ");
+        //    return 1;
+        //}
 
         public DataTable GetAllList()
         {
