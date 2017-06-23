@@ -65,17 +65,17 @@ namespace flightiandblueServiceStack.ServiceInterface
                 foreach (orders g in listmode)
                 {
                     objOGR.objorders = g;
-                    if (g.Aid != request.RegisterId)
+                    if (g.Aid == request.RegisterId)
                     {
                         objOGR.objGoodsA = objgoodsBll.GetModel(g.AGoodId);
                         objOGR.objGoodsB = objgoodsBll.GetModel(g.BGoodId);
-                        objOGR.objGoodsB.Remark = objChatRoomBLL.getChatCount(objOGR.objGoodsB.UserId).ToString();
+                        objOGR.objGoodsB.Remark = objChatRoomBLL.getChatCount(objOGR.objGoodsB.UserId, objOGR.objGoodsA.UserId).ToString();
                     }
                     else
                     {
                         objOGR.objGoodsA = objgoodsBll.GetModel(g.BGoodId);
                         objOGR.objGoodsB = objgoodsBll.GetModel(g.AGoodId);
-                        objOGR.objGoodsB.Remark = objChatRoomBLL.getChatCount(objOGR.objGoodsB.UserId).ToString();
+                        objOGR.objGoodsB.Remark = objChatRoomBLL.getChatCount(objOGR.objGoodsB.UserId, objOGR.objGoodsA.UserId).ToString();
                     }
                     listOGR.Add(objOGR);
                 }
