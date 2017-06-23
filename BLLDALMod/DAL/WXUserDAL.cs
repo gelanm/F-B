@@ -122,6 +122,44 @@ namespace BLLDALMod.DAL
         }
 
         /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        public bool Update(WXUser model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update book WXUser ");
+            strSql.Append("Status=@Status,");
+            strSql.Append("Memo=@Memo,");
+            strSql.Append("UpdateTime=@UpdateTime,");
+            strSql.Append("latitude=@latitude,");
+            strSql.Append("longitude=@longitude");
+            strSql.Append(" where Id=@id");
+            MySqlParameter[] parameters = {
+					new MySqlParameter("@Status", MySqlDbType.VarChar,10),
+					new MySqlParameter("@Memo", MySqlDbType.VarChar,1000),
+					new MySqlParameter("@UpdateTime", MySqlDbType.DateTime),
+                    new MySqlParameter("@latitude", MySqlDbType.VarChar,20),
+					new MySqlParameter("@longitude", MySqlDbType.VarChar,20),
+                    new MySqlParameter("@id", MySqlDbType.Int32,4)};
+            parameters[0].Value = model.Status;
+            parameters[1].Value = model.Memo;
+            parameters[2].Value = model.UpdateTime;
+            parameters[3].Value = model.Latitude;
+            parameters[4].Value = model.Longitude;
+            parameters[5].Value = model.Id;
+
+            int rows = DBhelpmysql.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// 得到一个对象实体
         /// </summary>
         public WXUser GetModel(int Id)
