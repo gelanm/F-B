@@ -27,8 +27,12 @@ namespace BLLDALMod.BLL
         {
             return true;
         }
-        public int getChatCount(int userId) {
-            return dal.getChatCount(userId);
+        public int getChatCount(int fuserId,int tuserId) {
+            return dal.getChatCount(fuserId,tuserId);
+        }
+        public int getChatCount(int tuserId)
+        {
+            return dal.getChatCount(tuserId);
         }
         /// <summary>
         /// 获得数据列表
