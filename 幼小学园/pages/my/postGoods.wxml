@@ -9,7 +9,11 @@
         <block wx:for="{{list}}">
             <view data-id="{{item.objorders.id}}"  class="mod-list">
               <view class="left">
+              <view class="row">
                   <image src="{{item.objGoodsA.MainImage}}"></image>
+              </view>
+                <view class="row">
+                  <image src="{{item.objGoodsB.MainImage}}"></image>  </view>
               </view>
               <view class="right">
                   <view class="row">
@@ -21,13 +25,9 @@
                   <view class="row">
                       简介:{{item.objGoodsA.ContentValidity}}
                   </view>
-              </view>
-              <view class="left">
-                  <image src="{{item.objGoodsB.MainImage}}"></image>
-              </view>
-              <view class="right">
+              
                   <view class="row">
-                      {{item.objGoodsB.Title}}
+                      对方商品：{{item.objGoodsB.Title}}
                   </view>
                   <view class="row">
                       价格:{{item.objGoodsB.Price}}
@@ -35,15 +35,16 @@
                   <view class="row">
                       简介:{{item.objGoodsB.ContentValidity}}
                   </view>
-              </view>     
-            </view>
-            <view class="btn-area">
-                        <button type="default" data-idx="{{item.objorders.id}}" size="mini"  bindtap="endExchange">交换结束</button>
+              </view>    
+   <view class="btn-area">
+                <button type="default" data-idx="{{item.objorders.id}}" size="mini"  bindtap="endExchange">交换结束</button>
                         <button type="default" data-idx="{{item.objGoodsB.UserId}}" size="mini"  bindtap="chat">聊天<view wx:if="{{item.bool}}" class="badge">
                         {{item.unreadNum}}
-                        </view></button>
-                        
-                   </view>  
+                        </view></button>  </view>  
+            </view>
+         
+             
+                  
                 <!--<view class="left">
                     <image src="{{item.MainImage}}"></image>
                 </view>

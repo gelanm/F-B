@@ -95,7 +95,8 @@ Page({
     //创建一个 socket 连接(必须是wss协议)
     wx.connectSocket({
       // url: 'ws://localhost:3000',
-      url: 'ws://flightingandblue.com:8181',
+      url: 'ws://192.168.6.235:8181',
+      //url: 'ws://flightingandblue.com:8181',
       data: {
         x: '',
         y: ''
@@ -282,7 +283,8 @@ Page({
             })
           //}
           that.setData({
-            msg: that.data.msg.concat(storage)
+            //msg: that.data.msg.concat(storage)
+            msg: storage
           })
         })
       }

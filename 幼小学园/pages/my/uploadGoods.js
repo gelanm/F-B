@@ -178,10 +178,11 @@ Page({
       if(valueAll.price>100)
       {
         wx.showToast({
-          title: '宝贝价格不能高于100元',
+          title: '宝贝价格不能高于100元,交换后的任何损失自负，与平台无关。',
           icon: 'loading',
           duration: 2000
         })
+        return;
       }
       else{
         this.setData({
