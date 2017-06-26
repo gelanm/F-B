@@ -8,6 +8,8 @@ Page({
    */
   data: {
     userInfo: {},
+    latitude:0,
+    longitude:0,
     //projectSource: 'https://github.com/liuxuanqiang/wechat-weapp-mall',
     userListInfo: [{
       id: 'postGoods',
@@ -33,11 +35,13 @@ Page({
       text: '发布技术视频',
       isunread: false,
       unreadNum: 1
-    }, {
-        id: 'mapAddress',
-        icon: '../../img/iconfont-shouhuodizhi.png',
-      text: '收货地址管理'
-    }, {
+    }, 
+    // {
+    //     id: 'mapAddress',
+    //     icon: '../../img/iconfont-shouhuodizhi.png',
+    //   text: '收货地址管理'
+    // }, 
+    {
         id: 'chat',
         icon: '../../img/iconfont-kefu.png',
       text: '联系客服'
@@ -45,11 +49,13 @@ Page({
         id: 'problem',
         icon: '../../img/iconfont-help.png',
         text: '常见问题'
-    }, {
-        id: 'set',
-      icon: '../../img/set.png',
-      text: '设置'
-    }]
+    }//, 
+    // {
+    //     id: 'set',
+    //   icon: '../../img/set.png',
+    //   text: '设置'
+    // }
+    ]
   },
 
   /**
@@ -57,63 +63,147 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    wx.login({
-      success: function (res) {
-        console.log(res)
-        if (res.code) {
-          wx.getUserInfo({
-            withCredentials: true,
-            success: function (res1) {
-              that.setData({
-                userInfo: res1.userInfo
-              })
-              console.log(res1)
-              var a = { "Code": res.code, "IV": res1.iv, "EncryptedData": res1.encryptedData}
-              api.Api("WXUser", a).then(res2 => {
-                console.log(res2);
-                if (res2.Id>0) {
-                  console.log(res2)
-                  wx.setStorage({
-                    key: "User",
-                    data: res2
-                  })
-                } else {
-                  //console.log(res2.Status.ErrorMessage)
-                }
-              })//.catch(rej=>{
-              //   console.log(rej)
-              // })
-              // success
-            },
-            fail: function (res1) {
-              // fail
-              //console.log(res1)
-            },
-            complete: function (res1) {
-              // complete
-              //console.log(res1)
-            }
-          })
-    //调用应用实例的方法获取全局数据
-  //   app.getUserInfo(function (userInfo) {
-  //     //更新数据
-  //     that.setData({
-  //       userInfo: userInfo
-  //     })
-  //   })
-        }
-      }
-    })
     wx.getLocation({
       type: 'wgs84',
-      success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        var speed = res.speed
-        var accuracy = res.accuracy
-        console.log(res)
+      fail: function (res0) {
+        // fail
+        //console.log(res1)
+        wx.login({
+          success: function (res) {
+            console.log(res)
+            if (res.code) {
+              wx.getUserInfo({
+                withCredentials: true,
+                success: function (res1) {
+                  that.setData({
+                    userInfo: res1.userInfo
+                  })
+                  console.log(res1)
+                  var a = { "Code": res.code, "IV": res1.iv, "EncryptedData": res1.encryptedData, "Latitude": 0, "Longitude": 0 }
+                  api.Api("WXUser", a).then(res2 => {
+                    console.log(res2);
+                    if (res2.Id > 0) {
+                      console.log(res2)
+                      wx.setStorage({
+                        key: "User",
+                        data: res2
+                      })
+                    } else {
+                      //console.log(res2.Status.ErrorMessage)
+                    }
+                  })//.catch(rej=>{
+                  //   console.log(rej)
+                  // })
+                  // success
+                },
+                fail: function (res1) {
+                  // fail
+                  //console.log(res1)
+                },
+                complete: function (res1) {
+                  // complete
+                  //console.log(res1)
+                }
+              })
+            }
+          }
+        })
+      },
+      success: function (res0) {
+        var latitude = res0.latitude
+        var longitude = res0.longitude
+        // var speed = res.speed
+        // var accuracy = res.accuracy
+        wx.login({
+          success: function (res) {
+            console.log(res)
+            if (res.code) {
+              wx.getUserInfo({
+                withCredentials: true,
+                success: function (res1) {
+                  that.setData({
+                    userInfo: res1.userInfo
+                  })
+                  console.log(res1)
+                  var a = { "Code": res.code, "IV": res1.iv, "EncryptedData": res1.encryptedData, "Latitude": latitude,"Longitude":longitude }
+                  api.Api("WXUser", a).then(res2 => {
+                    console.log(res2);
+                    if (res2.Id > 0) {
+                      console.log(res2)
+                      wx.setStorage({
+                        key: "User",
+                        data: res2
+                      })
+                    } else {
+                      //console.log(res2.Status.ErrorMessage)
+                    }
+                  })//.catch(rej=>{
+                  //   console.log(rej)
+                  // })
+                  // success
+                },
+                fail: function (res1) {
+                  // fail
+                  //console.log(res1)
+                },
+                complete: function (res1) {
+                  // complete
+                  //console.log(res1)
+                }
+              })
+            }
+          }
+        })
       }
     })
+  //   wx.login({
+  //     success: function (res) {
+  //       console.log(res)
+  //       if (res.code) {
+  //         wx.getUserInfo({
+  //           withCredentials: true,
+  //           success: function (res1) {
+  //             that.setData({
+  //               userInfo: res1.userInfo
+  //             })
+  //             console.log(res1)
+  //             var a = { "Code": res.code, "IV": res1.iv, "EncryptedData": res1.encryptedData}
+  //             api.Api("WXUser", a).then(res2 => {
+  //               console.log(res2);
+  //               if (res2.Id>0) {
+  //                 console.log(res2)
+  //                 wx.setStorage({
+  //                   key: "User",
+  //                   data: res2
+  //                 })
+  //               } else {
+  //                 //console.log(res2.Status.ErrorMessage)
+  //               }
+  //             })//.catch(rej=>{
+  //             //   console.log(rej)
+  //             // })
+  //             // success
+  //           },
+  //           fail: function (res1) {
+  //             // fail
+  //             //console.log(res1)
+  //           },
+  //           complete: function (res1) {
+  //             // complete
+  //             //console.log(res1)
+  //           }
+  //         })
+  //   //调用应用实例的方法获取全局数据
+  // //   app.getUserInfo(function (userInfo) {
+  // //     //更新数据
+  // //     that.setData({
+  // //       userInfo: userInfo
+  // //     })
+  // //   })
+  //       }
+  //     }
+  //   })
+    
   },
 
   /**

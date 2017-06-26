@@ -134,19 +134,19 @@ function date(format, timestamp) {
     U: function () { return Math.round(jsdate.getTime() / 1000) }
   };
 
-  return format.replace(/[\]?([a-zA-Z])/g, function (t, s) {
-    if (t != s) {
-      // escaped 
-      ret = s;
-    } else if (f[s]) {
-      // a date function exists 
-      ret = f[s]();
-    } else {
-      // nothing special 
-      ret = s;
-    }
-    return ret;
-  });
+  // return format.replace(/[\]?([a-zA-Z])/g, function (t, s) {
+  //   if (t != s) {
+  //     // escaped 
+  //     ret = s;
+  //   } else if (f[s]) {
+  //     // a date function exists 
+  //     ret = f[s]();
+  //   } else {
+  //     // nothing special 
+  //     ret = s;
+  //   }
+  //   return ret;
+  // });
 }
 
 

@@ -18,11 +18,11 @@ Page({
   swiperchange: function (e) {
     //console.log(e.detail.current)
   },
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../detail/detail'
-    })
-  },
+  // bindViewTap: function () {
+  //   wx.navigateTo({
+  //     url: '../detail/detail'
+  //   })
+  // },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -72,44 +72,44 @@ Page({
     // })
 
     //venuesList
-    wx.request({
-      url: 'http://huanqiuxiaozhen.com/wemall/venues/venuesList',
-      method: 'GET',
-      data: {},
-      header: {
-        'Accept': 'application/json'
-      },
-      success: function (res) {
-        that.setData({
-          venuesItems: res.data.data
-        })
-        setTimeout(function () {
-          that.setData({
-            loadingHidden: true
-          })
-        }, 1500)
-      }
-    })
+    // wx.request({
+    //   url: 'http://huanqiuxiaozhen.com/wemall/venues/venuesList',
+    //   method: 'GET',
+    //   data: {},
+    //   header: {
+    //     'Accept': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     that.setData({
+    //       venuesItems: res.data.data
+    //     })
+    //     setTimeout(function () {
+    //       that.setData({
+    //         loadingHidden: true
+    //       })
+    //     }, 1500)
+    //   }
+    // })
 
-    //choiceList
-    wx.request({
-      url: 'http://huanqiuxiaozhen.com/wemall/goods/choiceList',
-      method: 'GET',
-      data: {},
-      header: {
-        'Accept': 'application/json'
-      },
-      success: function (res) {
-        that.setData({
-          choiceItems: res.data.data.dataList
-        })
-        setTimeout(function () {
-          that.setData({
-            loadingHidden: true
-          })
-        }, 1500)
-      }
-    })
+    // //choiceList
+    // wx.request({
+    //   url: 'http://huanqiuxiaozhen.com/wemall/goods/choiceList',
+    //   method: 'GET',
+    //   data: {},
+    //   header: {
+    //     'Accept': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     that.setData({
+    //       choiceItems: res.data.data.dataList
+    //     })
+    //     setTimeout(function () {
+    //       that.setData({
+    //         loadingHidden: true
+    //       })
+    //     }, 1500)
+    //   }
+    // })
   },
 
   /**
