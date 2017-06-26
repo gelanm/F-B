@@ -44,7 +44,7 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
 
         //}
 
-        public int InsertMysqlWXUserInf(WXGetUserInfoResponseType objWXUserInfo)
+        public int InsertMysqlWXUserInf(WXGetUserInfoResponseType objWXUserInfo,string Latitude,string Longitude)
         {
             try
             {
@@ -66,6 +66,8 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
                     objWXUser.NickName = objWXUserInfo.nickName;
                     objWXUser.HeadimgUrl = objWXUserInfo.avatarUrl;
                     objWXUser.AddDate = DateTime.Now;
+                    objWXUser.Latitude = Latitude;
+                    objWXUser.Longitude = Longitude;
 
                     return objWXUserBLL.Add(objWXUser);
                 }
