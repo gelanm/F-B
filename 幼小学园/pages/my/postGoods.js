@@ -37,17 +37,20 @@ Page({
         var b = { "OpenId": value.OpenId, "RegisterId": value.Id, "Id": id, Head: { "name": "", "auth": "", "id": value.Id }}
         api.Api('EndOrders', b).then(res => {
             console.log(res);
-            if (res.Status.IsSuccess == false) {
+            if (res.IsSuccess == false) {
               wx.showToast({
-                title: res.Status.ErrorMessage,
+                title: "失败",
                 icon: 'false',
                 duration: 2000
               })
             } else {
               wx.showToast({
-                title: res.Status.ErrorMessage,
+                title: "成功",
                 icon: 'success',
                 duration: 2000
+              })
+              wx.navigateTo({
+                url: '../my/unpostGoods'
               })
             }
           })

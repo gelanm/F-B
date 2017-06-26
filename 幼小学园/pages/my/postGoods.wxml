@@ -37,7 +37,7 @@
                   </view>
               </view>    
    <view class="btn-area">
-                <button type="default" data-idx="{{item.objorders.id}}" size="mini"  bindtap="endExchange">交换结束</button>
+                <button type="default" data-idx="{{item.objorders.Id}}" size="mini"  bindtap="endExchange">交换结束</button>
                         <button type="default" data-idx="{{item.objGoodsB.UserId}}" size="mini"  bindtap="chat">聊天<view wx:if="{{item.bool}}" class="badge">
                         {{item.unreadNum}}
                         </view></button>  </view>  

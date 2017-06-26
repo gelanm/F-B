@@ -22,32 +22,35 @@ Page({
     a = { "OpenId": value.OpenId, "RegisterId": value.Id, "Aid": this.data.Aid, "Bid": this.data.Bid, Head : {"name": "", "auth": "", "id":value.Id }}
     api.Api('Orders', a).then(res => {
       console.log(res);
-      if (res.Status.IsSuccess === false) {
+      if (res.IsSuccess === false) {
         wx.showToast({
-          title: res.Status.ErrorMessage,
+          title: "失败",
           icon: 'false',
           duration: 2000
         })
       } else {
         wx.showToast({
-          title: res.Status.ErrorMessage,
+          title: "成功",
           icon: 'success',
           duration: 2000
         }) 
-        var that = this;
-        try {
-          var value = wx.getStorageSync('User')
-          if (value) {
-            // Do something with return value
-            console.log(value)
-            that.setData({
-              a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": 0, "count": that.data.count }
-            })
-          }
-        } catch (e) {
-          // Do something when catch error
-        }
-        this.loadNewData(this.data.a);
+        wx.navigateTo({
+          url: '../my/postGoods'
+        })
+        // var that = this;
+        // try {
+        //   var value = wx.getStorageSync('User')
+        //   if (value) {
+        //     // Do something with return value
+        //     console.log(value)
+        //     that.setData({
+        //       a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 0, "start": 0, "count": that.data.count }
+        //     })
+        //   }
+        // } catch (e) {
+        //   // Do something when catch error
+        // }
+        // this.loadNewData(this.data.a);
       }
     })
     
