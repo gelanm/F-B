@@ -132,10 +132,11 @@ namespace flightiandblueServiceStack.ServiceInterface
 
             if (modegood.State == "2")
             {
-                return new OrdersResponse
-                {
-                    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" }
-                };
+                //return new OrdersResponse
+                //{
+                //    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" }
+                //};
+                return new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" };
             }
             modegood.State = "2";
             modegood.UpdateTime = DateTime.Now;
@@ -149,6 +150,7 @@ namespace flightiandblueServiceStack.ServiceInterface
                 {
                     Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" }
                 };
+                return new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" };
             }
             modegood.State = "2";
             modegood.UpdateTime = DateTime.Now;
@@ -169,10 +171,11 @@ namespace flightiandblueServiceStack.ServiceInterface
 
 
 
-            return new OrdersResponse
-            {
-                Status = new BaseResponse { IsSuccess = true, Message = "" }
-            };
+            //return new OrdersResponse
+            //{
+            //    Status = new BaseResponse { IsSuccess = true, Message = "" }
+            //};
+            return new BaseResponse { IsSuccess = true, Message = "" };
         
         }
 
@@ -188,26 +191,29 @@ namespace flightiandblueServiceStack.ServiceInterface
             modeorder = objorders.GetModel(request.Id);
             if (modeorder == null)
             {
-                return new OrdersResponse
-                {
-                    Status = new BaseResponse { IsSuccess = false, Message = "该商品不存在正在共享的订单" }
-                };
+                //return new OrdersResponse
+                //{
+                //    Status = new BaseResponse { IsSuccess = false, Message = "该商品不存在正在共享的订单" }
+                //};
+                return new BaseResponse { IsSuccess = false, Message = "该商品不存在正在共享的订单" };
             }
 
             if (modeorder.Status != "01")
             {
-                return new OrdersResponse
-                {
-                    Status = new BaseResponse { IsSuccess = false, Message = "该商品不存在正在共享的订单" }
-                };
+                //return new OrdersResponse
+                //{
+                //    Status = new BaseResponse { IsSuccess = false, Message = "该商品不存在正在共享的订单" }
+                //};
+                return new BaseResponse { IsSuccess = false, Message = "该商品不存在正在共享的订单" };
             }
             if ((DateTime.Now.AddDays(-7) < modeorder.CreateDate)
                 && (DateTime.Now.AddDays(-2) > modeorder.CreateDate))
             {
-                return new OrdersResponse
-                {
-                    Status = new BaseResponse { IsSuccess = false, Message = "请于" + modeorder.CreateDate.AddDays(7).ToString() + "后，再结束订单。" }
-                };
+                //return new OrdersResponse
+                //{
+                //    Status = new BaseResponse { IsSuccess = false, Message = "请于" + modeorder.CreateDate.AddDays(7).ToString() + "后，再结束订单。" }
+                //};
+                return new BaseResponse { IsSuccess = false, Message = "请于" + modeorder.CreateDate.AddDays(7).ToString() + "后，再结束订单。" };
             }
             modeorder.Status = "06";
             modeorder.UpdateTime = DateTime.Now;
@@ -224,10 +230,11 @@ namespace flightiandblueServiceStack.ServiceInterface
             objgood.Update(modegood);
             objgood.Update(modegood2);
 
-            return new OrdersResponse
-            {
-                Status = new BaseResponse { IsSuccess = true, Message = "" }
-            };
+            //return new OrdersResponse
+            //{
+            //    Status = new BaseResponse { IsSuccess = true, Message = "" }
+            //};
+            return new BaseResponse { IsSuccess = true, Message = "" };
 
         }
         // 结束订单 
