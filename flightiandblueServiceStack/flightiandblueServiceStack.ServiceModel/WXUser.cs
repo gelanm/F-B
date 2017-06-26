@@ -13,6 +13,8 @@ namespace flightiandblueServiceStack.ServiceModel
         public string Code { get; set; }
         public string IV { get; set; }
         public string EncryptedData { get; set; }
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }  
     }
 
     public class WXUserResponse //: BaseResponseType
