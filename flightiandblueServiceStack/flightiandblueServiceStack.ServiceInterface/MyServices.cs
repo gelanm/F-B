@@ -85,8 +85,8 @@ namespace flightiandblueServiceStack.ServiceInterface
 
         public object Any(flightiandblueServiceStack.ServiceModel.WXUser request)
         {
-            string url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + "wxfa6ae3a6654c4012"     //Common.weixin.WxPayConfig.APPID
-            + "&secret=" + "b2c837bafcbe989666c24f999b499868"
+            string url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + "wxadacff94d16f6ce6"  //"wxfa6ae3a6654c4012"     //Common.weixin.WxPayConfig.APPID
+            + "&secret=" + "fac38a432fb780375d607cfa0f0fe044"             //"b2c837bafcbe989666c24f999b499868"
             + "&js_code=" + request.Code
             + "&&grant_type=authorization_code";
             HttpWebRequest request1 = WebRequest.Create(url) as HttpWebRequest;
@@ -108,7 +108,7 @@ namespace flightiandblueServiceStack.ServiceInterface
             return new WXUserResponse
             {
                 //Id = new ServiceProcess.WX.WXService().InsertWXUserInf(WXUserInfo),
-                Id = new ServiceProcess.WXService().InsertMysqlWXUserInf(WXUserInfo),
+                Id = new ServiceProcess.WXService().InsertMysqlWXUserInf(WXUserInfo,request.Latitude,request.Longitude),
                 OpenId = WXUserInfo.openId,
                 UnionId = WXUserInfo.unionId,
                 avatarUrl = WXUserInfo.avatarUrl,
