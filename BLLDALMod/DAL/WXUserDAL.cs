@@ -76,9 +76,9 @@ namespace BLLDALMod.DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into WXUser(");
-            strSql.Append("OpenId,UnionId,NickName,Province,City,Country,Sex,HeadimgUrl,AccessToken,RefreshToken,AddDate,Memo,Status)");
+            strSql.Append("OpenId,UnionId,NickName,Province,City,Country,Sex,HeadimgUrl,AccessToken,RefreshToken,AddDate,Memo,Status,latitude,longitude)");
             strSql.Append(" values (");
-            strSql.Append("@OpenId,@UnionId,@NickName,@Province,@City,@Country,@Sex,@HeadimgUrl,@AccessToken,@RefreshToken,@AddDate,@Memo,@Status)");
+            strSql.Append("@OpenId,@UnionId,@NickName,@Province,@City,@Country,@Sex,@HeadimgUrl,@AccessToken,@RefreshToken,@AddDate,@Memo,@Status,@latitude,@longitude)");
             strSql.Append(";select @@IDENTITY");
 
             MySqlParameter[] parameters = {
@@ -94,7 +94,9 @@ namespace BLLDALMod.DAL
 					new MySqlParameter("@RefreshToken", MySqlDbType.VarChar,250),
 					new MySqlParameter("@AddDate", MySqlDbType.DateTime),
 					new MySqlParameter("@Memo", MySqlDbType.VarChar,1000),
-					new MySqlParameter("@Status", MySqlDbType.VarChar,10)};
+					new MySqlParameter("@Status", MySqlDbType.VarChar,10),
+                    new MySqlParameter("@latitude", MySqlDbType.VarChar,20),
+                    new MySqlParameter("@longitude", MySqlDbType.VarChar,20)};
             parameters[0].Value = model.OpenId;
             parameters[1].Value = model.UnionId;
             parameters[2].Value = model.NickName;
@@ -108,6 +110,8 @@ namespace BLLDALMod.DAL
             parameters[10].Value = model.AddDate;
             parameters[11].Value = model.Memo;
             parameters[12].Value = model.Status;
+            parameters[13].Value = model.Latitude ;
+            parameters[14].Value = model.Longitude;
 
             object obj = DBhelpmysql.Insert(strSql.ToString(), parameters);
             if (obj == null)
