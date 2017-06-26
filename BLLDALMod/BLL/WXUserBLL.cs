@@ -23,6 +23,13 @@ namespace BLLDALMod.BLL
         {
             return dal.InsertMysql(model);
         }
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        public bool Update(WXUser model)
+        {
+            return dal.Update(model);
+        }
 
         public DataTable GetAllList()
         {
