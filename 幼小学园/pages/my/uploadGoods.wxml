@@ -22,7 +22,7 @@
     </view>-->
     <view class="add-option">
         <label for="addImg">主图:</label>
-        <button style="margin:30rpx;" bindtap="chooseimage">获取图片</button>
+        <button style="margin:30rpx;font-size: 0.6rem;" bindtap="chooseimage">获取图片（请上传1M以内的小图）</button>
     </view>
     <view class="add-option">
         <label for="addTitle">购买日期:</label>
