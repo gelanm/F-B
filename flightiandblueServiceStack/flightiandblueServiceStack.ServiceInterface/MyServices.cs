@@ -49,7 +49,7 @@ namespace flightiandblueServiceStack.ServiceInterface
             else if (request.Type == 1)
             {
 
-                List<techs> listmode = objtechsBll.GetModelList(" 1=1 limit " + request.start + "," + request.count);
+                List<techs> listmode = objtechsBll.GetModelList(" State = 1 limit " + request.start + "," + request.count);
                 return listmode;
             }
             else if (request.Type == 2)
