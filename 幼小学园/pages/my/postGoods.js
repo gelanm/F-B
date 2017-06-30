@@ -12,6 +12,15 @@ Page({
   }, 
   chat: function (e) {
     var id = e.currentTarget.dataset.idx;
+    if(id === 0)
+    {
+      wx.showToast({
+        title: "请稍候再试。",
+        icon: 'false',
+        duration: 2000
+      })
+      return
+    }
     wx.navigateTo({
       url: '/pages/chat/chat?id=' + id,
       success: function (res) {

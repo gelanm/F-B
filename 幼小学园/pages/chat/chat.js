@@ -77,6 +77,12 @@ Page({
 
     }
 
+    if(this.data.fid === 0)
+    {
+      wx.navigateTo({
+        url: '../my/postGoods'
+      })
+    }
 
     const that = this
     this.getUserInfo((res) => {

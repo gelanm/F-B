@@ -1,8 +1,8 @@
 //app.js
 //
 App({
-  appId:'wxfa6ae3a6654c4012',
-  appSecret:'b2c837bafcbe989666c24f999b499868',
+  appId:'wxadacff94d16f6ce6',
+  appSecret:'fac38a432fb780375d607cfa0f0fe044',
   onLaunch: function () {
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []

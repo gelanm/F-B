@@ -45,7 +45,7 @@
         <input type="text"  class="{{descClass}}" bindinput="verifyNotD" placeholder="对宝贝的描述" name="desc" id="addDesc" placeholder-style="color:#103a64;font-size:0.6rem"  />
     </view>
     <view class="btn-area">
-        <button formType="submit">提交</button>
+        <button id="submit" formType="submit">提交</button>
         <button formType="reset">取消</button>
     </view>
     <image src="{{tempFilePaths }}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
