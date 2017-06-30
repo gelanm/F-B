@@ -12,7 +12,7 @@ Page({
     interval: 3000,
     duration: 1000,
     loadingHidden: false,  // loading
-    images: [{ picurl: "../../img/banner_001.jpg" }, { picurl: "../../img/banner_002.jpg" }]
+    images: [{ picurl: "../../img/banner_001.jpg" }, { picurl: "../../img/banner_002.jpg" }, { picurl: "../../img/banner_003.jpg" }]
   },
   //事件处理函数
   swiperchange: function (e) {
