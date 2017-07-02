@@ -183,7 +183,7 @@ public class memcached
         public static string Find(string key)
         {
 
-            string[] serverList = { "192.168.6.222:11211" };
+            string[] serverList = { PublicConfig.MemoryIP };
             // 初始化SocketIO池
             string poolName = "MyPool";
             SockIOPool sockIOPool1 = SockIOPool.GetInstance(poolName);
