@@ -17,7 +17,17 @@ namespace Fleck
         public static Action<LogLevel, string, Exception> LogAction = (level, message, ex) =>
         {
             if (level >= Level)
+            {
                 Console.WriteLine("{0} [{1}] {2} {3}", DateTime.Now, level, message, ex);
+                if (ex == null)
+                {
+                    AddLog.AddMsgLog(PublicEnum.LogType.Msg, level.ToString(), message, "");
+                }
+                else
+                {
+                    AddLog.AddMsgLog(PublicEnum.LogType.BLLError, level.ToString(), message, ex.StackTrace);
+                }
+            }   
         };
 
         public static void Warn(string message, Exception ex = null)
