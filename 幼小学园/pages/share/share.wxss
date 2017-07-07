@@ -15,6 +15,12 @@
   font-size: 14px;
   line-height: 24px;
 }
+.mod-list .row1{
+  display: flex;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: yellow; 
+}
 .left{
   width:200rpx;
   height:250rpx;

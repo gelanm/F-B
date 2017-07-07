@@ -21,7 +21,7 @@
                     <view class="row">
                         购买日期:{{item.PurchaseDate}}
                     </view>
-                    <view class="row">
+                    <view class="row1">
                         地区:{{item.Remark}}
                     </view>
                     <view class="row">
