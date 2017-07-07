@@ -35,6 +35,7 @@ namespace flightiandblueServiceStack.ServiceInterface
             OrdersBLL objOrdersBLL = new OrdersBLL();
             goodsBLL objgoodsBll = new goodsBLL();
             techsBLL objtechsBll = new techsBLL();
+            WXUserBLL objWXUserBLL = new WXUserBLL();
             if (request.Type == 0)
             {
 
@@ -55,6 +56,10 @@ namespace flightiandblueServiceStack.ServiceInterface
             else if (request.Type == 2)
             {
                 List<Goods> listmode = objgoodsBll.GetModelList(" State in ( '" + request.State.ToString() + "','2') and UserId != " + request.RegisterId + " limit " + request.start + "," + request.count);
+                foreach (Goods g in listmode) {
+                    BLLDALMod.Model.WXUser objWXUser = objWXUserBLL.GetModel(g.UserId);
+                    g.Remark = objWXUser.Province + "-" + objWXUser.City;
+                }
                 return listmode;
             }
             else
