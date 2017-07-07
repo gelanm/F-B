@@ -72,24 +72,50 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
                     objWXUser.Latitude = Latitude;
                     objWXUser.Longitude = Longitude;
 
-                    Id = objWXUserBLL.Add(objWXUser);
-                    if (Id > 0)
-                    {
+					string url = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + Latitude + "," + Longitude
+						+ "&key=" + "X2DBZ-PH73W-D3XRW-RYGGX-RRVV7-AGBLC";
 
-                        string url = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + Latitude + "," + Longitude
-                        + "&key=" + "X2DBZ-PH73W-D3XRW-RYGGX-RRVV7-AGBLC";        
+					HttpWebRequest request1 = WebRequest.Create(url) as HttpWebRequest;
+					request1.Method = "GET";
+					string DefaultUserAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
+					request1.UserAgent = DefaultUserAgent;
+					System.Net.HttpWebResponse response;
+					response = (System.Net.HttpWebResponse)request1.GetResponse();
+					System.IO.StreamReader myreader = new System.IO.StreamReader(response.GetResponseStream(), System.Text.Encoding.UTF8);
+					string responseText = myreader.ReadToEnd();
+					myreader.Close();
+					var weixin = JsonHelper.Deserialize<TXMapResponseType>(responseText);
+
+					objWXUser.Province = weixin.result.address_component.province;
+					if (objWXUser.Province.Substring(objWXUser.Province.Length - 1) == "市")
+					{
+						objWXUser.City = weixin.result.address_component.district;
+					}
+					else {
+						objWXUser.City = weixin.result.address_component.city;
+					}
+					objWXUser.Memo = weixin.result.address;
+
+
+                    Id = objWXUserBLL.Add(objWXUser);
+                    //if (Id > 0)
+                    //{
+
+                    //    string url = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + Latitude + "," + Longitude
+                    //    + "&key=" + "X2DBZ-PH73W-D3XRW-RYGGX-RRVV7-AGBLC";        
                         
-                        HttpWebRequest request1 = WebRequest.Create(url) as HttpWebRequest;
-                        request1.Method = "GET";
-                        string DefaultUserAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
-                        request1.UserAgent = DefaultUserAgent;
-                        System.Net.HttpWebResponse response;
-                        response = (System.Net.HttpWebResponse)request1.GetResponse();
-                        System.IO.StreamReader myreader = new System.IO.StreamReader(response.GetResponseStream(), System.Text.Encoding.UTF8);
-                        string responseText = myreader.ReadToEnd();
-                        myreader.Close();
-                        var weixin = JsonHelper.Deserialize<TXMapResponseType>(responseText);
-                    }
+                    //    HttpWebRequest request1 = WebRequest.Create(url) as HttpWebRequest;
+                    //    request1.Method = "GET";
+                    //    string DefaultUserAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
+                    //    request1.UserAgent = DefaultUserAgent;
+                    //    System.Net.HttpWebResponse response;
+                    //    response = (System.Net.HttpWebResponse)request1.GetResponse();
+                    //    System.IO.StreamReader myreader = new System.IO.StreamReader(response.GetResponseStream(), System.Text.Encoding.UTF8);
+                    //    string responseText = myreader.ReadToEnd();
+                    //    myreader.Close();
+                    //    var weixin = JsonHelper.Deserialize<TXMapResponseType>(responseText);
+
+                    //}
                     return Id;
                 }
                 //return 1;
