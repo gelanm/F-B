@@ -22,6 +22,9 @@
                         购买日期:{{item.PurchaseDate}}
                     </view>
                     <view class="row">
+                        地区:{{item.Remark}}
+                    </view>
+                    <view class="row">
                         简介:{{item.ContentValidity}}
                     </view>
                 </view>

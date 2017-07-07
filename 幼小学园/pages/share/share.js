@@ -81,7 +81,8 @@ Page({
             UserId: t.UserId,
             AddTime: util.getLocalTime(t.AddTime.replace("/Date(", "").replace("-0000)/", "")),
             PurchaseDate: util.getLocalTime(t.PurchaseDate.replace("/Date(", "").replace("-0000)/", "")),
-            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", ""))
+            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", "")),
+            Remark:t.Remark
           })
         })
         this.setData({
@@ -113,7 +114,8 @@ Page({
             UserId: t.UserId,
             AddTime: util.getLocalTime(t.AddTime.replace("/Date(", "").replace("-0000)/", "")),
             PurchaseDate: util.getLocalTime(t.PurchaseDate.replace("/Date(", "").replace("-0000)/", "")),
-            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", ""))
+            UpdateTime: util.getLocalTime(t.UpdateTime.replace("/Date(", "").replace("-0000)/", "")),
+            Remark: t.Remark
           })
         })
         this.setData({
