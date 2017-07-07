@@ -109,9 +109,9 @@ namespace flightiandblueServiceStack.ServiceInterface.ServiceProcess
 
                     foreach (var uploadedFile in Request.Files.Where(uploadedFile => uploadedFile.ContentLength > 0))
                     {
-                        if (uploadedFile.ContentLength > 1048576)  //大于1M 报错
+                        if (uploadedFile.ContentLength > 5242880)  //大于1M 报错
                         {
-                            return "认证失败，图片大于1M";
+                            return "上传失败，图片大于5M";
                         }
                         using (var ms = new MemoryStream())
                         {
