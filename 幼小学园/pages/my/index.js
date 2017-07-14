@@ -42,10 +42,10 @@ Page({
     //   text: '收货地址管理'
     // }, 
     {
-        id: 'chat',
-        icon: '../../img/iconfont-kefu.png',
-      text: '联系客服'
-    }, {
+    //    id: 'chat',
+    //    icon: '../../img/iconfont-kefu.png',
+    //  text: '联系客服'
+    //}, {
         id: 'problem',
         icon: '../../img/iconfont-help.png',
         text: '常见问题'
