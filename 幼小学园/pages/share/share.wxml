@@ -8,7 +8,7 @@
     <scroll-view class="sv" scroll-top="0" scroll-y bindscrolltolower="scrolltolower">
         <block wx:for="{{list}}">
             <view data-id="{{item.id}}"  class="mod-list">
-                <view class="left">
+                <view class="left" bindtap="viewImg" data-idx="{{item.MainImage}}">
                     <image src="{{item.MainImage}}"></image>
                 </view>
                 <view class="right">

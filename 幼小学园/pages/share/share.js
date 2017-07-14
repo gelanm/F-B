@@ -25,6 +25,23 @@ Page({
       }
     })
   },
+  viewImg:function(e){
+    console.log(e)
+    var id = e.currentTarget.dataset.idx;
+    var img = id.replace("https://www.flightingandblue.com/uploads/0/350/","https://www.flightingandblue.com/uploads/0/0/")
+    wx.navigateTo({
+      url: '/pages/Images/Image?img=' + img,
+      success: function (res) {
+        // success
+      },
+      fail: function (res) {
+        // fail
+      },
+      complete: function (res) {
+        // complete
+      }
+    })
+  },
   chat: function (e) {
     // var id = e.currentTarget.dataset.idx;
     // wx.navigateTo({
