@@ -12,7 +12,8 @@
     "pages/share/share",
     "pages/tech/tech",   
     "pages/chat/chat",
-    "pages/my/set"
+    "pages/my/set",
+    "pages/Images/Image"
   ],
   "window":{
     "backgroundTextStyle":"light",
