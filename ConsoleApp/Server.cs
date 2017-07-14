@@ -180,7 +180,7 @@ namespace Fleck.Samples.ConsoleApp
                 {
                     foreach (var socket in allSockets.ToList())
                     {
-                        socket.Send(input);
+                        //socket.Send(input);                      //2017.7.14 yoyolu Mono下报错。
                     }
                     input = Console.ReadLine();
                 }
