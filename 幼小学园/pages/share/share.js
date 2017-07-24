@@ -8,29 +8,33 @@ Page({
     list: [],
     showMore: true,
     showLoading: true,
-    a: {}
+    a: {},
+    region: ['上海市', '上海市', '嘉定区']
+  },
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+    var that = this;
+    try {
+      var value = wx.getStorageSync('User')
+      if (value) {
+        // Do something with return value
+        console.log(value)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": 0, "count": that.data.count, "Province": that.data.region[0], "City": that.data.region[1] }
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
+    this.loadNewData(this.data.a);
   },
   redirect: function (e) {
     var id = e.currentTarget.dataset.idx;
     wx.navigateTo({
       url: '/pages/detail/detail?id=' + id,
-      success: function (res) {
-        // success
-      },
-      fail: function (res) {
-        // fail
-      },
-      complete: function (res) {
-        // complete
-      }
-    })
-  },
-  viewImg:function(e){
-    console.log(e)
-    var id = e.currentTarget.dataset.idx;
-    var img = id.replace("https://www.flightingandblue.com/uploads/0/350/","https://www.flightingandblue.com/uploads/0/0/")
-    wx.navigateTo({
-      url: '/pages/Images/Image?img=' + img,
       success: function (res) {
         // success
       },
@@ -72,7 +76,7 @@ Page({
         // Do something with return value
         console.log(value)
         that.setData({
-          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": that.data.pn * that.data.count, "count": that.data.count }
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": that.data.pn * that.data.count, "count": that.data.count, "Province": that.data.region[0], "City": that.data.region[1]  }
         })
         
       }
@@ -82,7 +86,7 @@ Page({
     this.loadData(this.data.a);
   },
   loadData: function (obj) {
-    api.Api('viewGoods', obj).then(res => {
+    api.Api('viewGoods2', obj).then(res => {
       console.log(res);
       var storage = [];
       if (res.length > 0) {
@@ -115,7 +119,7 @@ Page({
     })
   },
   loadNewData: function (obj) {
-    api.Api('viewGoods', obj).then(res => {
+    api.Api('viewGoods2', obj).then(res => {
       console.log(res);
       var storage = [];
       if (res.length > 0) {
@@ -144,6 +148,9 @@ Page({
         this.setData({
           showMore: false
         })
+        this.setData({
+          list: null
+        })
       }
     })
   },
@@ -155,8 +162,33 @@ Page({
       if (value) {
         // Do something with return value
         console.log(value)
+        var Region;
+        if (value.User.Province.substr(value.User.Province.length-1,1)==="市")
+        {
+          Region[0] = value.User.Province
+          Region[1] = value.User.Province
+          Region[2] = value.User.City
+          //console.log("市")
+          //console.log("[" + value.User.Province + "," + value.User.Province + "," + value.User.City + "]")
+          // that.setData({
+          //   //region: "[" + value.User.Province + "," + value.User.Province + "," + value.User.City + "]"
+          //   region: Region
+          // })
+        }else{
+          Region[0] = value.User.Province
+          Region[1] = value.User.City
+          Region[2] = ""
+          // that.setData({
+          //   //region: "[" + value.User.Province + "," + value.User.City + ", ]"
+          // })
+        }
         that.setData({
-          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": 0, "count": that.data.count }
+          region: Region
+        })
+        console.log("1")
+        console.log(that.data.region)
+        that.setData({
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": 0, "count": that.data.count, "Province": that.data.region[0], "City": that.data.region[1] }
         })
         console.log(a);
       }
@@ -177,7 +209,7 @@ Page({
         // Do something with return value
         console.log(value)
         that.setData({
-          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": 0, "count": that.data.count }
+          a: { "OpenId": value.OpenId, "RegisterId": value.Id, "State": 1, "Type": 2, "start": 0, "count": that.data.count, "Province": that.data.region[0], "City": that.data.region[1]  }
         })
       }
     } catch (e) {

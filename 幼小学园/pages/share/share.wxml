@@ -1,4 +1,11 @@
 <!--pages/home/home.wxml-->
+<view class="top">
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+    <view class="picker">
+      省市过滤：{{region[0]}}，{{region[1]}}
+    </view>
+  </picker>
+</view>
 <block wx:if="{{showLoading}}">
     <view class="page-loading">
         <text>正在玩命加载中。。。</text>
