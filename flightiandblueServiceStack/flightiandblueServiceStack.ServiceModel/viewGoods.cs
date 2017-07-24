@@ -18,4 +18,19 @@ namespace flightiandblueServiceStack.ServiceModel
         public int count { get; set; }
         public int Type { get; set; }
     }
+
+	[Route("/viewGoods2")]
+	public class viewGoods2 : IReturn<Goods>
+	{
+		public string OpenId { get; set; }
+		public int RegisterId { get; set; }
+		public int State { get; set; }
+		public int start { get; set; }
+		public int count { get; set; }
+		public int Type { get; set; }
+		public string Province { get; set; }
+		public string City { get; set; }
+	}
+
+
 }
