@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace flightiandblueServiceStack.ServiceModel
 {
     [Route("/WXUser")]
@@ -23,6 +24,7 @@ namespace flightiandblueServiceStack.ServiceModel
         public string OpenId { get; set; }
         public string UnionId { get; set; }
         public string avatarUrl { get; set; }
+		public BLLDALMod.Model.WXUser User { get; set; }
     }
 
     public class WXjscode2sessionResponseType
