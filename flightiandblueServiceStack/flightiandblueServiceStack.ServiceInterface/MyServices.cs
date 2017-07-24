@@ -29,6 +29,57 @@ namespace flightiandblueServiceStack.ServiceInterface
             return new MessageAddResponse { Result = "留言成功!" };
         }
 
+		public object Any(viewGoods2 request)
+		{
+			goodsBLL objgoodsBll = new goodsBLL();
+			WXUserBLL objWXUserBLL = new WXUserBLL();
+			if (request.Type == 2)
+			{
+				List<Goods> listmode = new List<Goods>();
+				if (request.Province.Substring(request.Province.Length - 1) == "市")
+				{
+					listmode = objgoodsBll.GetModelList(" State in ( '" + request.State.ToString() + "','2') and UserId in ( select Id from WXUser where Id != " + request.RegisterId + " and Province ='" + request.Province + "') limit " + request.start + "," + request.count);
+				}
+				else
+				{
+					listmode = objgoodsBll.GetModelList(" State in ( '" + request.State.ToString() + "','2') and UserId in ( select Id from WXUser where Id != " + request.RegisterId + " and Province ='" + request.Province + "' and City = '" + request.City + "') limit " + request.start + "," + request.count);
+				}
+				foreach (Goods g in listmode)
+				{
+					BLLDALMod.Model.WXUser objWXUser = objWXUserBLL.GetModel(g.UserId);
+					g.Remark = objWXUser.Province + "-" + objWXUser.City;
+				}
+				return listmode;
+			}
+			else
+			{
+				//List<Goods> listmode = new List<Goods>();
+				//var user = objWXUserBLL.GetModel(request.RegisterId);
+				//if (user == null)
+				//{
+				//	return "";
+				//}
+				//else
+				//{
+				//	if (request.Province.Substring(request.Province.Length - 1) == "市")
+				//	{
+				//		listmode = objgoodsBll.GetModelList(" State in ( '" + request.State.ToString() + "','2') and UserId in ( select Id from WXUser where Id != " + request.RegisterId + " and Province ='" + user.Province + "') limit " + request.start + "," + request.count);
+				//	}
+				//	else
+				//	{
+				//		listmode = objgoodsBll.GetModelList(" State in ( '" + request.State.ToString() + "','2') and UserId in ( select Id from WXUser where Id != " + request.RegisterId + " and Province ='" + user.Province + "' and City = '" + user.City + "') limit " + request.start + "," + request.count);
+				//	}
+				//	foreach (Goods g in listmode)
+				//	{
+				//		BLLDALMod.Model.WXUser objWXUser = objWXUserBLL.GetModel(g.UserId);
+				//		g.Remark = objWXUser.Province + "-" + objWXUser.City;
+				//	}
+				//	return listmode;
+				//}
+				return "";
+			}
+		}
+
         public object Any(viewGoods request)
         {
             ChatRoomBLL objChatRoomBLL = new ChatRoomBLL();
@@ -110,13 +161,16 @@ namespace flightiandblueServiceStack.ServiceInterface
             string s = AESHelper.AESDecrypt(text);
             var WXUserInfo = JsonHelper.Deserialize<WXGetUserInfoResponseType>(s);
 
+			WXUserBLL objWXUserBLL = new WXUserBLL();
+			var id = new ServiceProcess.WXService().InsertMysqlWXUserInf(WXUserInfo, request.Latitude, request.Longitude);
             return new WXUserResponse
             {
                 //Id = new ServiceProcess.WX.WXService().InsertWXUserInf(WXUserInfo),
-                Id = new ServiceProcess.WXService().InsertMysqlWXUserInf(WXUserInfo,request.Latitude,request.Longitude),
+                Id = id,
                 OpenId = WXUserInfo.openId,
                 UnionId = WXUserInfo.unionId,
                 avatarUrl = WXUserInfo.avatarUrl,
+				User = objWXUserBLL.GetModel(id)
                 //Status = new BaseResponse { IsSuccess = true, Message = "" }
             };
             //return new WXUserResponse {Status= new BaseResponse{IsSuccess = true, Message="" }};
@@ -151,10 +205,10 @@ namespace flightiandblueServiceStack.ServiceInterface
 
             if (modegood.State == "2")
             {
-                return new OrdersResponse
-                {
-                    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" }
-                };
+                //return new OrdersResponse
+                //{
+                //    Status = new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" }
+                //};
                 return new BaseResponse { IsSuccess = false, Message = modegood.Title + ", 该商品已经共享了" };
             }
             modegood.State = "2";
