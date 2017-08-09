@@ -225,9 +225,11 @@ Page({
       //     console.log(res2.Status.ErrorMessage)
       //   }
     console.log(this.data)
+    console.log('this.data')
     console.log(valueAll)
         wx.uploadFile({
           url: 'http://serviceapi.flightingandblue.com/upload', //仅为示例，非真实的接口地址
+          //url: 'http://api.test.com/apisk/upload',
           filePath: _self.data.tempFilePaths[0],
           name: 'file',
           formData: {
@@ -246,6 +248,14 @@ Page({
               duration: 2000
             })
             //do something
+          },
+          fail:function(res){
+            console.log(res)
+            wx.showToast({
+              title: '上传失败',
+              icon: 'success_no_circle',
+              duration: 2000
+            })
           }
         })
       // PostData(options, function (res) {
