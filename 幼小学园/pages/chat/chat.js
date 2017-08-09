@@ -101,8 +101,9 @@ Page({
     //创建一个 socket 连接(必须是wss协议)
     wx.connectSocket({
       // url: 'ws://localhost:3000',
-      //url: 'ws://121.199.76.96:80',
-      url: 'ws://chat.flightingandblue.com',
+      //url: 'wss://192.168.6.215:8181',
+      //url: 'wss://121.199.76.96:443',
+      url: 'wss://chat.flightingandblue.com',                 
       data: {
         x: '',
         y: ''
