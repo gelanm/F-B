@@ -13,26 +13,33 @@ Page({
     //projectSource: 'https://github.com/liuxuanqiang/wechat-weapp-mall',
     userListInfo: [{
       id: 'postGoods',
-      icon: '../../img/iconfont-dingdan.png',
+      icon: '../../img/已发布.png',
       text: '已分享的宝贝',
       isunread: false,
       unreadNum: 3
     }, {
         id: 'unpostGoods',
-        icon: '../../img/iconfont-card.png',
+        icon: '../../img/未发布.png',
         text: '未分享的宝贝',
       isunread: false,
       unreadNum: 2
     }, {
         id: 'uploadGoods',
-        icon: '../../img/iconfont-icontuan.png',
+        icon: '../../img/发布.png',
       text: '发布宝贝',
       isunread: false,
       unreadNum: 1
     }, {
       id: 'uploadTech',
-      icon: '../../img/iconfont-icontuan.png',
+      icon: '../../img/发布视频.png',
       text: '发布技术视频',
+      isunread: false,
+      unreadNum: 1
+    }, 
+    {
+      id: 'myFriends',
+      icon: '../../img/好友.png',
+      text: '我的好友',
       isunread: false,
       unreadNum: 1
     }, 
@@ -47,7 +54,7 @@ Page({
     //  text: '联系客服'
     //}, {
         id: 'problem',
-        icon: '../../img/iconfont-help.png',
+        icon: '../../img/常见问题.png',
         text: '常见问题'
     }//, 
     // {
