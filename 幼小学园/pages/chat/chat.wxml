@@ -33,10 +33,10 @@
     <view class="send-msg-box-wrapper">
       <view class="send-msg-box">
         <view class="voice">
-          <button type="primary" size="mini" class="add-user-btn">新加</button>
+          <button type="primary" size="mini" class="add-user-btn" bindtap="addFriend">加好友</button>
         </view>
         <view class="input-area">
-          <input type="text" class="msg-content" bindinput="MessageInput"/>
+          <input type="text" class="msg-content" value="{{message}}" bindinput="MessageInput"/>
         </view>
         <view class="btn-area">
           <button type="primary" size="mini" class="send-msg-btn" bindtap="sendMessage"  >发送</button>

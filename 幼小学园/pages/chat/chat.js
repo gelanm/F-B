@@ -22,6 +22,12 @@ Page({
       message:e.detail.value
     })
   },
+  addFriend:function(e){
+    var obj = {"fid":this.data.fid,"tid":this.data.tid,"type":"1"}
+    api.Api('addFriends', obj).then(res => {
+      console.log(res)
+    })
+  },
   sendMessage: function (e){
     console.log(this.data.message)
     // var obj = '{"act": "l","userid":"2","auth":"1"}'
@@ -50,6 +56,7 @@ Page({
     this.setData({
       msg: this.data.msg.concat(storage)
     })
+    this.setData({message:""})
     // msg
 
     //websocket.send(a);
