@@ -228,7 +228,7 @@ Page({
     console.log('this.data')
     console.log(valueAll)
         wx.uploadFile({
-          url: 'http://serviceapi.flightingandblue.com/upload', //仅为示例，非真实的接口地址
+          url: 'https://serviceapi.flightingandblue.com/upload', //仅为示例，非真实的接口地址
           //url: 'http://api.test.com/apisk/upload',
           filePath: _self.data.tempFilePaths[0],
           name: 'file',
@@ -248,6 +248,7 @@ Page({
               duration: 2000
             })
             //do something
+
           },
           fail:function(res){
             console.log(res)
